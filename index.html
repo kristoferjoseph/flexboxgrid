@@ -3,140 +3,228 @@
 
     <head>
         <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Flexbox Grid</title>
-        <link rel="stylesheet" href="vendor/normalize.css" media="screen"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="vendor/normalize.css" media="screen" />
         <link rel="stylesheet" href="css/index.css" media="screen" />
         <link rel="stylesheet" href="css/flexgrid.css" media="screen" />
     </head>
 
     <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to
+                improve your experience.</p>
+        <![endif]-->
         <div class="wrap">
              <h1>Flexbox Grid</h1>
 
-            <div class="row between">
-                <div class="column--1">
-                    <div class="box">1</div>
-                </div>
-                <div class="column--1">
-                    <div class="box">1</div>
-                </div>
-                <div class="column--1">
-                    <div class="box">1</div>
-                </div>
-                <div class="column--1">
-                    <div class="box">1</div>
-                </div>
-                <div class="column--1">
-                    <div class="box">1</div>
-                </div>
-                <div class="column--1">
-                    <div class="box">1</div>
+            <p>Flexbox Grid is yet another grid system for modern browsers that support the <code>flex</code> display
+                property.</p> <a href="http://caniuse.com/#search=flexbox">Check Browser Support</a>
+
+            </p>
+             <h2>Features</h2>
+
+            <ul>
+                <li> <a href="#fluid">Fluid</a>
+
+                </li>
+                <li> <a href="#syntax">Simple syntax</a>
+
+                </li>
+                <li> <a href="#auto">Auto width</a>
+
+                </li>
+                <li> <a href="#nested">Nested grids</a>
+
+                </li>
+                <li> <a href="#centering">Centering</a>
+
+                </li>
+                <li>Alignment</li>
+                <li>Distribution</li>
+                <li>Reordering</li>
+                <li>Reversing</li>
+            </ul>
+            <a name="fluid"></a>
+             <h2>Fluid</h2>
+
+            <p>Percent based widths allow fluid resizing of columns and rows.</p>
+            <div class="row">
+                <div class="column-12">
+                    <div class="box">12</div>
                 </div>
             </div>
             <div class="row">
-                <div class="column--2">
-                    <div class="box">2</div>
-                </div>
-                <div class="column--2">
-                    <div class="box">2</div>
-                </div>
-                <div class="column--2">
-                    <div class="box">2</div>
-                </div>
-                <div class="column--2">
-                    <div class="box">2</div>
-                </div>
-                <div class="column--2">
-                    <div class="box">2</div>
-                </div>
-                <div class="column--2">
-                    <div class="box">2</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="column--3">
-                    <div class="box">3</div>
-                </div>
-                <div class="column--3">
-                    <div class="box">3</div>
-                </div>
-                <div class="column--3">
-                    <div class="box">3</div>
-                </div>
-                <div class="column--3">
-                    <div class="box">3</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="column--4">
-                    <div class="box">4</div>
-                </div>
-                <div class="column--4">
-                    <div class="box">4</div>
-                </div>
-                <div class="column--4">
-                    <div class="box">4</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="column--1">
+                <div class="column-1">
                     <div class="box">1</div>
                 </div>
-                <div class="column--5">
-                    <div class="box">5</div>
-                </div>
-                <div class="column--5">
-                    <div class="box">5</div>
-                </div>
-                <div class="column--1">
-                    <div class="box">1</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="column--6">
-                    <div class="box">6</div>
-                </div>
-                <div class="column--6">
-                    <div class="box">6</div>
-                </div>
-            </div>
-            <div class="row center">
-                <div class="column--7">
-                    <div class="box">7</div>
-                </div>
-            </div>
-            <div class="row center">
-                <div class="column--8">
-                    <div class="box">8</div>
-                </div>
-            </div>
-            <div class="row center">
-                <div class="column--9">
-                    <div class="box">9</div>
-                </div>
-            </div>
-            <div class="row center">
-                <div class="column--10">
-                    <div class="box">10</div>
-                </div>
-            </div>
-            <div class="row center">
-                <div class="column--11">
+                <div class="column-11">
                     <div class="box">11</div>
                 </div>
             </div>
             <div class="row">
-                <div class="column--12">
-                    <div class="box">12</div>
+                <div class="column-2">
+                    <div class="box">2</div>
+                </div>
+                <div class="column-10">
+                    <div class="box">10</div>
                 </div>
             </div>
-            <footer>
-                <a href="http://twitter.com/dam">
+            <div class="row">
+                <div class="column-3">
+                    <div class="box">3</div>
+                </div>
+                <div class="column-9">
+                    <div class="box">9</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-4">
+                    <div class="box">4</div>
+                </div>
+                <div class="column-8">
+                    <div class="box">8</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-5">
+                    <div class="box">5</div>
+                </div>
+                <div class="column-7">
+                    <div class="box">7</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-6">
+                    <div class="box">6</div>
+                </div>
+                <div class="column-6">
+                    <div class="box">6</div>
+                </div>
+            </div>
+            <a name="syntax"></a>
+             <h2>Simple Syntax</h2>
+
+            <p>Add a row. Nest numbered columns in it.</p>
+<pre><code>&lt;div class="row">
+    &lt;div class="column-12">
+        &lt;div class="box">12&lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
+
+            <a name="auto"></a>
+             <h2>Auto Width</h2>
+
+            <p>Add any number of auto sizing columns to a row. Let the grid figure it out.</p>
+            <div
+            class="row">
+                <div class="auto">
+                    <div class="box">auto</div>
+                </div>
+                <div class="auto">
+                    <div class="box">auto</div>
+                </div>
+        </div>
+        <div class="row">
+            <div class="auto">
+                <div class="box">auto</div>
+            </div>
+            <div class="auto">
+                <div class="box">auto</div>
+            </div>
+            <div class="auto">
+                <div class="box">auto</div>
+            </div>
+        </div>
+<pre><code>&lt;div class="row">
+    &lt;div class="auto">
+        &lt;div class="box">auto&lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
+
+        <a name="nested"></a>
+         <h2>Nested Grids</h2>
+
+        <p>Nest grids inside grids inside grids.</p>
+        <div class="row">
+            <div class="auto">
+                <div class="box">auto
+                    <div class="row">
+                        <div class="auto">
+                            <div class="box--first">auto
+                                <div class="row">
+                                    <div class="auto">
+                                        <div class="box--nested">auto</div>
+                                    </div>
+                                    <div class="auto">
+                                        <div class="box--nested">auto</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="auto">
+                            <div class="box--first">auto</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="auto">
+                <div class="box">auto</div>
+            </div>
+        </div>
+<pre><code>&lt;div class="row">
+    &lt;div class="auto">
+        &lt;div class="box">auto&lt;/div>
+            &lt;div class="row">
+                &lt;div class="auto">
+                    &lt;div class="box">auto&lt;/div>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
+
+        <a name="centering"></a>
+         <h2>Centering</h2>
+
+        <p>Vertically center items. OMFG RIGHT!?</p>
+        <div class="row">
+            <div class="column-12">
+                <div class="box">
+                    Something in here to make it appear to be vertically centered and stuff.
+                    <div class="column-6">
+                        <div class="box--nested">center</div>
+                    </div>
+                    <div class="column-6 center">
+                        <div class="box--nested">center</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer> <a class="tag" href="http://twitter.com/dam">
                     @dam ♡s you
                 </a>
-            </footer>
+
+        </footer>
         </div>
+        <script>
+            (function(b, o, i, l, e, r)
+            {
+                b.GoogleAnalyticsObject = l;
+                b[l] || (b[l] = function()
+                {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+                b[l].l = +new Date;
+                e = o.createElement(i);
+                r = o.getElementsByTagName(i)[0];
+                e.src = '//www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e, r)
+            }(window, document, 'script', 'ga'));
+            ga('create', 'UA-XXXXX-X');
+            ga('send', 'pageview');
+        </script>
     </body>
 
 </html>
