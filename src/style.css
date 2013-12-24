@@ -59,6 +59,7 @@ h6 {
   position: relative;
   box-sizing: border-box;
   min-height: 1rem;
+  margin-bottom: 1rem;
   padding: 1rem;
   background: #007FFF;
   border: 1px solid #FFF;
@@ -66,9 +67,6 @@ h6 {
   overflow: hidden;
   text-align: center;
   color: white;
-}
-.box {
-  margin-bottom: 1rem;
 }
 .box--first {
   background: #0066CC;
@@ -88,5 +86,19 @@ h6 {
 .tag {
   color: #000;
   font-weight: normal;
+}
+
+@media only screen and (min-width: 33rem) {
+
+  .box--first,
+  .box--nested,
+  .box--large {
+    margin-bottom: 0rem;
+  }
+
+  .box {
+    margin-bottom: 1rem;
+  }
+
 }
 
