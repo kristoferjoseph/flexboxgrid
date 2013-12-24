@@ -224,6 +224,10 @@ body {
   line-height: 1.4rem;
 }
 
+h2 {
+  margin-bottom: -.5rem;
+}
+
 a {
   text-decoration: none;
   color: #007FFF;

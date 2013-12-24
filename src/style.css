@@ -8,6 +8,9 @@ body {
     background: #EEE;
     line-height: 1.4rem;
 }
+h2 {
+  margin-bottom: -0.5rem;
+}
 a {
     text-decoration: none;
     color: #007FFF;
