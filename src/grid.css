@@ -97,11 +97,11 @@
 .auto {
   flex: 1;
 }
-.top,
-.start {
+.top {
    align-self: flex-start;
+}
+.start {
    align-items: flex-start;
-   text-align: start;
    justify-content: start;
 }
 .center {
@@ -110,9 +110,10 @@
    text-align: center;
    justify-content: center;
 }
-.bottom,
-.end {
+.bottom {
    align-self: flex-end;
+}
+.end {
    align-items: flex-end;
    text-align: end;
    justify-content: flex-end;
@@ -122,6 +123,12 @@
 }
 .between {
   justify-content: space-between;
+}
+.first {
+  order: -1;
+}
+.last {
+  order: 1;
 }
 
 @media only screen and (min-width: 33rem) {

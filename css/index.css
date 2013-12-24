@@ -32,31 +32,49 @@ pre {
 code {
   color: #007FFF;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #001A33;
+}
 .wrap {
+    box-sizing: border-box;
     max-width: 75%;
     margin: 0 auto;
+    padding-top: 2rem;
+}
+.page-section {
+  margin-bottom: 3rem;
 }
 .box--first,
 .box--nested,
 .box {
-    box-sizing: border-box;
-    min-height: 1rem;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    background: #007FFF;
-    border: 1px solid #FFF;
-    border-radius: 2px;
-    overflow: scroll;
-    text-align: center;
-    color: white;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background: #007FFF;
+  border: 1px solid #FFF;
+  border-radius: 2px;
+  overflow: hidden;
+  text-align: center;
+  color: white;
 }
 .box--nested {
-    background: #003366;
-    border: none;
+  background: #003366;
+  border: none;
 }
 .box--first {
-    background: #0066CC;
-    border: none;
+  background: #0066CC;
+  border: none;
+}
+.page-footer {
+  box-sizing:border-box;
+  padding-bottom: 3rem;
 }
 .tag {
   color: #000;
