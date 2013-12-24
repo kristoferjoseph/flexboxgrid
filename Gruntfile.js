@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         autoprefixer: {
             compile: {
                 src: 'src/grid.css',
-                dest: 'css/flexgrid.css'
+                dest: 'css/flexboxgrid.css'
             }
         },
         cssmin: {
