@@ -4,11 +4,19 @@ module.exports = function(grunt) {
     grunt.initConfig({
         autoprefixer: {
             compile: {
-                src: 'src/grid.css',
-                dest: 'css/flexboxgrid.css'
+                expand: true,
+                cwd: 'css',
+                src: ['*.css', '!*.min.css'],
+                dest: 'css',
+                ext: '.css'
             }
         },
         cssmin: {
+            concat: {
+              files: {
+                'css/index.css': ['vendor/css/normalize.css', 'src/style.css','src/flexboxgrid.css']
+              }
+            },
             minify: {
                 expand: true,
                 cwd: 'css',
@@ -20,10 +28,10 @@ module.exports = function(grunt) {
     });
 
     // These plugins provide necessary tasks.
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     // Default task.
-    grunt.registerTask('default', ['autoprefixer', 'cssmin']);
+    grunt.registerTask('default', ['cssmin:concat', 'autoprefixer', 'cssmin:minify']);
 
 };
