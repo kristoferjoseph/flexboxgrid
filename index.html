@@ -32,7 +32,8 @@
             </a>
 
             <p>
-            The motivation is that <a href="http://www.w3.org/TR/css3-flexbox/">flexbox</a> is the first specification to land in browsers that was made specifically to address problems faced in modern web design.
+            The motivation for creating this is that <a href="http://www.w3.org/TR/css3-flexbox/">flexbox</a> is the first specification to land in browsers that was made specifically to address problems faced in modern web design.<br>
+            Meaning it is less of a hack than other grid systems based on <code>float</code> and <code>inline-block</code>.
             </p>
 
             </section>
@@ -48,6 +49,9 @@
                     </li>
                     <li>
                         <a href="#syntax">Simple syntax</a>
+                    </li>
+                    <li>
+                        <a href="#offsets">Offsets</a>
                     </li>
                     <li>
                         <a href="#auto">Auto width</a>
@@ -148,6 +152,76 @@
 <pre><code>&lt;div class="row">
     &lt;div class="column-12">
         &lt;div class="box">12&lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
+
+            </section>
+
+            <section class="page-section">
+
+                <a name="offsets"></a>
+                <h2>Offsets</h2>
+                <p>Offset a column</p>
+
+                <div class="row">
+                    <div class="offset-11 column-1">
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-10 column-2">
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-9 column-3">
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-8 column-4">
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-7 column-5">
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-6 column-6">
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-5 column-7">
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-4 column-8">
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-3 column-9">
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-2 column-10">
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-1 column-11">
+                        <div class="box"></div>
+                    </div>
+                </div>
+
+<pre><code>&lt;div class="row">
+    &lt;div class="offset-3 column-9">
+        &lt;div class="box">offset&lt;/div>
     &lt;/div>
 &lt;/div></code></pre>
 

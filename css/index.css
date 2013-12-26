@@ -224,8 +224,8 @@ body {
   line-height: 1.4rem;
 }
 
-h2 {
-  margin-bottom: -.5rem;
+h2+p {
+  margin-top: -.5rem;
 }
 
 a {
