@@ -235,7 +235,7 @@ h6 {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 :focus {
@@ -292,24 +292,26 @@ code {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 3rem;
+  padding: 2rem;
   background: #FFF;
   border: 1px solid #FFF;
   border-radius: 2px;
 }
 
 .header--hero {
-  font-size: 6rem;
+  font-size: 3rem;
   white-space: nowrap;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .p--hero {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
+  font-size: 1rem;
+  margin-bottom: 0;
+  padding: 0 2rem;
 }
 
-.download-button {
+.download-button,
+.github-button {
   position: relative;
   display: inline-block;
   -webkit-box-sizing: border-box;
@@ -328,13 +330,15 @@ code {
   transition: background-color,.5s;
 }
 
-.download-button:hover {
+.download-button:hover,
+.github-button {
   background: #39F;
   border-color: #39F;
   text-shadow: 0 1px #007FFF;
 }
 
-.download-button:active {
+.download-button:active,
+.github-button {
   background: #007FFF;
   border-top: 1px solid #06C;
 }
@@ -384,7 +388,32 @@ code {
   font-weight: 400;
 }
 
-@media only screen and (min-width:33rem) {
+.invisible--hand {
+  display: none;
+  visibility: hidden;
+}
+
+.visible--hand {
+  display: block;
+  visibility: visible;
+}
+
+@media only screen and (min-width:48rem) {
+  .header--hero {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+  }
+
+  .p--hero {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .download-button {
+    display: block;
+    visibility: visible;
+  }
+
   .box--first,
   .box--large,
   .box--nested {
@@ -393,6 +422,16 @@ code {
 
   .box {
     margin-bottom: 1rem;
+  }
+
+  .invisible--desk {
+    display: none;
+    visibility: hidden;
+  }
+
+  .visible--desk {
+    display: block;
+    visibility: visible;
   }
 }
 
@@ -708,38 +747,6 @@ code {
 }
 
 @media only screen and (min-width:48rem) {
-  .column,
-  .column-1,
-  .column-10,
-  .column-11,
-  .column-12,
-  .column-2,
-  .column-3,
-  .column-4,
-  .column-5,
-  .column-6,
-  .column-7,
-  .column-8,
-  .column-9,
-  .offset-1,
-  .offset-10,
-  .offset-11,
-  .offset-12,
-  .offset-2,
-  .offset-3,
-  .offset-4,
-  .offset-5,
-  .offset-6,
-  .offset-7,
-  .offset-8,
-  .offset-9,
-  .row {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0 1rem;
-  }
-
   .column-1--lap {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 8.333%;
