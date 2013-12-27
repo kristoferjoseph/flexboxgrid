@@ -2,7 +2,7 @@
   "name": "flexboxgrid",
   "version": "0.0.0",
   "description": "Grid based off of CSS3 flexbox specification",
-  "main": "index.html",
+  "style": "css/flexbox.min.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
