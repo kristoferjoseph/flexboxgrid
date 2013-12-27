@@ -292,7 +292,7 @@ code {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 2rem;
+  padding: 0 2rem 2rem;
   background: #FFF;
   border: 1px solid #FFF;
   border-radius: 2px;
@@ -404,6 +404,10 @@ code {
 }
 
 @media only screen and (min-width:48rem) {
+  .page-section--hero {
+    padding-top: 2rem;
+  }
+
   .header--hero {
     font-size: 6rem;
     margin-bottom: 2rem;
