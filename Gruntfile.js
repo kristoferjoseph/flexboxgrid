@@ -17,9 +17,6 @@ module.exports = function(grunt) {
             }
         },
         cssmin: {
-            options: {
-              banner: grunt.file.read('LICENSE')
-            },
             concat: {
                 files: {
                     'css/index.css': ['vendor/css/normalize.css', 'src/style.css', 'src/flexboxgrid.css']
