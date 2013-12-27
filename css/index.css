@@ -330,16 +330,16 @@ code {
   transition: background-color,.5s;
 }
 
-.download-button:hover,
-.github-button {
+.download-button:hover {
   background: #39F;
   border-color: #39F;
+  color: #FFF;
   text-shadow: 0 1px #007FFF;
 }
 
-.download-button:active,
-.github-button {
+.download-button:active {
   background: #007FFF;
+  color: #FFF;
   border-top: 1px solid #06C;
 }
 
