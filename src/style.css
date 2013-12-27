@@ -99,18 +99,22 @@ code {
   background: #007FFF;
   border-top: 1px solid #0066CC;
 }
-.box--first, .box--nested, .box--large, .box {
+.box--row, .box--first, .box--nested, .box--large, .box {
+  box-sizing: border-box;
   position: relative;
   box-sizing: border-box;
   min-height: 1rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
+  margin-bottom: 0;
+  padding: 0.5rem;
   background: #007FFF;
   border: 1px solid #FFF;
   border-radius: 2px;
   overflow: hidden;
   text-align: center;
   color: white;
+}
+.box--row {
+  margin-bottom: 1rem;
 }
 .box--first {
   background: #0066CC;
@@ -121,7 +125,7 @@ code {
   border: none;
 }
 .box--large {
-  padding: 8rem;
+  height: 8rem;
 }
 .page-footer {
   box-sizing:border-box;
@@ -153,11 +157,8 @@ code {
       display: block;
       visibility: visible;
     }
-    .box--first, .box--nested, .box--large {
-        margin-bottom: 0rem;
-    }
-    .box {
-        margin-bottom: 1rem;
+    .box--row, .box--first, .box--nested, .box--large, .box {
+      padding: 1rem;
     }
     .invisible--desk {
       display: none;

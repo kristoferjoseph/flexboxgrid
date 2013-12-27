@@ -346,20 +346,25 @@ code {
 .box,
 .box--first,
 .box--large,
-.box--nested {
+.box--nested,
+.box--row {
   position: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   min-height: 1rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
+  margin-bottom: 0;
+  padding: .5rem;
   background: #007FFF;
   border: 1px solid #FFF;
   border-radius: 2px;
   overflow: hidden;
   text-align: center;
   color: #fff;
+}
+
+.box--row {
+  margin-bottom: 1rem;
 }
 
 .box--first {
@@ -373,7 +378,7 @@ code {
 }
 
 .box--large {
-  padding: 8rem;
+  height: 8rem;
 }
 
 .page-footer {
@@ -414,14 +419,12 @@ code {
     visibility: visible;
   }
 
+  .box,
   .box--first,
   .box--large,
-  .box--nested {
-    margin-bottom: 0rem;
-  }
-
-  .box {
-    margin-bottom: 1rem;
+  .box--nested,
+  .box--row {
+    padding: 1rem;
   }
 
   .invisible--desk {
