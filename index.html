@@ -10,40 +10,44 @@
     </head>
 
     <body>
+        <a name="top"></a>
         <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to
                 improve your experience.</p>
         <![endif]-->
         <a href="https://github.com/kristoferjoseph/flexboxgrid"><img width="149px" height="149px" style="position: absolute; top: 0; right: 0; border: 0;" src="img/forkme.png" alt="Fork me on GitHub"></a>
+
+        <section class="page-section--hero">
+
+            <div class="row center">
+                <h1 class="header--hero">Flexbox Grid</h1>
+            </div>
+
+            <div class="row center">
+
+                <p class="p--hero start">
+                A grid system based on the <a href="http://caniuse.com/#search=flexbox"><code>flex</code></a> display property.
+                One less hack.
+                </p>
+
+            </div>
+
+            <div class="row center">
+                <button class="download-button">Download</button>
+            </div>
+
+        </section>
+
         <div class="wrap">
-
-             <section class="page-section">
-
-             <h1>Flexbox Grid</h1>
-
-             <p>
-                Flexbox Grid is yet another grid system for modern browsers.
-                <br>
-                It is based on the <code>flex</code> display property.
-             </p>
-
-             <a href="http://caniuse.com/#search=flexbox">
-                 Check Browser Support
-            </a>
-
-            <p>
-            The motivation for creating this is that <a href="http://www.w3.org/TR/css3-flexbox/">flexbox</a> is the first specification to land in browsers that was made specifically to address problems faced in modern web design.<br>
-            Meaning it is less of a hack than other grid systems based on <code>float</code> and <code>inline-block</code>.
-            </p>
-
-            </section>
 
             <section class="page-section">
 
-                <a name="top"></a>
                 <h2>Features</h2>
 
                 <ul>
+                    <li>
+                        <a href="#responsive">Responsive</a>
+                    </li>
                     <li>
                         <a href="#fluid">Fluid</a>
                     </li>
@@ -71,7 +75,60 @@
                     <li>
                         <a href="#reversing">Reversing</a>
                     </li>
+                    <li>
+                        <a href="#compatible">Backwards Compatible</a>
+                    </li>
                 </ul>
+
+            </section>
+
+            <section class="page-section">
+
+                <a name="responsive"></a>
+                <h2>Responsive</h2>
+
+                <p>
+                Responsive modifiers enable specifying different column sizes and offsets at hand, lap, desk & wall viewport widths.
+                </p>
+
+                <div class="row">
+                    <div class="column-12--hand column-3--lap column-2--desk column-1--wall">
+                        <div class="box"></div>
+                    </div>
+                    <div class="column-6--hand column-6--lap column-8--desk column-10--wall">
+                        <div class="box"></div>
+                    </div>
+                    <div class="column-6--hand column-3--lap column-2--desk column-1--wall">
+                        <div class="box"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column-12--hand column-3--lap column-2--desk column-1--wall">
+                        <div class="box"></div>
+                    </div>
+                    <div class="column-12--hand column-9--lap column-10--desk column-11--wall">
+                        <div class="box"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column-10--hand column-6--lap column-8--desk column-10--wall">
+                        <div class="box"></div>
+                    </div>
+                    <div class="column-2--hand column-6--lap column-4--desk column-2--wall">
+                        <div class="box"></div>
+                    </div>
+                </div>
+
+<pre><code>&lt;div class="row">
+    &lt;div class="column-12--hand
+                column-8--lap
+                column-6--desk
+                column-4--wall">
+        &lt;div class="box">Responsive&lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
 
             </section>
 
@@ -82,61 +139,60 @@
 
                 <p>Percent based widths allow fluid resizing of columns and rows.</p>
                 <div class="row">
-                    <div class="column-12">
+                    <div class="column-12--hand">
                         <div class="box"></div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="column-1">
+                    <div class="column-1--hand">
                         <div class="box"></div>
                     </div>
-                    <div class="column-11">
-                        <div class="box"></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="column-2">
-                        <div class="box"></div>
-                    </div>
-                    <div class="column-10">
+                    <div class="column-11--hand">
                         <div class="box"></div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="column-3">
+                    <div class="column-2--hand">
                         <div class="box"></div>
                     </div>
-                    <div class="column-9">
-                        <div class="box"></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="column-4">
-                        <div class="box"></div>
-                    </div>
-                    <div class="column-8">
+                    <div class="column-10--hand">
                         <div class="box"></div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="column-5">
+                    <div class="column-3--hand">
                         <div class="box"></div>
                     </div>
-                    <div class="column-7">
+                    <div class="column-9--hand">
                         <div class="box"></div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="column-6">
+                    <div class="column-4--hand">
                         <div class="box"></div>
                     </div>
-                    <div class="column-6">
+                    <div class="column-8--hand">
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column-5--hand">
+                        <div class="box"></div>
+                    </div>
+                    <div class="column-7--hand">
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column-6--hand">
+                        <div class="box"></div>
+                    </div>
+                    <div class="column-6--hand">
                         <div class="box"></div>
                     </div>
                 </div>
 
-<pre><code>.half,
-.column-6 {
+<pre><code>.column-6--hand {
   flex: 0 0 50%;
 }</code></pre>
 
@@ -150,7 +206,7 @@
                 <p>All you need to remember is row, column, content.</p>
 
 <pre><code>&lt;div class="row">
-    &lt;div class="column-12">
+    &lt;div class="column-12--hand">
         &lt;div class="box">12&lt;/div>
     &lt;/div>
 &lt;/div></code></pre>
@@ -164,63 +220,63 @@
                 <p>Offset a column</p>
 
                 <div class="row">
-                    <div class="offset-11 column-1">
+                    <div class="offset-11--hand column-1--hand">
                         <div class="box"></div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="offset-10 column-2">
+                    <div class="offset-10--hand column-2--hand">
                         <div class="box"></div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="offset-9 column-3">
+                    <div class="offset-9--hand column-3--hand">
                         <div class="box"></div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="offset-8 column-4">
+                    <div class="offset-8--hand column-4--hand">
                         <div class="box"></div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="offset-7 column-5">
+                    <div class="offset-7--hand column-5--hand">
                         <div class="box"></div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="offset-6 column-6">
+                    <div class="offset-6--hand column-6--hand">
                         <div class="box"></div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="offset-5 column-7">
+                    <div class="offset-5--hand column-7--hand">
                         <div class="box"></div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="offset-4 column-8">
+                    <div class="offset-4--hand column-8--hand">
                         <div class="box"></div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="offset-3 column-9">
+                    <div class="offset-3--hand column-9--hand">
                         <div class="box"></div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="offset-2 column-10">
+                    <div class="offset-2--hand column-10--hand">
                         <div class="box"></div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="offset-1 column-11">
+                    <div class="offset-1--hand column-11--hand">
                         <div class="box"></div>
                     </div>
                 </div>
 
 <pre><code>&lt;div class="row">
-    &lt;div class="offset-3 column-9">
+    &lt;div class="offset-3--hand column-9--hand">
         &lt;div class="box">offset&lt;/div>
     &lt;/div>
 &lt;/div></code></pre>
@@ -235,28 +291,28 @@
                 <p>Add any number of auto sizing columns to a row. Let the grid figure it out.</p>
 
                 <div class="row">
-                    <div class="auto">
+                    <div class="column-auto--hand">
                         <div class="box"></div>
                     </div>
-                    <div class="auto">
+                    <div class="column-auto--hand">
                         <div class="box"></div>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="auto">
+                    <div class="column-auto--hand">
                         <div class="box"></div>
                     </div>
-                    <div class="auto">
+                    <div class="column-auto--hand">
                         <div class="box"></div>
                     </div>
-                    <div class="auto">
+                    <div class="column-auto--hand">
                         <div class="box"></div>
                     </div>
                 </div>
 
 <pre><code>&lt;div class="row">
-    &lt;div class="auto">
+    &lt;div class="column-auto--hand">
         &lt;div class="box">auto&lt;/div>
     &lt;/div>
 &lt;/div></code></pre>
@@ -270,25 +326,25 @@
 
             <p>Nest grids inside grids inside grids.</p>
             <div class="row">
-                <div class="column-7">
+                <div class="column-7--hand">
                     <div class="box">
                         <div class="row">
-                            <div class="column-9">
+                            <div class="column-9--hand">
                                 <div class="box--first">
                                     <div class="row">
-                                        <div class="column-4">
+                                        <div class="column-4--hand">
                                             <div class="box--nested"></div>
                                         </div>
-                                        <div class="column-8">
+                                        <div class="column-8--hand">
                                             <div class="box--nested"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="column-3">
+                            <div class="column-3--hand">
                                 <div class="box--first">
                                     <div class="row">
-                                        <div class="auto">
+                                        <div class="column-auto--hand">
                                             <div class="box--nested">
                                             </div>
                                         </div>
@@ -298,18 +354,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="column-5">
+                <div class="column-5--hand">
                     <div class="box">
                         <div class="row">
-                            <div class="full">
+                            <div class="column-12--hand">
                                 <div class="box--first">
                                     <div class="row">
-                                        <div class="half">
+                                        <div class="column-6--hand">
                                             <div class="box--nested">
 
                                             </div>
                                         </div>
-                                        <div class="half">
+                                        <div class="column-6--hand">
                                             <div class="box--nested">
 
                                             </div>
@@ -322,10 +378,10 @@
                 </div>
             </div>
 <pre><code>&lt;div class="row">
-    &lt;div class="auto">
+    &lt;div class="column-auto--hand">
         &lt;div class="box">auto&lt;/div>
             &lt;div class="row">
-                &lt;div class="auto">
+                &lt;div class="column-auto--hand">
                     &lt;div class="box">auto&lt;/div>
                 &lt;/div>
             &lt;/div>
@@ -346,10 +402,10 @@
             <h3><code>.start</code></h3>
 
             <div class="row">
-                <div class="full">
+                <div class="column-12--hand">
                     <div class="box">
                         <div class="row start">
-                            <div class="column-6">
+                            <div class="column-6--hand">
                                 <div class="box--nested">
 
                                 </div>
@@ -362,7 +418,7 @@
              *default alignment
 
 <pre><code>&lt;div class="row start">
-    &lt;div class="column-6">
+    &lt;div class="column-6--hand">
         &lt;div class="box">
             start
         &lt;/div>
@@ -373,10 +429,10 @@
             <h3><code>.end</code></h3>
 
             <div class="row">
-                <div class="full">
+                <div class="column-12--hand">
                     <div class="box">
                         <div class="row end">
-                            <div class="column-6">
+                            <div class="column-6--hand">
                                 <div class="box--nested">
 
                                 </div>
@@ -387,7 +443,7 @@
             </div>
 
 <pre><code>&lt;div class="row end">
-    &lt;div class="column-6">
+    &lt;div class="column-6--hand">
         &lt;div class="box">
             end
         &lt;/div>
@@ -398,10 +454,10 @@
             <h3><code>.top</code></h3>
 
             <div class="row">
-                <div class="column-6">
+                <div class="column-6--hand">
                     <div class="box--large"></div>
                 </div>
-                <div class="column-6 top">
+                <div class="column-6--hand top">
                     <div class="box"></div>
                 </div>
             </div>
@@ -409,7 +465,7 @@
              *default alignment
 
 <pre><code>&lt;div class="row">
-    &lt;div class="column-6 top">
+    &lt;div class="column-6--hand top">
         &lt;div class="box">
             top
         &lt;/div>
@@ -420,16 +476,16 @@
             <h3><code>.center</code></h3>
 
             <div class="row">
-                <div class="column-6">
+                <div class="column-6--hand">
                     <div class="box--large"></div>
                 </div>
-                <div class="column-6 center">
+                <div class="column-6--hand center">
                     <div class="box"></div>
                 </div>
             </div>
 
 <pre><code>&lt;div class="row">
-    &lt;div class="column-6 center">
+    &lt;div class="column-6--hand center">
         &lt;div class="box">
             center
         &lt;/div>
@@ -440,16 +496,16 @@
             <h3><code>.bottom</code></h3>
 
             <div class="row">
-                <div class="column-6">
+                <div class="column-6--hand">
                     <div class="box" style="height: 8rem;"></div>
                 </div>
-                <div class="column-6 bottom">
+                <div class="column-6--hand bottom">
                     <div class="box"></div>
                 </div>
             </div>
 
 <pre><code>&lt;div class="row">
-    &lt;div class="column-6 bottom">
+    &lt;div class="column-6--hand bottom">
         &lt;div class="box">
             bottom
         &lt;/div>
@@ -471,20 +527,20 @@
             <h3><code>.around</code></h3>
 
             <div class="row">
-                <div class="full">
+                <div class="column-12--hand">
                     <div class="box">
                         <div class="row around">
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--nested">
 
                                 </div>
                             </div>
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--nested">
 
                                 </div>
                             </div>
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--nested">
 
                                 </div>
@@ -495,17 +551,17 @@
             </div>
 
 <pre><code>&lt;div class="row around">
-    &lt;div class="column-2">
+    &lt;div class="column-2--hand">
         &lt;div class="box">
             around
         &lt;/div>
     &lt;/div>
-    &lt;div class="column-2">
+    &lt;div class="column-2--hand">
         &lt;div class="box">
             around
         &lt;/div>
     &lt;/div>
-    &lt;div class="column-2">
+    &lt;div class="column-2--hand">
         &lt;div class="box">
             around
         &lt;/div>
@@ -516,20 +572,20 @@
             <h3><code>.between</code></h3>
 
             <div class="row">
-                <div class="full">
+                <div class="column-12--hand">
                     <div class="box">
                         <div class="row between">
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--nested">
 
                                 </div>
                             </div>
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--nested">
 
                                 </div>
                             </div>
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--nested">
 
                                 </div>
@@ -540,17 +596,17 @@
             </div>
 
 <pre><code>&lt;div class="row between">
-    &lt;div class="column-2">
+    &lt;div class="column-2--hand">
         &lt;div class="box">
             between
         &lt;/div>
     &lt;/div>
-    &lt;div class="column-2">
+    &lt;div class="column-2--hand">
         &lt;div class="box">
             between
         &lt;/div>
     &lt;/div>
-    &lt;div class="column-2">
+    &lt;div class="column-2--hand">
         &lt;div class="box">
             between
         &lt;/div>
@@ -572,25 +628,25 @@
             <h3><code>.first</code></h3>
 
             <div class="row">
-                <div class="full">
+                <div class="column-12--hand">
                     <div class="box">
                         <div class="row">
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--first">1</div>
                             </div>
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--first">2</div>
                             </div>
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--first">3</div>
                             </div>
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--first">4</div>
                             </div>
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--first">5</div>
                             </div>
-                            <div class="column-2 first">
+                            <div class="column-2--hand first">
                                 <div class="box--nested">6</div>
                             </div>
                         </div>
@@ -599,17 +655,17 @@
             </div>
 
 <pre><code>&lt;div class="row">
-    &lt;div class="column-2">
+    &lt;div class="column-2--hand">
         &lt;div class="box">
             1
         &lt;/div>
     &lt;/div>
-    &lt;div class="column-2">
+    &lt;div class="column-2--hand">
         &lt;div class="box">
             2
         &lt;/div>
     &lt;/div>
-    &lt;div class="column-2 first">
+    &lt;div class="column-2--hand first">
         &lt;div class="box">
             3
         &lt;/div>
@@ -620,25 +676,25 @@
             <h3><code>.last</code></h3>
 
             <div class="row">
-                <div class="full">
+                <div class="column-12--hand">
                     <div class="box">
                         <div class="row">
-                            <div class="column-2 last">
+                            <div class="column-2--hand last">
                                 <div class="box--nested">1</div>
                             </div>
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--first">2</div>
                             </div>
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--first">3</div>
                             </div>
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--first">4</div>
                             </div>
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--first">5</div>
                             </div>
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--first">6</div>
                             </div>
                         </div>
@@ -647,17 +703,17 @@
             </div>
 
 <pre><code>&lt;div class="row">
-    &lt;div class="column-2 last">
+    &lt;div class="column-2--hand last">
         &lt;div class="box">
             1
         &lt;/div>
     &lt;/div>
-    &lt;div class="column-2">
+    &lt;div class="column-2--hand">
         &lt;div class="box">
             2
         &lt;/div>
     &lt;/div>
-    &lt;div class="column-2">
+    &lt;div class="column-2--hand">
         &lt;div class="box">
             3
         &lt;/div>
@@ -675,25 +731,25 @@
             <h3><code>.reverse</code></h3>
 
             <div class="row">
-                <div class="full">
+                <div class="column-12--hand">
                     <div class="box">
                         <div class="row reverse">
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--nested">1</div>
                             </div>
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--nested">2</div>
                             </div>
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--nested">3</div>
                             </div>
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--nested">4</div>
                             </div>
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--nested">5</div>
                             </div>
-                            <div class="column-2">
+                            <div class="column-2--hand">
                                 <div class="box--nested">6</div>
                             </div>
                         </div>
@@ -702,17 +758,17 @@
             </div>
 
 <pre><code>&lt;div class="row reverse">
-    &lt;div class="column-2">
+    &lt;div class="column-2--hand">
         &lt;div class="box">
             1
         &lt;/div>
     &lt;/div>
-    &lt;div class="column-2">
+    &lt;div class="column-2--hand">
         &lt;div class="box">
             2
         &lt;/div>
     &lt;/div>
-    &lt;div class="column-2">
+    &lt;div class="column-2--hand">
         &lt;div class="box">
             3
         &lt;/div>
@@ -721,16 +777,23 @@
 </code></pre>
 
         </section>
+<!--
+        <section class="page-section">
 
+            <a name="compatible"></a>
+            <h2>Backwards Compatible</h2>
+            *kinda
 
+        </section>
+-->
         <footer class="page-footer">
             <div class="row">
-                <div class="auto start">
+                <div class="column-auto--hand start">
                     <a class="tag" href="http://twitter.com/dam">
                             @dam ♡s you
                     </a>
                 </div>
-                <div class="auto end">
+                <div class="column-auto--hand end">
                     <a href="#top">⇪ back to top</a>
                 </div>
             </div>
@@ -755,5 +818,7 @@
             ga('create', 'UA-46683011-1', 'flexboxgrid.com');
             ga('send', 'pageview');
         </script>
+        <script type="text/javascript" src="//use.typekit.net/nod8myc.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     </body>
 </html>

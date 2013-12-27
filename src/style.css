@@ -8,8 +8,19 @@ body {
     background: #EEE;
     line-height: 1.4rem;
 }
+h1, h2, h3, h4, h5, h6 {
+    font-family:"bree", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: #001A33;
+}
+h2 {
+    font-size: 3rem;
+}
+:focus {
+    outline-color: transparent;
+    outline-style: none;
+}
 h2 + p {
-  margin-top: -0.5rem;
+  margin: -1.25rem 0 2rem 0;
 }
 a {
     text-decoration: none;
@@ -22,26 +33,18 @@ a:hover {
     color: #007FFF;
 }
 pre {
-  overflow-x: auto;
-  padding: 1.25em;
-  border: 1px solid #e6e6e6;
-  border-left-width: 5px;
-  margin: 1.6em 0;
-  font-size: 0.875em;
-  background: #fcfcfc;
-  white-space: pre;
-  word-wrap: normal;
+    overflow-x: auto;
+    padding: 1.25em;
+    border: 1px solid #e6e6e6;
+    border-left-width: 5px;
+    margin: 1.6em 0;
+    font-size: 0.875em;
+    background: #fcfcfc;
+    white-space: pre;
+    word-wrap: normal;
 }
 code {
-  color: #007FFF;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #001A33;
+    color: #007FFF;
 }
 .wrap {
     box-sizing: border-box;
@@ -50,55 +53,85 @@ h6 {
     padding-top: 2rem;
 }
 .page-section {
-  margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
-.box--first,
-.box--nested,
-.box--large,
-.box {
-  position: relative;
-  box-sizing: border-box;
-  min-height: 1rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  background: #007FFF;
-  border: 1px solid #FFF;
-  border-radius: 2px;
-  overflow: hidden;
-  text-align: center;
-  color: white;
+.page-section--hero {
+    box-sizing: border-box;
+    padding: 3rem;
+    background: #FFF;
+    border: 1px solid #FFF;
+    border-radius: 2px;
+}
+.header--hero {
+    font-size: 6rem;
+    white-space: nowrap;
+    margin-bottom: 2rem;
+}
+.p--hero {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+.download-button {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 3rem;
+    margin: 0;
+    height: 4rem;
+    line-height: 4rem;
+    background: #007FFF;
+    border: 1px solid #007FFF;
+    border-radius: 2px;
+    color: #FFF;
+    font-size: 1.25rem;
+    transition: background-color, 0.5s;
+}
+.download-button:hover {
+    background: #3399FF;
+    border-color: #3399FF;
+    text-shadow: 0 1px #007FFF;
+}
+.download-button:active {
+    background: #007FFF;
+    border-top: 1px solid #0066CC;
+}
+.box--first, .box--nested, .box--large, .box {
+    position: relative;
+    box-sizing: border-box;
+    min-height: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #007FFF;
+    border: 1px solid #FFF;
+    border-radius: 2px;
+    overflow: hidden;
+    text-align: center;
+    color: white;
 }
 .box--first {
-  background: #0066CC;
-  border: none;
+    background: #0066CC;
+    border: none;
 }
 .box--nested {
-  background: #003366;
-  border: none;
+    background: #003366;
+    border: none;
 }
 .box--large {
-  padding: 8rem;
+    padding: 8rem;
 }
 .page-footer {
-  box-sizing:border-box;
-  padding-bottom: 3rem;
+    box-sizing:border-box;
+    padding-bottom: 3rem;
 }
 .tag {
-  color: #000;
-  font-weight: normal;
+    color: #000;
+    font-weight: normal;
 }
-
 @media only screen and (min-width: 33rem) {
-
-  .box--first,
-  .box--nested,
-  .box--large {
-    margin-bottom: 0rem;
-  }
-
-  .box {
-    margin-bottom: 1rem;
-  }
-
+    .box--first, .box--nested, .box--large {
+        margin-bottom: 0rem;
+    }
+    .box {
+        margin-bottom: 1rem;
+    }
 }
-
