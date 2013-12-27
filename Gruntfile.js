@@ -9,13 +9,18 @@ module.exports = function(grunt) {
                 src: ['*.css', '!*.min.css'],
                 dest: 'css',
                 ext: '.css'
+            },
+            release: {
+                files: {
+                    'css/flexboxgrid.css': 'src/flexboxgrid.css'
+                }
             }
         },
         cssmin: {
             concat: {
-              files: {
-                'css/index.css': ['vendor/css/normalize.css', 'src/style.css','src/flexboxgrid.css']
-              }
+                files: {
+                    'css/index.css': ['vendor/css/normalize.css', 'src/style.css', 'src/flexboxgrid.css']
+                }
             },
             minify: {
                 expand: true,
@@ -33,5 +38,6 @@ module.exports = function(grunt) {
 
     // Default task.
     grunt.registerTask('default', ['cssmin:concat', 'autoprefixer', 'cssmin:minify']);
+    grunt.registerTask('release', ['autoprefixer:release', 'cssmin']);
 
 };
