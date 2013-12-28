@@ -236,6 +236,7 @@ h6 {
 
 h2 {
   font-size: 2rem;
+  margin: 1rem 0;
 }
 
 :focus {
@@ -244,7 +245,7 @@ h2 {
 }
 
 h2+p {
-  margin: -1.25rem 0 2rem 0;
+  margin: 0 0 2rem;
 }
 
 a {
@@ -354,7 +355,6 @@ code {
   box-sizing: border-box;
   min-height: 1rem;
   margin-bottom: 0;
-  padding: .5rem;
   background: #007FFF;
   border: 1px solid #FFF;
   border-radius: 2px;
