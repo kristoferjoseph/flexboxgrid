@@ -381,6 +381,13 @@ code {
   height: 8rem;
 }
 
+.container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .5rem;
+}
+
 .page-footer {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

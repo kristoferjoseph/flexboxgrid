@@ -127,6 +127,10 @@ code {
 .box--large {
   height: 8rem;
 }
+.container {
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
 .page-footer {
   box-sizing:border-box;
   padding-bottom: 3rem;
