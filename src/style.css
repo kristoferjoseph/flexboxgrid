@@ -57,7 +57,7 @@ code {
 }
 .page-section--hero {
   box-sizing: border-box;
-  padding: 0 2rem 2rem 2rem;
+  padding: 1rem 2rem 2rem 2rem;
   background: #FFF;
   border: 1px solid #FFF;
   border-radius: 2px;
@@ -145,6 +145,11 @@ code {
 }
 @media only screen and (min-width: 48rem) {
 
+     .visible--lap {
+       display: block;
+       visibility: visible;
+     }
+
     .page-section--hero {
       padding-top: 2rem;
     }
@@ -155,10 +160,6 @@ code {
     .p--hero {
       font-size: 1.25rem;
       margin-bottom: 2rem;
-    }
-    .download-button {
-      display: block;
-      visibility: visible;
     }
     .box--row, .box--first, .box--nested, .box--large, .box {
       padding: 1rem;
