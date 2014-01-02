@@ -128,22 +128,27 @@
   align-self: flex-start;
 }
 .start {
-  align-items: flex-start;
-  text-align: start;
-  justify-content: start;
+  justify-content: flex-start;
+}
+.justify--center {
+  justify-content: center;
+}
+.align--center {
+  text-align: center;
+}
+.text-align--end {
+  text-align: end;
+}
+.center--children {
+  align-items: center;
 }
 .center {
   align-self: center;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
 }
 .bottom {
   align-self: flex-end;
 }
 .end {
-  align-items: flex-end;
-  text-align: end;
   justify-content: flex-end;
 }
 .around {

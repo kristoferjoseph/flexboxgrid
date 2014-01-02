@@ -238,30 +238,38 @@
 }
 
 .start {
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  text-align: start;
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
+  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
-  justify-content: start;
+  justify-content: flex-start;
+}
+
+.justify--center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.align--center {
+  text-align: center;
+}
+
+.text-align--end {
+  text-align: end;
+}
+
+.center--children {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .center {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 .bottom {
@@ -271,11 +279,6 @@
 }
 
 .end {
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-  -ms-flex-align: end;
-  align-items: flex-end;
-  text-align: end;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;

@@ -47,33 +47,116 @@ pre {
 code {
   color: #007FFF;
 }
+.layout {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.page-nav {
+  z-index: 2;
+  box-sizing: border-box;
+  position: fixed;
+  padding: 0.5rem;
+  width: 100%;
+  background: transparent;
+}
+.page {
+  z-index: 1;
+  background: #EEE;
+  width: 100%;
+  transition: all .1s ease-in-out;
+}
+.open {
+  transform: translate3d(-250px, 0, 0);
+}
 .wrap {
   box-sizing: border-box;
   max-width: 75%;
   margin: 0 auto;
-  padding-top: 2rem;
 }
 .page-section {
-  margin-bottom: 5rem;
+  padding-top: 2rem;
+  margin: 3rem 0  5rem;
 }
-.page-section--hero {
+.page-features {
+  z-index: 0;
+}
+.menu-button {
+  float: right;
+  height: 2rem;
+  width: 2rem;
+  background: #FFF;
+  border: 1px solid transparent;
+}
+.menu-button:hover {
+  border: 1px solid #007FFF;
+  border-radius: 2px;
+}
+.menu-button:active {
+  background: #EEE;
+  border: 1px solid transparent;
+}
+.hero {
   box-sizing: border-box;
-  padding: 1rem 2rem 2rem 2rem;
+  padding: 2rem 2rem 2rem 2rem;
   background: #FFF;
   border: 1px solid #FFF;
   border-radius: 2px;
 }
-.header--hero {
+.hero__headline {
   font-size: 3rem;
   white-space: nowrap;
   margin-bottom: 0;
 }
-.p--hero {
+.hero__copy {
   font-size: 1rem;
   margin-bottom: 0;
   padding: 0 2rem;
 }
-.github-button,
+.slide-menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 250px;
+  box-sizing: border-box;
+  background:hsl(209, 100%, 10%);
+}
+.slide-menu > h2 {
+  box-sizing: border-box;
+  padding: 3rem 3rem 0 3rem;
+  color: #eee;
+}
+.slide-menu > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide-menu > ul > li {
+   height: 2rem;
+   line-height: 2rem;
+   color: #007FFF;
+   background: transparent;
+   transition: all .2s ease-in;
+}
+.slide-menu > ul > li:hover {
+  color: #fff;
+}
+.slide-menu > ul > li > a {
+  box-sizing: border-box;
+  padding-left: 3rem;
+  display: block;
+  color: #007FFF;
+  transition: color 0.2s ease-in;
+}
+.slide-menu > ul > li > a:hover {
+  color: hsl(210, 100%, 60%);
+  border-bottom: none;
+}
+
 .download-button {
   position: relative;
   display: inline-block;
@@ -149,19 +232,21 @@ code {
 }
 @media only screen and (min-width: 48rem) {
 
-     .visible--lap {
-       display: block;
-       visibility: visible;
-     }
-
-    .page-section--hero {
-      padding-top: 2rem;
+    .page {
+      width: 75%;
     }
-    .header--hero {
+    .slide-menu {
+      width: 25%;
+    }
+    .open {
+      width: 75%;
+      transform: translate3d(0,0,0);
+    }
+    .hero__headline {
       font-size: 6rem;
       margin-bottom: 2rem;
     }
-    .p--hero {
+    .hero__copy {
       font-size: 1.25rem;
       margin-bottom: 2rem;
     }
