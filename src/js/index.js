@@ -1,7 +1,7 @@
 (function(window){
   var d = window.document,
       q = d.querySelector,
-      menu = d.querySelector('.features'),
+      menu = d.querySelector('.js-menu'),
       menuButton = d.querySelector('.js-menu-button'),
       page = d.querySelector('.page');
 

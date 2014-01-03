@@ -1,1 +1,1 @@
-!function(a){var b=a.document,c=(b.querySelector,b.querySelector(".features")),d=b.querySelector(".js-menu-button"),e=b.querySelector(".page");c.classList.add("slide-menu"),d.addEventListener("click",function(){e.classList.toggle("open")})}(this);
+!function(a){var b=a.document,c=(b.querySelector,b.querySelector(".js-menu")),d=b.querySelector(".js-menu-button"),e=b.querySelector(".page");c.classList.add("slide-menu"),d.addEventListener("click",function(){e.classList.toggle("open")})}(this);

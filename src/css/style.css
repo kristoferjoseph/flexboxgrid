@@ -75,11 +75,13 @@ code {
   margin: 0 auto;
 }
 .page-section {
-  padding-top: 2rem;
+  padding-top: 3rem;
   margin: 3rem 0  5rem;
 }
 .page-features {
   z-index: 0;
+  width: 100%;
+  background:hsl(209, 100%, 10%);
 }
 .menu-button {
   float: right;
@@ -121,38 +123,37 @@ code {
   z-index: -1;
   height: 100%;
   width: 250px;
+}
+.menu {
   box-sizing: border-box;
+  padding-bottom: 5rem;
   background:hsl(209, 100%, 10%);
 }
-.slide-menu > h2 {
+.menu__header {
   box-sizing: border-box;
   padding: 3rem 3rem 0 3rem;
   color: #eee;
 }
-.slide-menu > ul {
+.menu__list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
-.slide-menu > ul > li {
-   height: 2rem;
-   line-height: 2rem;
-   color: #007FFF;
-   background: transparent;
-   transition: all .2s ease-in;
+.menu__list-item {
+  height: 2rem;
+  line-height: 2rem;
+  color: #007FFF;
+  background: transparent;
+  transition: all .2s ease-in;
 }
-.slide-menu > ul > li:hover {
-  color: #fff;
-}
-.slide-menu > ul > li > a {
+.menu__link {
   box-sizing: border-box;
   padding-left: 3rem;
   display: block;
   color: #007FFF;
   transition: color 0.2s ease-in;
 }
-.slide-menu > ul > li > a:hover {
+.menu__link:hover {
   color: hsl(210, 100%, 60%);
   border-bottom: none;
 }
