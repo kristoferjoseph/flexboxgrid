@@ -53,7 +53,6 @@ code {
   flex-direction: column;
 }
 .page-nav {
-  z-index: 2;
   box-sizing: border-box;
   position: fixed;
   padding: 0.5rem;
@@ -61,13 +60,10 @@ code {
   background: transparent;
 }
 .page {
-  z-index: 1;
+  z-index: 0;
   background: #EEE;
   width: 100%;
   transition: all .1s ease-in-out;
-}
-.open {
-  transform: translate3d(-250px, 0, 0);
 }
 .wrap {
   box-sizing: border-box;
@@ -79,14 +75,16 @@ code {
   margin: 3rem 0  5rem;
 }
 .page-features {
-  z-index: 0;
   width: 100%;
   background:hsl(209, 100%, 10%);
   overflow: scroll;
 }
 .menu-button {
+  position: fixed;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 1;
   box-sizing: border-box;
-  float: right;
   padding: 0.5rem;
   height: 2rem;
   width: 2rem;
@@ -111,6 +109,9 @@ code {
   clip: rect(0 0 0 0);
   opacity: 0.001;
 }
+#menu-button:checked + .page {
+  transform: translate3d(-250px, 0, 0);
+}
 .hero {
   box-sizing: border-box;
   padding: 2rem 2rem 2rem 2rem;
@@ -134,7 +135,6 @@ code {
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
   height: 100%;
   width: 250px;
 }

@@ -14,12 +14,6 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to
                 improve your experience.</p>
         <![endif]-->
-        <div class="page-nav visible--hand invisible--desk">
-            <label class="icomatic menu-button">
-                <input type="checkbox" class="menu-button__input">
-                listview
-            </label>
-        </div>
         <div class="row page-features">
         <section class="menu js-menu slide-menu">
             <h2 class="menu__header">Features</h2>
@@ -62,6 +56,10 @@
             </ul>
             </section>
         </div>
+        <label for="menu-button" class="icomatic menu-button visible--hand invisible--desk">
+            listview
+        </label>
+        <input id="menu-button" type="checkbox" class="menu-button__input">
         <div class="page">
             <header class="hero">
                 <div class="row justify--center">
@@ -760,7 +758,6 @@
             catch (e)
             {}
         </script>
-        <script type="text/javascript" src="js/index.js"></script>
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/topcoat-icons/0.2.0/font/icomatic.css">
         <script src="//localhost:35729/livereload.js"></script>
     </body>

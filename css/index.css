@@ -290,7 +290,6 @@ code {
 }
 
 .page-nav {
-  z-index: 2;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -301,17 +300,11 @@ code {
 }
 
 .page {
-  z-index: 1;
+  z-index: 0;
   background: #EEE;
   width: 100%;
   -webkit-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out;
-}
-
-.open {
-  -webkit-transform: translate3d(-250px,0,0);
-  -ms-transform: translate3d(-250px,0,0);
-  transform: translate3d(-250px,0,0);
 }
 
 .wrap {
@@ -328,17 +321,19 @@ code {
 }
 
 .page-features {
-  z-index: 0;
   width: 100%;
   background: #001a33;
   overflow: scroll;
 }
 
 .menu-button {
+  position: fixed;
+  top: .75rem;
+  right: .75rem;
+  z-index: 1;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  float: right;
   padding: .5rem;
   height: 2rem;
   width: 2rem;
@@ -365,6 +360,12 @@ code {
   border: 0;
   clip: rect(0 0 0 0);
   opacity: .001;
+}
+
+#menu-button:checked+.page {
+  -webkit-transform: translate3d(-250px,0,0);
+  -ms-transform: translate3d(-250px,0,0);
+  transform: translate3d(-250px,0,0);
 }
 
 .hero {
@@ -395,7 +396,6 @@ code {
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
   height: 100%;
   width: 250px;
 }
