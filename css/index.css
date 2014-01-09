@@ -331,10 +331,15 @@ code {
   z-index: 0;
   width: 100%;
   background: #001a33;
+  overflow: scroll;
 }
 
 .menu-button {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   float: right;
+  padding: .5rem;
   height: 2rem;
   width: 2rem;
   background: #FFF;
@@ -349,6 +354,17 @@ code {
 .menu-button:active {
   background: #EEE;
   border: 1px solid transparent;
+}
+
+.menu-button__input {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+  opacity: .001;
 }
 
 .hero {
@@ -378,6 +394,7 @@ code {
   position: fixed;
   top: 0;
   right: 0;
+  bottom: 0;
   z-index: -1;
   height: 100%;
   width: 250px;

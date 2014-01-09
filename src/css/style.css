@@ -82,9 +82,12 @@ code {
   z-index: 0;
   width: 100%;
   background:hsl(209, 100%, 10%);
+  overflow: scroll;
 }
 .menu-button {
+  box-sizing: border-box;
   float: right;
+  padding: 0.5rem;
   height: 2rem;
   width: 2rem;
   background: #FFF;
@@ -97,6 +100,16 @@ code {
 .menu-button:active {
   background: #EEE;
   border: 1px solid transparent;
+}
+.menu-button__input {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+  opacity: 0.001;
 }
 .hero {
   box-sizing: border-box;
@@ -120,6 +133,7 @@ code {
   position: fixed;
   top: 0;
   right: 0;
+  bottom: 0;
   z-index: -1;
   height: 100%;
   width: 250px;
@@ -157,7 +171,6 @@ code {
   color: hsl(210, 100%, 60%);
   border-bottom: none;
 }
-
 .download-button {
   position: relative;
   display: inline-block;
@@ -184,7 +197,11 @@ code {
   color: #FFF;
   border-top: 1px solid #0066CC;
 }
-.box--row, .box--first, .box--nested, .box--large, .box {
+.box--row,
+.box--first,
+.box--nested,
+.box--large,
+.box {
   box-sizing: border-box;
   position: relative;
   box-sizing: border-box;
@@ -251,7 +268,11 @@ code {
       font-size: 1.25rem;
       margin-bottom: 2rem;
     }
-    .box--row, .box--first, .box--nested, .box--large, .box {
+    .box--row,
+    .box--first,
+    .box--nested,
+    .box--large,
+    .box {
       padding: 1rem;
     }
     .invisible--desk {
