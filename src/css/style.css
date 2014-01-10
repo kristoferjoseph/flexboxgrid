@@ -257,9 +257,8 @@ code {
     .slide-menu {
       width: 25%;
     }
-    .open {
-      width: 75%;
-      transform: translate3d(0,0,0);
+    #menu-button:checked + .page {
+      transform: translate3d(0, 0, 0);
     }
     .hero__headline {
       font-size: 6rem;
