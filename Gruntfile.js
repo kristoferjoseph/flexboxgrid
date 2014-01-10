@@ -37,6 +37,13 @@ module.exports = function(grunt) {
                 }
             }
         },
+        processhtml: {
+          include: {
+            files: {
+              'index.html': ['index.html']
+            }
+          }
+        },
         watch: {
             css: {
                 files: 'src/**/*',
@@ -61,9 +68,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-processhtml');
 
     // Default task.
-    grunt.registerTask('default', ['cssmin:concat', 'autoprefixer', 'cssmin:minify', 'uglify']);
+    grunt.registerTask('default', ['cssmin:concat', 'autoprefixer', 'cssmin:minify', 'uglify', 'processhtml']);
     grunt.registerTask('release', ['autoprefixer:release', 'cssmin', 'uglify']);
     grunt.registerTask('reload', ['watch']);
 
