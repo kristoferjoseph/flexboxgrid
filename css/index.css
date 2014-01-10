@@ -363,9 +363,9 @@ code {
 }
 
 #menu-button:checked+.page {
-  -webkit-transform: translate3d(-250px,0,0);
-  -ms-transform: translate3d(-250px,0,0);
-  transform: translate3d(-250px,0,0);
+  -webkit-transform: translate3d(-15rem,0,0);
+  -ms-transform: translate3d(-15rem,0,0);
+  transform: translate3d(-15rem,0,0);
 }
 
 .hero {

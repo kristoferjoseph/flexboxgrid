@@ -110,7 +110,7 @@ code {
   opacity: 0.001;
 }
 #menu-button:checked + .page {
-  transform: translate3d(-250px, 0, 0);
+  transform: translate3d(-15rem, 0, 0);
 }
 .hero {
   box-sizing: border-box;
