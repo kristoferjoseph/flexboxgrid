@@ -771,6 +771,14 @@
                 icn.href = '//cdnjs.cloudflare.com/ajax/libs/topcoat-icons/0.2.0/font/icomatic.css';
                 window.addEventListener('load', function() {
                     document.body.appendChild(icn);
+
+                    var menuButton = document.querySelector('.menu-button');
+                    menuButton.addEventListener('click', function(e) {
+                        var target = window[this.htmlFor];
+                        target.checked = !target.checked;
+                        e.preventDefault();
+                    });
+
                 });
 
             })();
