@@ -18,7 +18,7 @@
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: 0 -1rem;
+  margin: 0 -0.5rem;
 }
 
 .row.reverse {
@@ -63,7 +63,6 @@
   flex-wrap: column-reverse;
 }
 
-.row,
 .column,
 .column-1--hand,
 .column-2--hand,
@@ -105,9 +104,9 @@
 
 .column-2--hand {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 16.666%;
-  -ms-flex: 0 0 16.666%;
-  flex: 0 0 16.666%;
+  -webkit-flex: 0 0 16.667%;
+  -ms-flex: 0 0 16.667%;
+  flex: 0 0 16.667%;
 }
 
 .column-3--hand {
@@ -126,9 +125,9 @@
 
 .column-5--hand {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 41.666%;
-  -ms-flex: 0 0 41.666%;
-  flex: 0 0 41.666%;
+  -webkit-flex: 0 0 41.667%;
+  -ms-flex: 0 0 41.667%;
+  flex: 0 0 41.667%;
 }
 
 .column-6--hand {
@@ -147,9 +146,9 @@
 
 .column-8--hand {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 66.666%;
-  -ms-flex: 0 0 66.666%;
-  flex: 0 0 66.666%;
+  -webkit-flex: 0 0 66.667%;
+  -ms-flex: 0 0 66.667%;
+  flex: 0 0 66.667%;
 }
 
 .column-9--hand {
@@ -168,9 +167,9 @@
 
 .column-11--hand {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 91.666%;
-  -ms-flex: 0 0 91.666%;
-  flex: 0 0 91.666%;
+  -webkit-flex: 0 0 91.667%;
+  -ms-flex: 0 0 91.667%;
+  flex: 0 0 91.667%;
 }
 
 .column-12--hand {
@@ -192,7 +191,7 @@
 }
 
 .offset-2--hand {
-  margin-left: 16.666%;
+  margin-left: 16.667%;
 }
 
 .offset-3--hand {
@@ -204,7 +203,7 @@
 }
 
 .offset-5--hand {
-  margin-left: 41.666%;
+  margin-left: 41.667%;
 }
 
 .offset-6--hand {
@@ -216,7 +215,7 @@
 }
 
 .offset-8--hand {
-  margin-left: 66.666%;
+  margin-left: 66.667%;
 }
 
 .offset-9--hand {
@@ -228,7 +227,7 @@
 }
 
 .offset-11--hand {
-  margin-left: 91.666%;
+  margin-left: 91.667%;
 }
 
 .top {
@@ -322,9 +321,9 @@
 
   .column-2--lap {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 16.666%;
-    -ms-flex: 0 0 16.666%;
-    flex: 0 0 16.666%;
+    -webkit-flex: 0 0 16.667%;
+    -ms-flex: 0 0 16.667%;
+    flex: 0 0 16.667%;
   }
 
   .column-3--lap {
@@ -343,9 +342,9 @@
 
   .column-5--lap {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 41.666%;
-    -ms-flex: 0 0 41.666%;
-    flex: 0 0 41.666%;
+    -webkit-flex: 0 0 41.667%;
+    -ms-flex: 0 0 41.667%;
+    flex: 0 0 41.667%;
   }
 
   .column-6--lap {
@@ -364,9 +363,9 @@
 
   .column-8--lap {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 66.666%;
-    -ms-flex: 0 0 66.666%;
-    flex: 0 0 66.666%;
+    -webkit-flex: 0 0 66.667%;
+    -ms-flex: 0 0 66.667%;
+    flex: 0 0 66.667%;
   }
 
   .column-9--lap {
@@ -385,9 +384,9 @@
 
   .column-11--lap {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 91.666%;
-    -ms-flex: 0 0 91.666%;
-    flex: 0 0 91.666%;
+    -webkit-flex: 0 0 91.667%;
+    -ms-flex: 0 0 91.667%;
+    flex: 0 0 91.667%;
   }
 
   .column-12--lap {
@@ -409,7 +408,7 @@
   }
 
   .offset-2--lap {
-    margin-left: 16.666%;
+    margin-left: 16.667%;
   }
 
   .offset-3--lap {
@@ -421,7 +420,7 @@
   }
 
   .offset-5--lap {
-    margin-left: 41.666%;
+    margin-left: 41.667%;
   }
 
   .offset-6--lap {
@@ -433,7 +432,7 @@
   }
 
   .offset-8--lap {
-    margin-left: 66.666%;
+    margin-left: 66.667%;
   }
 
   .offset-9--lap {
@@ -445,7 +444,7 @@
   }
 
   .offset-11--lap {
-    margin-left: 91.666%;
+    margin-left: 91.667%;
   }
 }
 
@@ -459,9 +458,9 @@
 
   .column-2--desk {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 16.666%;
-    -ms-flex: 0 0 16.666%;
-    flex: 0 0 16.666%;
+    -webkit-flex: 0 0 16.667%;
+    -ms-flex: 0 0 16.667%;
+    flex: 0 0 16.667%;
   }
 
   .column-3--desk {
@@ -480,9 +479,9 @@
 
   .column-5--desk {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 41.666%;
-    -ms-flex: 0 0 41.666%;
-    flex: 0 0 41.666%;
+    -webkit-flex: 0 0 41.667%;
+    -ms-flex: 0 0 41.667%;
+    flex: 0 0 41.667%;
   }
 
   .column-6--desk {
@@ -501,9 +500,9 @@
 
   .column-8--desk {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 66.666%;
-    -ms-flex: 0 0 66.666%;
-    flex: 0 0 66.666%;
+    -webkit-flex: 0 0 66.667%;
+    -ms-flex: 0 0 66.667%;
+    flex: 0 0 66.667%;
   }
 
   .column-9--desk {
@@ -522,9 +521,9 @@
 
   .column-11--desk {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 91.666%;
-    -ms-flex: 0 0 91.666%;
-    flex: 0 0 91.666%;
+    -webkit-flex: 0 0 91.667%;
+    -ms-flex: 0 0 91.667%;
+    flex: 0 0 91.667%;
   }
 
   .column-12--desk {
@@ -546,7 +545,7 @@
   }
 
   .offset-2--desk {
-    margin-left: 16.666%;
+    margin-left: 16.667%;
   }
 
   .offset-3--desk {
@@ -558,7 +557,7 @@
   }
 
   .offset-5--desk {
-    margin-left: 41.666%;
+    margin-left: 41.667%;
   }
 
   .offset-6--desk {
@@ -570,7 +569,7 @@
   }
 
   .offset-8--desk {
-    margin-left: 66.666%;
+    margin-left: 66.667%;
   }
 
   .offset-9--desk {
@@ -582,7 +581,7 @@
   }
 
   .offset-11--desk {
-    margin-left: 91.666%;
+    margin-left: 91.667%;
   }
 }
 
@@ -596,9 +595,9 @@
 
   .column-2--wall {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 16.666%;
-    -ms-flex: 0 0 16.666%;
-    flex: 0 0 16.666%;
+    -webkit-flex: 0 0 16.667%;
+    -ms-flex: 0 0 16.667%;
+    flex: 0 0 16.667%;
   }
 
   .column-3--wall {
@@ -617,9 +616,9 @@
 
   .column-5--wall {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 41.666%;
-    -ms-flex: 0 0 41.666%;
-    flex: 0 0 41.666%;
+    -webkit-flex: 0 0 41.667%;
+    -ms-flex: 0 0 41.667%;
+    flex: 0 0 41.667%;
   }
 
   .column-6--wall {
@@ -638,9 +637,9 @@
 
   .column-8--wall {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 66.666%;
-    -ms-flex: 0 0 66.666%;
-    flex: 0 0 66.666%;
+    -webkit-flex: 0 0 66.667%;
+    -ms-flex: 0 0 66.667%;
+    flex: 0 0 66.667%;
   }
 
   .column-9--wall {
@@ -659,9 +658,9 @@
 
   .column-11--wall {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 91.666%;
-    -ms-flex: 0 0 91.666%;
-    flex: 0 0 91.666%;
+    -webkit-flex: 0 0 91.667%;
+    -ms-flex: 0 0 91.667%;
+    flex: 0 0 91.667%;
   }
 
   .column-12--wall {
@@ -683,7 +682,7 @@
   }
 
   .offset-2--wall {
-    margin-left: 16.666%;
+    margin-left: 16.667%;
   }
 
   .offset-3--wall {
@@ -695,7 +694,7 @@
   }
 
   .offset-5--wall {
-    margin-left: 41.666%;
+    margin-left: 41.667%;
   }
 
   .offset-6--wall {
@@ -707,7 +706,7 @@
   }
 
   .offset-8--wall {
-    margin-left: 66.666%;
+    margin-left: 66.667%;
   }
 
   .offset-9--wall {
@@ -719,6 +718,6 @@
   }
 
   .offset-11--wall {
-    margin-left: 91.666%;
+    margin-left: 91.667%;
   }
 }
