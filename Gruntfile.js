@@ -38,11 +38,25 @@ module.exports = function(grunt) {
             }
         },
         processhtml: {
-          include: {
-            files: {
-              'index.html': ['index.html']
+            dist: {
+                options: {
+                    process: true
+                },
+                files: {
+                    'index.html': ['src/index.html']
+                }
             }
-          }
+        },
+        htmlmin: {
+            dist: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: {
+                    'index.html': ['index.html']
+                }
+            }
         },
         watch: {
             css: {
@@ -54,10 +68,10 @@ module.exports = function(grunt) {
                     livereload: true,
                 },
                 files: [
-                  'index.html',
-                  'css/*.css',
-                  'js/*.js',
-                  'img/*'
+                        'index.html',
+                        'css/*.css',
+                        'js/*.js',
+                        'img/*'
                 ]
             }
         }
@@ -69,10 +83,17 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-processhtml');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
     // Default task.
-    grunt.registerTask('default', ['cssmin:concat', 'autoprefixer', 'cssmin:minify', 'uglify', 'processhtml']);
-    grunt.registerTask('release', ['autoprefixer:release', 'cssmin', 'uglify']);
+    grunt.registerTask('default',
+      ['cssmin:concat',
+       'autoprefixer',
+       'cssmin:minify',
+       'uglify',
+       'processhtml',
+       'htmlmin'
+       ]);
     grunt.registerTask('reload', ['watch']);
 
 };
