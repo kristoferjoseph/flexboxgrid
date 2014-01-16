@@ -123,32 +123,23 @@
 .offset-11--hand {
   margin-left: 91.667%;
 }
-.top {
-  align-self: flex-start;
-}
 .start {
   justify-content: flex-start;
 }
-.justify--center {
-  justify-content: center;
-}
-.align--center {
-  text-align: center;
-}
-.text-align--end {
-  text-align: end;
-}
-.center--children {
-  align-items: center;
-}
 .center {
-  align-self: center;
-}
-.bottom {
-  align-self: flex-end;
+  justify-content: center;
 }
 .end {
   justify-content: flex-end;
+}
+.top {
+  align-items: flex-start;
+}
+.middle {
+  align-items: center;
+}
+.bottom {
+  align-items: flex-end;
 }
 .around {
   justify-content: space-around;
