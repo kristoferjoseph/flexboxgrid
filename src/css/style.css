@@ -128,6 +128,7 @@ code {
   font-size: 1rem;
   margin-bottom: 0;
   padding: 0 2rem;
+  text-align: center;
 }
 .slide-menu {
   display: block;
