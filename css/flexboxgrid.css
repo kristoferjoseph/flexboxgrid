@@ -299,7 +299,7 @@
   order: 1;
 }
 
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 48em) {
   .column-1--lap {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 8.333%;
@@ -436,7 +436,7 @@
   }
 }
 
-@media only screen and (min-width: 62rem) {
+@media only screen and (min-width: 62em) {
   .column-1--desk {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 8.333%;
@@ -573,7 +573,7 @@
   }
 }
 
-@media only screen and (min-width: 75rem) {
+@media only screen and (min-width: 75em) {
   .column-1--wall {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 8.333%;
