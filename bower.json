@@ -1,0 +1,8 @@
+{
+  "name": "flexboxgrid",
+  "version": "0.2.0",
+  "description": "Grid based off of CSS3 flexbox specification",
+  "authors": ["@dam"],
+  "licence": "Apache-2.0",
+  "keywords": ["css", "grid", "flexbox"]
+}
