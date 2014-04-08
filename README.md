@@ -1,4 +1,3 @@
-
 Flexbox Grid
 ===========
 
@@ -28,8 +27,11 @@ page.
 <link rel="stylesheet" href="css/flexbox.min.css" media="screen" />
 ```
 Or better yet
+
 `cat ./css/**/*.css > bundle.css`
+
 and slap that whole mess in a style tag in your head.
+
 *Check flexboxgrid.com
 [Gruntfile.js](https://github.com/kristoferjoseph.com/flexboxgrid/tree/master/Gruntfile.js) to see how I did it.*
 
