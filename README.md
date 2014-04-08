@@ -13,9 +13,10 @@ Installation
 ### Bower
 `npm r bower -g && npm i flexboxgrid --save`
 
-### Raw dog CSS *like a boss*
+### Raw Dog CSS *like a boss*
 
 Download
+
 [Development](https://github.com/kristoferjoseph/flexboxgrid/tree/master/css/flexboxgrid.css)
 
 [Production](https://github.com/kristoferjoseph/flexboxgrid/tree/master/css/flexboxgrid.min.css)
