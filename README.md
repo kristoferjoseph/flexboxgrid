@@ -17,9 +17,9 @@ Installation
 
 Download
 
-[Development](https://github.com/kristoferjoseph/flexboxgrid/tree/master/css/flexboxgrid.css)
+[Development](https://raw.githubusercontent.com/kristoferjoseph/flexboxgrid/master/css/flexboxgrid.css)
 
-[Production](https://github.com/kristoferjoseph/flexboxgrid/tree/master/css/flexboxgrid.min.css)
+[Production](https://raw.githubusercontent.com/kristoferjoseph/flexboxgrid/master/css/flexboxgrid.min.css)
 
 Add the flexbox.css *development* or flexbox.min.css *production* to your html
 page.
@@ -34,7 +34,7 @@ Or better yet
 and slap that whole mess in a style tag in your head.
 
 *Check flexboxgrid.com
-[Gruntfile.js](https://github.com/kristoferjoseph.com/flexboxgrid/tree/master/Gruntfile.js) to see how I did it.*
+[Gruntfile.js](https://github.com/kristoferjoseph/flexboxgrid/blob/master/Gruntfile.js) to see how I did it.*
 
 View the documentation at [flexboxgrid.com](http://flexboxgrid.com)
 
