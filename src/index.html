@@ -19,10 +19,10 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to
                 improve your experience.</p>
         <![endif]-->
-        <section class="menu js-menu slide-menu">
+        <section class="menu slide-menu">
             <h2 class="menu__header">Features</h2>
 
-            <ul class="menu__list js-menu__list">
+            <ul class="menu__list">
                 <li class="menu__list-item">
                     <a class="menu__link" href="#responsive">Responsive</a>
                 </li>
@@ -59,7 +59,7 @@
                 -->
             </ul>
         </section>
-        <label for="menu-button" class="icomatic menu-button visible--hand invisible--desk">
+        <label for="menu-button" class="icomatic menu-button js-menu-button visible--hand invisible--desk">
             listview
         </label>
         <input id="menu-button" type="checkbox" class="menu-button__input">
@@ -799,7 +799,7 @@
                 window.addEventListener('load', function() {
                     document.body.appendChild(icn);
 
-                    var menuButton = document.querySelector('.menu-button');
+                    var menuButton = document.querySelector('.js-menu-button');
                     menuButton.addEventListener('click', function(e) {
                         var target = window[this.htmlFor];
                         target.checked = !target.checked;

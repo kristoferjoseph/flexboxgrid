@@ -3,13 +3,18 @@ body {
   padding: 0;
   margin: 0;
   font-size: 18px;
-  font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: normal;
   background: #EEE;
   line-height: 1.4rem;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family:"bree", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "bree", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #001A33;
 }
 h2 {
@@ -76,7 +81,7 @@ code {
 }
 .page-features {
   width: 100%;
-  background:hsl(209, 100%, 10%);
+  background: hsl(209, 100%, 10%);
   overflow: scroll;
 }
 .menu-button {
@@ -85,11 +90,12 @@ code {
   right: 0.75rem;
   z-index: 1;
   box-sizing: border-box;
-  padding: 0.5rem;
+  padding: 0.45rem;
   height: 2rem;
   width: 2rem;
   background: #FFF;
   border: 1px solid transparent;
+  user-select: none;
 }
 .menu-button:hover {
   border: 1px solid #007FFF;
@@ -143,7 +149,7 @@ code {
 .menu {
   box-sizing: border-box;
   padding-bottom: 5rem;
-  background:hsl(209, 100%, 10%);
+  background: hsl(209, 100%, 10%);
 }
 .menu__header {
   box-sizing: border-box;
@@ -235,7 +241,7 @@ code {
   padding: 0.5rem;
 }
 .page-footer {
-  box-sizing:border-box;
+  box-sizing: border-box;
   padding-bottom: 3rem;
 }
 .tag {
@@ -251,43 +257,39 @@ code {
   visibility: visible;
 }
 @media only screen and (min-width: 48rem) {
-
-    body {
-      font-size: 16px;
-    }
-
-    .page {
-      width: 75%;
-    }
-    .slide-menu {
-      width: 25%;
-    }
-    #menu-button:checked + .page {
-      transform: translate3d(0, 0, 0);
-    }
-    .hero__headline {
-      font-size: 6rem;
-      margin-bottom: 2rem;
-    }
-    .hero__copy {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-    }
-    .box--row,
-    .box--first,
-    .box--nested,
-    .box--large,
-    .box {
-      padding: 1rem;
-    }
-    .invisible--desk {
-      display: none;
-      visibility: hidden;
-    }
-    .visible--desk {
-      display: block;
-      visibility: visible;
-    }
-
+  body {
+    font-size: 16px;
+  }
+  .page {
+    width: 75%;
+  }
+  .slide-menu {
+    width: 25%;
+  }
+  #menu-button:checked + .page {
+    transform: translate3d(0, 0, 0);
+  }
+  .hero__headline {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+  }
+  .hero__copy {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .box--row,
+  .box--first,
+  .box--nested,
+  .box--large,
+  .box {
+    padding: 1rem;
+  }
+  .invisible--desk {
+    display: none;
+    visibility: hidden;
+  }
+  .visible--desk {
+    display: block;
+    visibility: visible;
+  }
 }
-

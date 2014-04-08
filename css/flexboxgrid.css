@@ -18,6 +18,11 @@
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  /*
+   * This negative margin is compensation
+   * for when rows wrap. DO NOT LIKE.
+   * If you have a better way please suggest. :)
+   */
   margin: 0 -0.5rem;
 }
 

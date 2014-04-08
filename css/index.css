@@ -334,11 +334,15 @@ code {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: .5rem;
+  padding: .45rem;
   height: 2rem;
   width: 2rem;
   background: #FFF;
   border: 1px solid transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .menu-button:hover {
@@ -896,7 +900,7 @@ code {
   order: 1;
 }
 
-@media only screen and (min-width:48rem) {
+@media only screen and (min-width:48em) {
   .column-1--lap {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 8.333%;
@@ -1033,7 +1037,7 @@ code {
   }
 }
 
-@media only screen and (min-width:62rem) {
+@media only screen and (min-width:62em) {
   .column-1--desk {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 8.333%;
@@ -1170,7 +1174,7 @@ code {
   }
 }
 
-@media only screen and (min-width:75rem) {
+@media only screen and (min-width:75em) {
   .column-1--wall {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 8.333%;

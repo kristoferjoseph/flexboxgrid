@@ -6,6 +6,11 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  /*
+   * This negative margin is compensation
+   * for when rows wrap. DO NOT LIKE.
+   * If you have a better way please suggest. :)
+   */
   margin: 0 -0.5rem;
 }
 .row.reverse {
@@ -154,7 +159,7 @@
   order: 1;
 }
 
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 48em) {
 
   .column-1--lap {
     flex: 0 0 8.333%;
@@ -231,7 +236,7 @@
 
 }
 
-@media only screen and (min-width: 62rem) {
+@media only screen and (min-width: 62em) {
 
   .column-1--desk {
     flex: 0 0 8.333%;
@@ -307,7 +312,7 @@
   }
 }
 
-@media only screen and (min-width: 75rem) {
+@media only screen and (min-width: 75em) {
 
   .column-1--wall {
     flex: 0 0 8.333%;
