@@ -1,3 +1,11 @@
+(function() {
+  var menuButton = document.querySelector('.js-menu-button'),
+      page = document.querySelector('.js-page');
+
+  menuButton.addEventListener('click', function(e) {
+    page.classList.toggle('open');
+  });
+}());
 (function(i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
     i[r] = i[r] || function() {
