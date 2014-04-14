@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+
 <html>
 
     <head>
@@ -61,14 +62,14 @@
         <input id="menu-button" type="checkbox" class="menu-button__input">
         <div class="page js-page">
             <header class="hero">
-                <div class="row center">
+                <div class="row center--hand">
                      <h1 class="hero__headline">Flexbox Grid</h1>
                 </div>
-                <div class="row center">
+                <div class="row center--hand">
                     <p class="hero__copy">A grid system based on the <a href="http://caniuse.com/#search=flexbox"><code class="inline-anchor">flex</code></a> display
                         property.</p>
                 </div>
-                <div class="row center">
+                <div class="row center--hand">
                   <a class="button invisible--hand visible--desk" href="https://github.com/kristoferjoseph/flexboxgrid/archive/v1.1.0.zip">Download</a>
                   <a class="button" href="https://github.com/kristoferjoseph/flexboxgrid">Github</a>
 
@@ -81,7 +82,7 @@
                 <section class="page-section">
                      <h2>Responsive</h2>
 
-                    <p>Responsive modifiers enable specifying different column sizes and offsets at hand,
+                    <p>Responsive modifiers enable specifying different column sizes, offsets, alignment and distribution at hand,
                         lap, desk & wall viewport widths.</p>
                     <div class="row">
                         <div class="column-12--hand column-3--lap column-2--desk column-1--wall">
@@ -180,7 +181,7 @@
                         </div>
                     </div>
 <pre><code>.column-6--hand {
-  flex: 0 0 50%;
+  flex-basis: 50%;
 }</code></pre>
 
                 </section>
@@ -371,12 +372,12 @@
 
                 <p>Add classes to align elements to the start or end of a row as well as the top,
                     bottom, or center of a column</p>
-                 <h3><code>.start</code></h3>
+                    <h3><code>.start--{{ modifier }}</code></h3>
 
                 <div class="row">
                     <div class="column-12--hand">
                         <div class="box container">
-                            <div class="row start">
+                            <div class="row start--hand">
                                 <div class="column-6--hand">
                                     <div class="box--nested"></div>
                                 </div>
@@ -384,7 +385,7 @@
                         </div>
                     </div>
                 </div>*default alignment
-<pre><code>&lt;div class="row start">
+<pre><code>&lt;div class="row start--hand">
     &lt;div class="column-6--hand">
         &lt;div class="box">
             start
@@ -393,12 +394,13 @@
 &lt;/div>
 </code></pre>
 
-                 <h3><code>.center</code></h3>
+
+                <h3><code>.center--{{ modifier }}</code></h3>
 
                 <div class="row">
                     <div class="column-12--hand">
                         <div class="box container">
-                            <div class="row center">
+                            <div class="row center--hand">
                                 <div class="column-6--hand">
                                     <div class="box--nested"></div>
                                 </div>
@@ -406,7 +408,7 @@
                         </div>
                     </div>
                 </div>
-<pre><code>&lt;div class="row center">
+<pre><code>&lt;div class="row center--hand">
     &lt;div class="column-6--hand">
         &lt;div class="box">
             start
@@ -415,12 +417,12 @@
 &lt;/div>
 </code></pre>
 
-                 <h3><code>.end</code></h3>
+                <h3><code>.end--{{ modifier }}</code></h3>
 
                 <div class="row">
                     <div class="column-12--hand">
                         <div class="box container">
-                            <div class="row end">
+                            <div class="row end--hand">
                                 <div class="column-6--hand">
                                     <div class="box--nested"></div>
                                 </div>
@@ -428,7 +430,7 @@
                         </div>
                     </div>
                 </div>
-<pre><code>&lt;div class="row end">
+<pre><code>&lt;div class="row end--hand">
     &lt;div class="column-6--hand">
         &lt;div class="box">
             end
@@ -437,9 +439,30 @@
 &lt;/div>
 </code></pre>
 
-                 <h3><code>.top</code></h3>
+                <p>Here is an example of using the modifiers in conjunction to acheive different alignment at different viewport sizes. </p>
+                <div class="row">
+                    <div class="column-12--hand">
+                        <div class="box container">
+                            <div class="row center--hand end--lap start--wall">
+                                <div class="column-6--hand">
+                                    <div class="box--nested"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>*Resize the browser window to see the alignment change.
+<pre><code>&lt;div class="row center--hand end--lap start--wall">
+    &lt;div class="column-6--hand">
+        &lt;div class="box">
+            All together now
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+</code></pre>
 
-                <div class="row top">
+                <h3><code>.top--{{ modifier }}</code></h3>
+
+                <div class="row top--hand">
                     <div class="column-6--hand">
                         <div class="box--large"></div>
                     </div>
@@ -447,7 +470,7 @@
                         <div class="box"></div>
                     </div>
                 </div>*default alignment
-<pre><code>&lt;div class="row top">
+<pre><code>&lt;div class="row top--hand">
     &lt;div class="column-6--hand">
         &lt;div class="box">
             top
@@ -456,9 +479,9 @@
 &lt;/div>
 </code></pre>
 
-                 <h3><code>.middle</code></h3>
+                <h3><code>.middle--{{ modifier }}</code></h3>
 
-                <div class="row middle">
+                <div class="row middle--hand">
                     <div class="column-6--hand">
                         <div class="box--large"></div>
                     </div>
@@ -466,7 +489,7 @@
                         <div class="box"></div>
                     </div>
                 </div>
-<pre><code>&lt;div class="row middle">
+<pre><code>&lt;div class="row middle--hand">
     &lt;div class="column-6--hand">
         &lt;div class="box">
             center
@@ -475,9 +498,9 @@
 &lt;/div>
 </code></pre>
 
-                 <h3><code>.bottom</code></h3>
+                <h3><code>.bottom--{{ modifier }}</code></h3>
 
-                <div class="row bottom">
+                <div class="row bottom--hand">
                     <div class="column-6--hand">
                         <div class="box--large"></div>
                     </div>
@@ -485,7 +508,7 @@
                         <div class="box"></div>
                     </div>
                 </div>
-<pre><code>&lt;div class="row bottom">
+<pre><code>&lt;div class="row bottom--hand">
     &lt;div class="column-6--hand">
         &lt;div class="box">
             bottom
@@ -501,12 +524,12 @@
                  <h2>Distribution</h2>
 
                 <p>Add classes to distribute the contents of a row or column.</p>
-                 <h3><code>.around</code></h3>
+                <h3><code>.around--{{ modifier }}</code></h3>
 
                 <div class="row">
                     <div class="column-12--hand">
                         <div class="box container">
-                            <div class="row around">
+                            <div class="row around--hand">
                                 <div class="column-2--hand">
                                     <div class="box--nested"></div>
                                 </div>
@@ -520,7 +543,7 @@
                         </div>
                     </div>
                 </div>
-<pre><code>&lt;div class="row around">
+<pre><code>&lt;div class="row around--hand">
     &lt;div class="column-2--hand">
         &lt;div class="box">
             around
@@ -539,12 +562,12 @@
 &lt;/div>
 </code></pre>
 
-                 <h3><code>.between</code></h3>
+                <h3><code>.between--{{ modifier }}</code></h3>
 
                 <div class="row">
                     <div class="column-12--hand">
                         <div class="box container">
-                            <div class="row between">
+                            <div class="row between--hand">
                                 <div class="column-2--hand">
                                     <div class="box--nested"></div>
                                 </div>
@@ -558,7 +581,7 @@
                         </div>
                     </div>
                 </div>
-<pre><code>&lt;div class="row between">
+<pre><code>&lt;div class="row between--hand">
     &lt;div class="column-2--hand">
         &lt;div class="box">
             between
@@ -584,7 +607,7 @@
                  <h2>Reordering</h2>
 
                 <p>Add classes to reorder columns.</p>
-                 <h3><code>.first</code></h3>
+                <h3><code>.first--{{ modifier }}</code></h3>
 
                 <div class="row">
                     <div class="column-12--hand">
@@ -605,7 +628,7 @@
                                 <div class="column-2--hand">
                                     <div class="box--first">5</div>
                                 </div>
-                                <div class="column-2--hand first">
+                                <div class="column-2--hand first--hand">
                                     <div class="box--nested">6</div>
                                 </div>
                             </div>
@@ -623,7 +646,7 @@
             2
         &lt;/div>
     &lt;/div>
-    &lt;div class="column-2--hand first">
+    &lt;div class="column-2--hand first--hand">
         &lt;div class="box">
             3
         &lt;/div>
@@ -631,13 +654,13 @@
 &lt;/div>
 </code></pre>
 
-                 <h3><code>.last</code></h3>
+                <h3><code>.last--{{ modifier }}</code></h3>
 
                 <div class="row">
                     <div class="column-12--hand">
                         <div class="box container">
                             <div class="row">
-                                <div class="column-2--hand last">
+                                <div class="column-2--hand last--hand">
                                     <div class="box--nested">1</div>
                                 </div>
                                 <div class="column-2--hand">
@@ -660,7 +683,7 @@
                     </div>
                 </div>
 <pre><code>&lt;div class="row">
-    &lt;div class="column-2--hand last">
+    &lt;div class="column-2--hand last--hand">
         &lt;div class="box">
             1
         &lt;/div>
