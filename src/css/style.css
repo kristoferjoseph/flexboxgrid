@@ -109,7 +109,7 @@ code {
   background: #EEE;
   border: 1px solid transparent;
 }
-.menu-button__input {
+.menu-button-input {
   position: absolute;
   width: 2rem;
   height: 2rem;
@@ -122,7 +122,7 @@ code {
 .open {
   transform: translate3d(-15rem, 0, 0);
 }
-.menu-button--icon {
+.menu-button-icon {
   width: 2rem;
   height: 2rem;
 }
@@ -133,12 +133,12 @@ code {
   border: 1px solid #FFF;
   border-radius: 2px;
 }
-.hero__headline {
+.hero-headline {
   font-size: 3rem;
   white-space: nowrap;
   margin-bottom: 0;
 }
-.hero__copy {
+.hero-copy {
   font-size: 1rem;
   margin-bottom: 0;
   padding: 0 2rem;
@@ -159,17 +159,17 @@ code {
   padding-bottom: 5rem;
   background: hsl(209, 100%, 10%);
 }
-.menu__header {
+.menu-header {
   box-sizing: border-box;
   padding: 3rem 3rem 0 3rem;
   color: #eee;
 }
-.menu__list {
+.menu-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.menu__list-item {
+.menu-list-item {
   height: 3rem;
   line-height: 3rem;
   font-size: 1.25rem;
@@ -177,14 +177,14 @@ code {
   background: transparent;
   transition: all .2s ease-in;
 }
-.menu__link {
+.menu-link {
   box-sizing: border-box;
   padding-left: 3rem;
   display: block;
   color: #007FFF;
   transition: color 0.2s ease-in;
 }
-.menu__link:hover {
+.menu-link:hover {
   color: hsl(210, 100%, 60%);
   border-bottom: none;
 }
@@ -214,10 +214,10 @@ code {
   color: #FFF;
   border-top: 2px solid #0066CC;
 }
-.box--row,
-.box--first,
-.box--nested,
-.box--large,
+.box-row,
+.box-first,
+.box-nested,
+.box-large,
 .box {
   box-sizing: border-box;
   position: relative;
@@ -231,18 +231,18 @@ code {
   text-align: center;
   color: white;
 }
-.box--row {
+.box-row {
   margin-bottom: 1rem;
 }
-.box--first {
+.box-first {
   background: #0066CC;
   border: none;
 }
-.box--nested {
+.box-nested {
   background: #003366;
   border: none;
 }
-.box--large {
+.box-large {
   height: 8rem;
 }
 .container {
@@ -260,11 +260,11 @@ code {
 .end {
   text-align: end;
 }
-.invisible--hand {
+.invisible-hand {
   display: none;
   visibility: hidden;
 }
-.visible--hand {
+.visible-hand {
   display: block;
   visibility: visible;
 }
@@ -282,26 +282,26 @@ code {
   .open {
     transform: translate3d(0, 0, 0);
   }
-  .hero__headline {
+  .hero-headline {
     font-size: 6rem;
     margin-bottom: 2rem;
   }
-  .hero__copy {
+  .hero-copy {
     font-size: 1.25rem;
     margin-bottom: 2rem;
   }
-  .box--row,
-  .box--first,
-  .box--nested,
-  .box--large,
+  .box-row,
+  .box-first,
+  .box-nested,
+  .box-large,
   .box {
     padding: 1rem;
   }
-  .invisible--desk {
+  .invisible-desk {
     display: none;
     visibility: hidden;
   }
-  .visible--desk {
+  .visible-desk {
     display: block;
     visibility: visible;
   }
