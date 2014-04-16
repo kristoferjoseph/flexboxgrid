@@ -109,16 +109,6 @@ code {
   background: #EEE;
   border: 1px solid transparent;
 }
-.menu-button-input {
-  position: absolute;
-  width: 2rem;
-  height: 2rem;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
-  opacity: 0.001;
-}
 .open {
   transform: translate3d(-15rem, 0, 0);
 }
@@ -236,11 +226,11 @@ code {
 }
 .box-first {
   background: #0066CC;
-  border: none;
+  border-color: #007FFF;
 }
 .box-nested {
   background: #003366;
-  border: none;
+  border-color: #007FFF;
 }
 .box-large {
   height: 8rem;
@@ -268,7 +258,6 @@ code {
   display: block;
   visibility: visible;
 }
-
 @media only screen and (min-width: 48rem) {
   body {
     font-size: 16px;
