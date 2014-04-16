@@ -1,8 +1,23 @@
+/*
+ * Removed gutters by default Due to a pixel rounding bug in IE 10+
+ * Once Google puts variables back we can use these to customize the grid
+:root {
+  var-half-gutter-width: 0.5rem;
+  var-gutter-compensation: -0.5rem;
+  var-outer-margin: 2rem;
+}
+*/
+.grid {
+  padding-right: var( outer-margin, 0 );
+  padding-left: var( outer-margin, 0 );
+}
 .row {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-right: var( gutter-compensation, 0 );
+  margin-left: var( gutter-compensation, 0 );
 }
 .row.reverse {
   flex-direction: row-reverse;
@@ -42,79 +57,84 @@
   flex-direction: column;
   flex-grow: 0;
   flex-shrink: 0;
+  padding-right: var( half-gutter-width, 0 );
+  padding-left: var( half-gutter-width, 0 );
 }
+.column-auto-wall,
+.column-auto-desk,
+.column-auto-lap,
 .column-auto-hand {
   flex-grow: 1;
   flex-basis: 0%;
 }
 .column-1-hand {
-  flex-basis: calc( 100% / 12 );
+  flex-basis: 8.333333333%;
 }
 .column-2-hand {
-  flex-basis: calc( ( 100% / 12 ) * 2 );
+  flex-basis: 16.666666667%;
 }
 .column-3-hand {
-  flex-basis: calc( ( 100% / 12 ) * 3 );
+  flex-basis: 25%;
 }
 .column-4-hand {
-  flex-basis: calc( ( 100% / 12 ) * 4 );
+  flex-basis: 33.333333333%;
 }
 .column-5-hand {
-  flex-basis: calc( ( 100% / 12 ) * 5 );
+  flex-basis: 41.666666667%;
 }
 .column-6-hand {
-  flex-basis: calc( ( 100% / 12 ) * 6 );
+  flex-basis: 50%;
 }
 .column-7-hand {
-  flex-basis: calc( ( 100% / 12 ) * 7 );
+  flex-basis: 58.333333333%;
 }
 .column-8-hand {
-  flex-basis: calc( ( 100% / 12 ) * 8 );
+  flex-basis: 66.666666667%;
 }
 .column-9-hand {
-  flex-basis: calc( ( 100% / 12 ) * 9 );
+  flex-basis: 75%;
 }
 .column-10-hand {
-  flex-basis: calc( ( 100% / 12 ) * 10 );
+  flex-basis: 83.333333333%;
 }
 .column-11-hand {
-  flex-basis: calc( ( 100% / 12 ) * 11 );
+  flex-basis: 91.666666667%;
 }
 .column-12-hand {
-  flex-basis: calc( ( 100% / 12 ) * 12 );
+  flex-basis: 100%;
 }
 .offset-1-hand {
-  margin-left: calc( 100% / 12 );
+  margin-left: 8.333333333%;
 }
 .offset-2-hand {
-  margin-left: calc( ( 100% / 12 ) * 2 );
+  margin-left: 16.666666667%;
 }
 .offset-3-hand {
-  margin-left: calc( ( 100% / 12 ) * 3 );
+  margin-left: 25%;
 }
 .offset-4-hand {
-  margin-left: calc( ( 100% / 12 ) * 4 );
+  margin-left: 33.333333333%;
 }
 .offset-5-hand {
-  margin-left: calc( ( 100% / 12 ) * 5 );
+  margin-left: 41.666666667%;
 }
 .offset-6-hand {
-  margin-left: calc( ( 100% / 12 ) * 6 );
+  margin-left: 50%;
 }
 .offset-7-hand {
-  margin-left: calc( ( 100% / 12 ) * 7 );
+  margin-left: 58.333333333%;
 }
 .offset-8-hand {
-  margin-left: calc( ( 100% / 12 ) * 8 );
+  margin-left: 66.666666667%;
 }
 .offset-9-hand {
-  margin-left: calc( ( 100% / 12 ) * 9 );
+  margin-left: 75%;
 }
 .offset-10-hand {
-  margin-left: calc( ( 100% / 12 ) * 10 );
+  margin-left: 83.333333333%;
 }
 .offset-11-hand {
-  margin-left: calc( ( 100% / 12 ) * 11 );
+  margin-left: 91.666666667%;
 }
 .start-hand {
   justify-content: flex-start;
@@ -152,76 +172,78 @@
 
 @media only screen and (min-width: 48em) {
 
+  .column-auto-lap {
+    flex-basis: 0%;
+  }
   .column-1-lap {
-    flex-basis: calc( 100% / 12 );
+    flex-basis: 8.333333333%;
   }
   .column-2-lap {
-    flex-basis: calc( ( 100% / 12 ) * 2 );
+    flex-basis: 16.666666667%;
   }
   .column-3-lap {
-    flex-basis: calc( ( 100% / 12 ) * 3 );
+    flex-basis: 25%;
   }
   .column-4-lap {
-    flex-basis: calc( ( 100% / 12 ) * 4 );
+    flex-basis: 33.333333333%;
   }
   .column-5-lap {
-    flex-basis: calc( ( 100% / 12 ) * 5 );
+    flex-basis: 41.666666667%;
   }
   .column-6-lap {
-    flex-basis: calc( ( 100% / 12 ) * 6 );
+    flex-basis: 50%;
   }
   .column-7-lap {
-    flex-basis: calc( ( 100% / 12 ) * 7 );
+    flex-basis: 58.333333333%;
   }
   .column-8-lap {
-    flex-basis: calc( ( 100% / 12 ) * 8 );
+    flex-basis: 66.666666667%;
   }
   .column-9-lap {
-    flex-basis: calc( ( 100% / 12 ) * 9 );
+    flex-basis: 75%;
   }
   .column-10-lap {
-    flex-basis: calc( ( 100% / 12 ) * 10 );
+    flex-basis: 83.333333333%;
   }
   .column-11-lap {
-    flex-basis: calc( ( 100% / 12 ) * 11 );
+    flex-basis: 91.666666667%;
   }
   .column-12-lap {
-    flex-basis: calc( ( 100% / 12 ) * 12 );
+    flex-basis: 100%;
   }
   .offset-1-lap {
-    margin-left: calc( 100% / 12 );
+    margin-left: 8.333333333%;
   }
   .offset-2-lap {
-    margin-left: calc( ( 100% / 12 ) * 2 );
+    margin-left: 16.666666667%;
   }
   .offset-3-lap {
-    margin-left: calc( ( 100% / 12 ) * 3 );
+    margin-left: 25%;
   }
   .offset-4-lap {
-    margin-left: calc( ( 100% / 12 ) * 4 );
+    margin-left: 33.333333333%;
   }
   .offset-5-lap {
-    margin-left: calc( ( 100% / 12 ) * 5 );
+    margin-left: 41.666666667%;
   }
   .offset-6-lap {
-    margin-left: calc( ( 100% / 12 ) * 6 );
+    margin-left: 50%;
   }
   .offset-7-lap {
-    margin-left: calc( ( 100% / 12 ) * 7 );
+    margin-left: 58.333333333%;
   }
   .offset-8-lap {
-    margin-left: calc( ( 100% / 12 ) * 8 );
+    margin-left: 66.666666667%;
   }
   .offset-9-lap {
-    margin-left: calc( ( 100% / 12 ) * 9 );
+    margin-left: 75%;
   }
   .offset-10-lap {
-    margin-left: calc( ( 100% / 12 ) * 10 );
+    margin-left: 83.333333333%;
   }
   .offset-11-lap {
-    margin-left: calc( ( 100% / 12 ) * 11 );
+    margin-left: 91.666666667%;
   }
-
   .start-lap {
     justify-content: flex-start;
     text-align: start;
@@ -260,74 +282,77 @@
 
 @media only screen and (min-width: 62em) {
 
+  .column-auto-desk {
+    flex-basis: 0%;
+  }
   .column-1-desk {
-    flex-basis: calc( 100% / 12 );
+    flex-basis: 8.333333333%;
   }
   .column-2-desk {
-    flex-basis: calc( ( 100% / 12 ) * 2 );
+    flex-basis: 16.666666667%;
   }
   .column-3-desk {
-    flex-basis: calc( ( 100% / 12 ) * 3 );
+    flex-basis: 25%;
   }
   .column-4-desk {
-    flex-basis: calc( ( 100% / 12 ) * 4 );
+    flex-basis: 33.333333333%;
   }
   .column-5-desk {
-    flex-basis: calc( ( 100% / 12 ) * 5 );
+    flex-basis: 41.666666667%;
   }
   .column-6-desk {
-    flex-basis: calc( ( 100% / 12 ) * 6 );
+    flex-basis: 50%;
   }
   .column-7-desk {
-    flex-basis: calc( ( 100% / 12 ) * 7 );
+    flex-basis: 58.333333333%;
   }
   .column-8-desk {
-    flex-basis: calc( ( 100% / 12 ) * 8 );
+    flex-basis: 66.666666667%;
   }
   .column-9-desk {
-    flex-basis: calc( ( 100% / 12 ) * 9 );
+    flex-basis: 75%;
   }
   .column-10-desk {
-    flex-basis: calc( ( 100% / 12 ) * 10 );
+    flex-basis: 83.333333333%;
   }
   .column-11-desk {
-    flex-basis: calc( ( 100% / 12 ) * 11 );
+    flex-basis: 91.666666667%;
   }
   .column-12-desk {
-    flex-basis: calc( ( 100% / 12 ) * 12 );
+    flex-basis: 100%;
   }
   .offset-1-desk {
-    margin-left: calc( 100% / 12 );
+    margin-left: 8.333333333%;
   }
   .offset-2-desk {
-    margin-left: calc( ( 100% / 12 ) * 2 );
+    margin-left: 16.666666667%;
   }
   .offset-3-desk {
-    margin-left: calc( ( 100% / 12 ) * 3 );
+    margin-left: 25%;
   }
   .offset-4-desk {
-    margin-left: calc( ( 100% / 12 ) * 4 );
+    margin-left: 33.333333333%;
   }
   .offset-5-desk {
-    margin-left: calc( ( 100% / 12 ) * 5 );
+    margin-left: 41.666666667%;
   }
   .offset-6-desk {
-    margin-left: calc( ( 100% / 12 ) * 6 );
+    margin-left: 50%;
   }
   .offset-7-desk {
-    margin-left: calc( ( 100% / 12 ) * 7 );
+    margin-left: 58.333333333%;
   }
   .offset-8-desk {
-    margin-left: calc( ( 100% / 12 ) * 8 );
+    margin-left: 66.666666667%;
   }
   .offset-9-desk {
-    margin-left: calc( ( 100% / 12 ) * 9 );
+    margin-left: 75%;
   }
   .offset-10-desk {
-    margin-left: calc( ( 100% / 12 ) * 10 );
+    margin-left: 83.333333333%;
   }
   .offset-11-desk {
-    margin-left: calc( ( 100% / 12 ) * 11 );
+    margin-left: 91.666666667%;
   }
   .start-desk {
     justify-content: flex-start;
@@ -367,74 +392,77 @@
 
 @media only screen and (min-width: 75em) {
 
+  .column-auto-wall {
+    flex-basis: 0%;
+  }
   .column-1-wall {
-    flex-basis: calc( 100% / 12 );
+    flex-basis: 8.333333333%;
   }
   .column-2-wall {
-    flex-basis: calc( ( 100% / 12 ) * 2 );
+    flex-basis: 16.666666667%;
   }
   .column-3-wall {
-    flex-basis: calc( ( 100% / 12 ) * 3 );
+    flex-basis: 25%;
   }
   .column-4-wall {
-    flex-basis: calc( ( 100% / 12 ) * 4 );
+    flex-basis: 33.333333333%;
   }
   .column-5-wall {
-    flex-basis: calc( ( 100% / 12 ) * 5 );
+    flex-basis: 41.666666667%;
   }
   .column-6-wall {
-    flex-basis: calc( ( 100% / 12 ) * 6 );
+    flex-basis: 50%;
   }
   .column-7-wall {
-    flex-basis: calc( ( 100% / 12 ) * 7 );
+    flex-basis: 58.333333333%;
   }
   .column-8-wall {
-    flex-basis: calc( ( 100% / 12 ) * 8 );
+    flex-basis: 66.666666667%;
   }
   .column-9-wall {
-    flex-basis: calc( ( 100% / 12 ) * 9 );
+    flex-basis: 75%;
   }
   .column-10-wall {
-    flex-basis: calc( ( 100% / 12 ) * 10 );
+    flex-basis: 83.333333333%;
   }
   .column-11-wall {
-    flex-basis: calc( ( 100% / 12 ) * 11 );
+    flex-basis: 91.666666667%;
   }
   .column-12-wall {
-    flex-basis: calc( ( 100% / 12 ) * 12 );
+    flex-basis: 100%;
   }
   .offset-1-wall {
-    margin-left: calc( 100% / 12 );
+    margin-left: 8.333333333%;
   }
   .offset-2-wall {
-    margin-left: calc( ( 100% / 12 ) * 2 );
+    margin-left: 16.666666667%;
   }
   .offset-3-wall {
-    margin-left: calc( ( 100% / 12 ) * 3 );
+    margin-left: 25%;
   }
   .offset-4-wall {
-    margin-left: calc( ( 100% / 12 ) * 4 );
+    margin-left: 33.333333333%;
   }
   .offset-5-wall {
-    margin-left: calc( ( 100% / 12 ) * 5 );
+    margin-left: 41.666666667%;
   }
   .offset-6-wall {
-    margin-left: calc( ( 100% / 12 ) * 6 );
+    margin-left: 50%;
   }
   .offset-7-wall {
-    margin-left: calc( ( 100% / 12 ) * 7 );
+    margin-left: 58.333333333%;
   }
   .offset-8-wall {
-    margin-left: calc( ( 100% / 12 ) * 8 );
+    margin-left: 66.666666667%;
   }
   .offset-9-wall {
-    margin-left: calc( ( 100% / 12 ) * 9 );
+    margin-left: 75%;
   }
   .offset-10-wall {
-    margin-left: calc( ( 100% / 12 ) * 10 );
+    margin-left: 83.333333333%;
   }
   .offset-11-wall {
-    margin-left: calc( ( 100% / 12 ) * 11 );
+    margin-left: 91.666666667%;
   }
   .start-wall {
     justify-content: flex-start;
