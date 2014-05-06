@@ -10,6 +10,8 @@ Install
 ### npm
 `npm i flexboxgrid --save`
 
+### cdn
+//cdn.jsdelivr.net/flexboxgrid/3.0.1/flexboxgrid.min.css
 ### css
 * [Development](https://raw.githubusercontent.com/kristoferjoseph/flexboxgrid/master/css/flexboxgrid.css)
 * [Production](https://raw.githubusercontent.com/kristoferjoseph/flexboxgrid/master/css/flexboxgrid.min.css)
