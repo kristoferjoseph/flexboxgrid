@@ -8,7 +8,7 @@ Grid based on the `flex` display property.
 Install
 ---------
 ### npm
-`npm i flexboxgrid --save`
+`npm install flexboxgrid --save`
 
 ### cdn
 ```
