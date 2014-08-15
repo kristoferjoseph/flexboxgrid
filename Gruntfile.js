@@ -2,7 +2,7 @@
 module.exports = function(grunt) {
 
     grunt.initConfig({
-        autoprefixer: {
+        myth: {
             compile: {
                 expand: true,
                 cwd: 'css',
@@ -78,7 +78,7 @@ module.exports = function(grunt) {
     });
 
     // These plugins provide necessary tasks.
-    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-myth');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
@@ -88,7 +88,7 @@ module.exports = function(grunt) {
     // Default task.
     grunt.registerTask('default',
       ['cssmin:concat',
-       'autoprefixer',
+       'myth',
        'cssmin:minify',
        'uglify',
        'processhtml',
