@@ -1,6 +1,6 @@
 {
   "name": "flexboxgrid",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Grid based off of CSS3 flexbox specification",
   "style": "css/flexboxgrid.css",
   "scripts": {
