@@ -12,7 +12,7 @@ Install
 
 ### cdn
 ```
-<link rel="stylesheet" href="//cdn.jsdelivr.net/flexboxgrid/3.0.1/flexboxgrid.min.css" type="text/css" />
+<link rel="stylesheet" href="//cdn.jsdelivr.net/flexboxgrid/5.0.0/flexboxgrid.min.css" type="text/css" />
 ```
 
 ### css
