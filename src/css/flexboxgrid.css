@@ -22,11 +22,11 @@
 }
 .row.reverse {
   flex-direction: row-reverse;
-  flex-wrap: row-reverse;
+  flex-wrap: wrap-reverse;
 }
 .col.reverse {
   flex-direction: column-reverse;
-  flex-wrap: column-reverse;
+  flex-wrap: wrap-reverse;
 }
 .col-xs,
 .col-xs-1,
