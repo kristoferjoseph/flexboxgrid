@@ -11,6 +11,9 @@ module.exports = function(grunt) {
                 ext: '.css'
             },
             release: {
+				options: {
+				   sourcemap: true	
+			    },	
                 files: {
                     'css/flexboxgrid.css': 'src/css/flexboxgrid.css'
                 }
@@ -47,6 +50,39 @@ module.exports = function(grunt) {
                 }
             }
         },
+      autoprefixer: {
+      options: {
+        browsers: [
+          'Android 2.3',
+          'Android >= 4',
+          'Chrome >= 20',
+          'Firefox >= 24', // Firefox 24 is the latest ESR
+          'Explorer >= 8',
+          'iOS >= 6',
+          'Opera >= 12',
+          'Safari >= 6'
+        ]
+      },
+      core: {
+        options: {
+          map: true
+        },
+        src: 'src/css/flexboxgrid.css'
+      }
+     }, 
+      less: {
+      compileCore: {
+        options: {
+          strictMath: true,
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapURL: 'flexboxgrid.css.map',
+          sourceMapFilename: 'src/css/flexboxgrid.css.map'
+        },
+        files: {
+          'src/css/flexboxgrid.css': 'less/flexboxgrid.less'
+        }
+      }},
         htmlmin: {
             dist: {
                 options: {
@@ -79,15 +115,19 @@ module.exports = function(grunt) {
 
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks('grunt-myth');
+    grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-processhtml');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
-
+    grunt.loadNpmTasks('grunt-autoprefixer');
+    
     // Default task.
     grunt.registerTask('default',
-      ['cssmin:concat',
+      ['less',
+       'autoprefixer',
+       'cssmin:concat',
        'myth',
        'cssmin:minify',
        'uglify',
