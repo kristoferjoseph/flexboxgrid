@@ -20,14 +20,16 @@
   margin-right: var( --gutter-compensation, -0.5rem );
   margin-left: var( --gutter-compensation, -0.5rem );
 }
-.row.reverse {
+
+.row.reverse, .row.reverse-xs {
   flex-direction: row-reverse;
-  flex-wrap: row-reverse;
+  flex-wrap: wrap-reverse;
 }
-.col.reverse {
+.col.reverse, .col.reverse-xs {
   flex-direction: column-reverse;
-  flex-wrap: column-reverse;
+  flex-wrap: wrap-reverse;
 }
+
 .col-xs,
 .col-xs-1,
 .col-xs-2,
@@ -181,6 +183,16 @@
   order: 1;
 }
 @media only screen and (min-width: 48em) {
+  
+  .row.reverse-sm {
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+  }
+  .col.reverse-sm {
+    flex-direction: column-reverse;
+    flex-wrap: wrap-reverse;
+  }  
+  
   .col-sm,
   .col-sm-1,
   .col-sm-2,
@@ -337,6 +349,16 @@
   }
 }
 @media only screen and (min-width: 62em) {
+
+  .row.reverse-md {
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+  }
+  .col.reverse-md {
+    flex-direction: column-reverse;
+    flex-wrap: wrap-reverse;
+  }  
+  
   .col-md,
   .col-md-1,
   .col-md-2,
@@ -491,6 +513,16 @@
   }
 }
 @media only screen and (min-width: 75em) {
+
+  .row.reverse-lg {
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  }
+  .col.reverse-lg {
+  flex-direction: column-reverse;
+  flex-wrap: wrap-reverse;
+  }
+  
   .col-lg,
   .col-lg-1,
   .col-lg-2,
