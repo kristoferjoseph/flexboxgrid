@@ -250,6 +250,7 @@
 }
 
 .center-xs {
+  -webkit-box-align: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
