@@ -12,7 +12,7 @@ module.exports = function(grunt) {
             },
             release: {
                 files: {
-                    'css/flexboxgrid.css': 'src/css/flexboxgrid.css'
+                    'dist/flexboxgrid.css': 'src/css/flexboxgrid.css'
                 }
             }
         },
@@ -27,6 +27,13 @@ module.exports = function(grunt) {
                 cwd: 'css',
                 src: ['*.css', '!*.min.css'],
                 dest: 'css',
+                ext: '.min.css'
+            },
+            release: {
+                expand: true,
+                cwd: 'dist',
+                src: ['*.css', '!*.min.css'],
+                dest: 'dist',
                 ext: '.min.css'
             }
         },
@@ -90,6 +97,7 @@ module.exports = function(grunt) {
       ['cssmin:concat',
        'myth',
        'cssmin:minify',
+       'cssmin:release',
        'uglify',
        'processhtml',
        'htmlmin'

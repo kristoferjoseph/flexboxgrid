@@ -73,7 +73,6 @@ dfn {
 }
 
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -176,14 +175,12 @@ html input[disabled] {
 
 input[type=checkbox],
 input[type=radio] {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
 
 input[type=search] {
   -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -209,7 +206,6 @@ table {
 }
 
 body {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -285,7 +281,6 @@ code {
 }
 
 .page-nav {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: fixed;
   padding: .5rem;
@@ -302,7 +297,6 @@ code {
 }
 
 .wrap {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   max-width: 75%;
   margin: 0 auto;
@@ -324,7 +318,6 @@ code {
   top: .75rem;
   right: .75rem;
   z-index: 1;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: .45rem;
   height: 3rem;
@@ -358,7 +351,6 @@ code {
 }
 
 .hero {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 2rem;
   background: #FFF;
@@ -391,14 +383,12 @@ code {
 }
 
 .menu {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding-bottom: 5rem;
   background: #001a33;
 }
 
 .menu-header {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 3rem 3rem 0;
   color: #eee;
@@ -421,7 +411,6 @@ code {
 }
 
 .menu-link {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 3rem;
   display: block;
@@ -444,7 +433,6 @@ code {
 .button {
   position: relative;
   display: inline-block;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   min-width: 11rem;
   padding: 0 4rem;
@@ -478,7 +466,6 @@ code {
 .box-nested,
 .box-row {
   position: relative;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   min-height: 1rem;
   margin-bottom: 0;
@@ -509,13 +496,11 @@ code {
 }
 
 .container {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: .5rem;
 }
 
 .page-footer {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding-bottom: 3rem;
 }
@@ -586,13 +571,14 @@ code {
   }
 }
 
-.grid {
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
   padding-right: 2rem;
   padding-left: 2rem;
 }
 
 .row {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -657,7 +643,6 @@ code {
 .col-xs-offset-7,
 .col-xs-offset-8,
 .col-xs-offset-9 {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -890,7 +875,11 @@ code {
   order: 1;
 }
 
-@media only screen and (min-width:48em) {
+@media only screen and (min-width:var(--screen-sm-min,48em)) {
+  .container {
+    width: 46rem;
+  }
+
   .col-sm,
   .col-sm-1,
   .col-sm-10,
@@ -916,7 +905,6 @@ code {
   .col-sm-offset-7,
   .col-sm-offset-8,
   .col-sm-offset-9 {
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: -webkit-box;
     display: -webkit-flex;
@@ -1035,12 +1023,10 @@ code {
 
   .col-sm-offset-1 {
     margin-left: 8.333333333%;
-    max-width: 8.333333333%;
   }
 
   .col-sm-offset-2 {
     margin-left: 16.666666667%;
-    max-width: 16.666666667%;
   }
 
   .col-sm-offset-3 {
@@ -1152,7 +1138,11 @@ code {
   }
 }
 
-@media only screen and (min-width:62em) {
+@media only screen and (min-width:var(--screen-md-min,62em)) {
+  .container {
+    width: 61rem;
+  }
+
   .col-md,
   .col-md-1,
   .col-md-10,
@@ -1178,7 +1168,6 @@ code {
   .col-md-offset-7,
   .col-md-offset-8,
   .col-md-offset-9 {
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: -webkit-box;
     display: -webkit-flex;
@@ -1412,7 +1401,11 @@ code {
   }
 }
 
-@media only screen and (min-width:75em) {
+@media only screen and (min-width:var(--screen-lg-min,75em)) {
+  .container {
+    width: 71rem;
+  }
+
   .col-lg,
   .col-lg-1,
   .col-lg-10,
@@ -1438,7 +1431,6 @@ code {
   .col-lg-offset-7,
   .col-lg-offset-8,
   .col-lg-offset-9 {
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: -webkit-box;
     display: -webkit-flex;

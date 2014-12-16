@@ -3,19 +3,29 @@
  * Uncomment and set these variables to customize the grid.
  *
  * :root {
- *  --half-gutter-width: 0.5rem;
- *  --gutter-compensation: -0.5rem;
+ *  --gutter-width: 1rem;
  *  --outer-margin: 2rem;
+ *  --gutter-compensation: calc( var( --gutter-width / 2 ) * -1 );
+ *  --half-gutter-width: calc( var( --gutter-width / 2 ) );
+ *  --screen-xs-min: 30em;
+ *  --screen-sm-min: 48em;
+ *  --screen-md-min: 62em;
+ *  --screen-lg-min: 75em;
+ *  --container-sm: calc( 45rem + var( --gutter-width ) );
+ *  --container-md: calc( 60rem + var( --gutter-width ) );
+ *  --container-lg: calc( 70rem + var( --gutter-width ) );
  * }
+ *
 */
 
-.grid {
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
   padding-right: 2rem;
   padding-left: 2rem;
 }
 
 .row {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -80,7 +90,6 @@
 .col-xs-offset-10,
 .col-xs-offset-11,
 .col-xs-offset-12 {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -313,7 +322,11 @@
   order: 1;
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and ( min-width: var( --screen-sm-min, 48em ) ) {
+  .container {
+    width: 46rem;
+  }
+
   .col-sm,
   .col-sm-1,
   .col-sm-2,
@@ -339,7 +352,6 @@
   .col-sm-offset-10,
   .col-sm-offset-11,
   .col-sm-offset-12 {
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: -webkit-box;
     display: -webkit-flex;
@@ -458,12 +470,10 @@
 
   .col-sm-offset-1 {
     margin-left: 8.333333333%;
-    max-width: 8.333333333%;
   }
 
   .col-sm-offset-2 {
     margin-left: 16.666666667%;
-    max-width: 16.666666667%;
   }
 
   .col-sm-offset-3 {
@@ -575,7 +585,11 @@
   }
 }
 
-@media only screen and (min-width: 62em) {
+@media only screen and ( min-width: var( --screen-md-min, 62em ) ) {
+  .container {
+    width: 61rem;
+  }
+
   .col-md,
   .col-md-1,
   .col-md-2,
@@ -601,7 +615,6 @@
   .col-md-offset-10,
   .col-md-offset-11,
   .col-md-offset-12 {
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: -webkit-box;
     display: -webkit-flex;
@@ -835,7 +848,11 @@
   }
 }
 
-@media only screen and (min-width: 75em) {
+@media only screen and ( min-width: var( --screen-lg-min, 75em ) ) {
+  .container {
+    width: 71rem;
+  }
+
   .col-lg,
   .col-lg-1,
   .col-lg-2,
@@ -861,7 +878,6 @@
   .col-lg-offset-10,
   .col-lg-offset-11,
   .col-lg-offset-12 {
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: -webkit-box;
     display: -webkit-flex;
