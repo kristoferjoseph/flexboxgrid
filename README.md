@@ -16,8 +16,8 @@ Install
 ```
 
 ### css
-* [Development](https://raw.githubusercontent.com/kristoferjoseph/flexboxgrid/master/css/flexboxgrid.css)
-* [Production](https://raw.githubusercontent.com/kristoferjoseph/flexboxgrid/master/css/flexboxgrid.min.css)
+* [Development](https://raw.githubusercontent.com/kristoferjoseph/flexboxgrid/master/dist/flexboxgrid.css)
+* [Production](https://raw.githubusercontent.com/kristoferjoseph/flexboxgrid/master/dist/flexboxgrid.min.css)
 
 Add the `flexbox.css` __development__ or `flexbox.min.css` __production__ to your html page.
 
