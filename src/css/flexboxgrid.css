@@ -26,6 +26,7 @@
 .row {
   box-sizing: border-box;
   display: flex;
+  flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
   margin-right: var( --gutter-compensation, -0.5rem );
@@ -66,6 +67,7 @@
 .col-xs-offset-12 {
   box-sizing: border-box;
   display: flex;
+  flex: 0 1 auto;
   flex-direction: column;
   flex-grow: 0;
   flex-shrink: 0;
@@ -222,6 +224,7 @@
   .col-sm-offset-12 {
     box-sizing: border-box;
     display: flex;
+    flex: 0 1 auto;
     flex-direction: column;
     flex-grow: 0;
     flex-shrink: 0;
@@ -379,6 +382,7 @@
   .col-md-offset-12 {
     box-sizing: border-box;
     display: flex;
+    flex: 0 1 auto;
     flex-direction: column;
     flex-grow: 0;
     flex-shrink: 0;
@@ -536,6 +540,7 @@
   .col-lg-offset-12 {
     box-sizing: border-box;
     display: flex;
+    flex: 0 1 auto;
     flex-direction: column;
     flex-grow: 0;
     flex-shrink: 0;

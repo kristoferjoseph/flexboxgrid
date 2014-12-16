@@ -31,6 +31,10 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -95,6 +99,10 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -357,6 +365,10 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -620,6 +632,10 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -883,6 +899,10 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
