@@ -66,8 +66,6 @@ code {
 .page {
   z-index: 0;
   background: #EEE;
-  width: 100%;
-  transition: all .1s ease-in-out;
 }
 .wrap {
   box-sizing: border-box;
@@ -259,9 +257,6 @@ code {
 @media only screen and (min-width: 48rem) {
   body {
     font-size: 16px;
-  }
-  .page {
-    width: 75%;
   }
   .slide-menu {
     width: 25%;

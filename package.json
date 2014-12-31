@@ -30,6 +30,8 @@
     "grunt-contrib-uglify": "^0.2.7",
     "grunt-contrib-watch": "^0.5.3",
     "grunt-myth": "^0.3.1",
-    "grunt-processhtml": "^0.2.9"
+    "grunt-processhtml": "^0.2.9",
+    "grunt-rework": "^0.1.0",
+    "rework-custom-media": "^0.2.0"
   }
 }

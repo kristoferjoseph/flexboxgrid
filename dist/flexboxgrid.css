@@ -330,7 +330,7 @@
   order: 1;
 }
 
-@media only screen and ( min-width: var( --screen-sm-min, 48em ) ) {
+@media only screen and ( min-width: 48em ) {
   .container {
     width: 46rem;
   }
@@ -597,7 +597,7 @@
   }
 }
 
-@media only screen and ( min-width: var( --screen-md-min, 62em ) ) {
+@media only screen and ( min-width: 62em ) {
   .container {
     width: 61rem;
   }
@@ -864,7 +864,7 @@
   }
 }
 
-@media only screen and ( min-width: var( --screen-lg-min, 75em ) ) {
+@media only screen and ( min-width: 75em ) {
   .container {
     width: 71rem;
   }
