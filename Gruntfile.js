@@ -1,5 +1,4 @@
 /*global module:false*/
-var reworkCustomMedia = require('rework-custom-media');
 
 module.exports = function(grunt) {
 
@@ -18,29 +17,10 @@ module.exports = function(grunt) {
         }
       }
     },
-    rework: {
-      compile: {
-        expand: true,
-        cwd: 'css',
-        src: ['*.css', '!*.min.css'],
-        dest: 'css',
-        ext: '.css'
-      },
-      release: {
-        files: {
-          'src/css/flexboxgrid.css': 'src/css/flexboxgrid.css'
-        }
-      },
-      options: {
-        use: [
-          reworkCustomMedia
-        ]
-      }
-    },
     cssmin: {
       concat: {
         files: {
-          'css/index.css': ['vendor/css/normalize.css', 'src/css/style.css', 'src/css/flexboxgrid.css']
+          'css/index.css': ['vendor/css/normalize.css', 'src/css/style.css', 'dist/flexboxgrid.css']
         }
       },
       minify: {
@@ -107,7 +87,6 @@ module.exports = function(grunt) {
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-myth');
-  grunt.loadNpmTasks('grunt-rework');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -115,9 +94,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
   // Default task.
-  grunt.registerTask('default', ['cssmin:concat',
-    'rework',
+  grunt.registerTask('default', [
     'myth',
+    'cssmin:concat',
     'cssmin:minify',
     'cssmin:release',
     'uglify',

@@ -69,7 +69,7 @@ code {
 }
 .wrap {
   box-sizing: border-box;
-  max-width: 75%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .page-section {
@@ -231,7 +231,7 @@ code {
 .box-large {
   height: 8rem;
 }
-.container {
+.box-container {
   box-sizing: border-box;
   padding: 0.5rem;
 }
