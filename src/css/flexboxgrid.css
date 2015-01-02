@@ -41,12 +41,10 @@
 
 .row.reverse {
   flex-direction: row-reverse;
-  flex-wrap: row-reverse;
 }
 
 .col.reverse {
   flex-direction: column-reverse;
-  flex-wrap: column-reverse;
 }
 
 .col-xs,
