@@ -66,12 +66,10 @@ code {
 .page {
   z-index: 0;
   background: #EEE;
-  width: 100%;
-  transition: all .1s ease-in-out;
 }
 .wrap {
   box-sizing: border-box;
-  max-width: 75%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .page-section {
@@ -233,7 +231,7 @@ code {
 .box-large {
   height: 8rem;
 }
-.container {
+.box-container {
   box-sizing: border-box;
   padding: 0.5rem;
 }
@@ -259,9 +257,6 @@ code {
 @media only screen and (min-width: 48rem) {
   body {
     font-size: 16px;
-  }
-  .page {
-    width: 75%;
   }
   .slide-menu {
     width: 25%;
