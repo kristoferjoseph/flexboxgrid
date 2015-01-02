@@ -10,9 +10,12 @@ Install
 ### npm
 `npm i flexboxgrid --save`
 
+### bower
+`bower install flexboxgrid`
+
 ### cdn
 ```
-<link rel="stylesheet" href="//cdn.jsdelivr.net/flexboxgrid/5.0.0/flexboxgrid.min.css" type="text/css" />
+<link rel="stylesheet" href="//cdn.jsdelivr.net/flexboxgrid/6.1.0/flexboxgrid.min.css" type="text/css" />
 ```
 
 ### css
