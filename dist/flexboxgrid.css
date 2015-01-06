@@ -53,9 +53,6 @@
   -webkit-flex-direction: row-reverse;
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
-  -webkit-flex-wrap: row-reverse;
-  -ms-flex-wrap: row-reverse;
-  flex-wrap: row-reverse;
 }
 
 .col.reverse {
@@ -64,9 +61,6 @@
   -webkit-flex-direction: column-reverse;
   -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
-  -webkit-flex-wrap: column-reverse;
-  -ms-flex-wrap: column-reverse;
-  flex-wrap: column-reverse;
 }
 
 .col-xs,
