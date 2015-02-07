@@ -3,6 +3,7 @@
   "version": "6.1.1",
   "description": "Grid based off of CSS3 flexbox specification",
   "style": "dist/flexboxgrid.css",
+  "main": "dist/flexboxgrid.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
