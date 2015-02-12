@@ -4,7 +4,8 @@
   "description": "Grid based off of CSS3 flexbox specification",
   "style": "dist/flexboxgrid.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js"
   },
   "repository": {
     "type": "git",
@@ -17,19 +18,24 @@
     "css"
   ],
   "author": "@dam",
-  "license": "Apache 2",
+  "license": "BSD",
   "bugs": {
     "url": "https://github.com/kristoferjoseph/flexboxgrid/issues"
   },
   "homepage": "https://github.com/kristoferjoseph/flexboxgrid",
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-autoprefixer": "^0.7.2",
-    "grunt-contrib-cssmin": "^0.7.0",
-    "grunt-contrib-htmlmin": "^0.1.3",
-    "grunt-contrib-uglify": "^0.2.7",
-    "grunt-contrib-watch": "^0.5.3",
-    "grunt-myth": "^0.3.1",
-    "grunt-processhtml": "^0.2.9"
+    "autoprefixer-core": "^5.1.5",
+    "colors": "^1.0.3",
+    "css-mqpacker": "^3.0.1",
+    "express": "^4.11.2",
+    "gulp": "^3.8.10",
+    "gulp-htmlmin": "^1.0.0",
+    "gulp-livereload": "^3.7.0",
+    "gulp-more-css": "^1.0.0",
+    "gulp-postcss": "^4.0.3",
+    "gulp-processhtml": "^1.0.2",
+    "gulp-sass": "^1.3.2",
+    "gulp-uglify": "^1.1.0",
+    "instant": "^1.7.0"
   }
 }

@@ -1,0 +1,106 @@
+$column-count: 12;
+$column-selector: '.col';
+
+$gutter-width: 1rem;
+$outer-margin: 2rem;
+$gutter-compensation: (($gutter-width / 2) * -1);
+$half-gutter-width: ($gutter-width / 2);
+
+$viewport-xs: 30em;
+$viewport-sm: 48em;
+$viewport-md: 62em;
+$viewport-lg: 75em;
+
+$container-sm: 45rem + $gutter-width;
+$container-md: 60rem + $gutter-width;
+$container-lg: 70rem + $gutter-width;
+
+$xs: 'xs';
+$sm: 'sm';
+$md: 'md';
+$lg: 'lg';
+
+$block-delimiter: '-';
+$element-delimiter: '-';
+$modifier-delimiter: '-';
+
+$sizes: #{$xs}, #{$sm}, #{$md}, #{$lg};
+$queries: #{$viewport-xs}, #{$viewport-sm}, #{$viewport-md}, #{$viewport-lg};
+
+@mixin queries($queries: $queries) {
+  @each $query in $queries {
+    @media screen and (min-width: #{$query}) {
+      @content
+    }
+  }
+}
+
+@mixin percent($property, $columns, $count) {
+  #{$property}: ((100% / $columns) * $count);
+}
+
+@mixin columns($selector, $columns: 0, $queries: $queries) {
+  @each $size in $sizes {
+      @for $i from 0 through $columns {
+        @if ($i) {
+          #{$selector}#{$modifier-delimiter}#{$size}#{$step-delimiter}#{$i} {
+            @include queries($queries) {
+              @content
+              @include percent('flex-basis', $columns, $i);
+              @include percent('max-width', $columns, $i);
+            }
+          }
+      } @else {
+        #{$selector}#{$modifier-delimiter}#{$size} {
+          @include queries($queries) {
+            @content
+            @include percent('flex-basis', $columns, $i);
+            @include percent('max-width', $columns, $i);
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin breakpoints($selector, $queries: $queries) {
+  #{$selector}#{$modifier-delimiter}#{$size} {
+    @include queries($queries) {
+      @content
+    }
+  }
+}
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $outer-margin;
+  padding-left: $outer-pargin;
+}
+
+.row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: $gutter-compensation;
+  margin-left: $gutter-compensation;
+}
+
+%column {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-right: $half-gutter-width;
+  padding-left: $half-gutter-width;
+}
+
+@include columns($column-selector, $column-count) {
+  @extend %column
+}
+
+
