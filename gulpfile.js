@@ -1,51 +1,62 @@
-var gulp         = require('gulp');
-var sass         = require('gulp-sass');
-var htmlmin      = require('gulp-htmlmin');
-var processhtml  = require('gulp-processhtml');
-var livereload   = require('gulp-livereload');
-var postcss      = require('gulp-postcss');
-var uglify       = require('gulp-uglify');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var htmlmin = require('gulp-htmlmin');
+var processhtml = require('gulp-processhtml');
+var livereload = require('gulp-livereload');
+var postcss = require('gulp-postcss');
+var uglify = require('gulp-uglify');
 var autoprefixer = require('autoprefixer-core');
-var mqpacker     = require('css-mqpacker');
-var morecss      = require('gulp-more-css');
+var mqpacker = require('css-mqpacker');
+var rename = require('gulp-rename');
+var concat = require('gulp-concat');
+var minify = require('gulp-clean-css');
+var preprocessors = [
+  autoprefixer,
+  mqpacker
+];
 
-gulp.task('default', ['css', 'min', 'js', 'html']);
+gulp.task('default', [
+  'sass',
+  'css',
+  'js',
+  'html'
+]);
 
-gulp.task('css', function() {
-  var preprocessors = [
-    autoprefixer,
-    mqpacker
-  ];
-  return gulp.src('./src/sass/flexboxgrid.scss')
+gulp.task('sass', function() {
+  return gulp.src('src/sass/flexboxgrid.scss')
     .pipe(sass())
     .pipe(postcss(preprocessors))
-    .pipe(gulp.dest('./css/'))
-    .pipe(livereload());
+    .pipe(gulp.dest('dist'))
+    .pipe(minify())
+    .pipe(rename('flexboxgrid.min.css'))
+    .pipe(gulp.dest('dist'));
 });
 
-gulp.task('min', function() {
-  return gulp.src()
-    .pipe(morecss())
-    .pipe('./dist');
+gulp.task('css', function() {
+  return gulp.src(['src/css/style.css', 'dist/flexboxgrid.css'])
+    .pipe(postcss(preprocessors))
+    .pipe(concat('index.css'))
+    .pipe(minify())
+    .pipe(rename('index.min.css'))
+    .pipe(gulp.dest('css'));
 });
 
 gulp.task('js', function() {
-  return gulp.src('./src/js/index.js')
+  return gulp.src('src/js/index.js')
     .pipe(uglify())
-    .pipe(gulp.dest('./js/'))
-    .pipe(livereload());
+    .pipe(gulp.dest('js'));
 });
 
 gulp.task('html', function() {
-  return gulp.src('./src/index.html')
+  return gulp.src('src/index.html')
     .pipe(processhtml())
-    .pipe(htmlmin())
-    .pipe(gulp.dest('./'))
-    .pipe(livereload());
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
+    .pipe(gulp.dest('.'));
 });
 
 gulp.task('watch', function() {
   livereload.listen();
-  gulp.watch('src/**/*.{scss,js,html}', ['css','js','html']);
+  gulp.watch('src/**/*.{scss,js,html}', ['default']);
 });
-

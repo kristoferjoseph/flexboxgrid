@@ -6,14 +6,19 @@ $outer-margin: 2rem;
 $gutter-compensation: (($gutter-width / 2) * -1);
 $half-gutter-width: ($gutter-width / 2);
 
-$viewport-xs: 30em;
-$viewport-sm: 48em;
-$viewport-md: 62em;
-$viewport-lg: 75em;
+$width-xs: 30;
+$width-sm: 48;
+$width-md: 62;
+$width-lg: 75;
 
-$container-sm: 45rem + $gutter-width;
-$container-md: 60rem + $gutter-width;
-$container-lg: 70rem + $gutter-width;
+$viewport-xs: #{$width-xs}em;
+$viewport-sm: #{$width-sm}em;
+$viewport-md: #{$width-md}em;
+$viewport-lg: #{$width-lg}em;
+
+$container-sm: #{$width-sm}rem + $gutter-width;
+$container-md: #{$width-md}rem + $gutter-width;
+$container-lg: #{$width-lg}rem + $gutter-width;
 
 $xs: 'xs';
 $sm: 'sm';
@@ -27,10 +32,12 @@ $modifier-delimiter: '-';
 $sizes: #{$xs}, #{$sm}, #{$md}, #{$lg};
 $queries: #{$viewport-xs}, #{$viewport-sm}, #{$viewport-md}, #{$viewport-lg};
 
+$properties: 'flex-basis', 'max-width';
+
 @mixin queries($queries: $queries) {
   @each $query in $queries {
     @media screen and (min-width: #{$query}) {
-      @content
+      @content;
     }
   }
 }
@@ -41,21 +48,12 @@ $queries: #{$viewport-xs}, #{$viewport-sm}, #{$viewport-md}, #{$viewport-lg};
 
 @mixin columns($selector, $columns: 0, $queries: $queries) {
   @each $size in $sizes {
-      @for $i from 0 through $columns {
-        @if ($i) {
-          #{$selector}#{$modifier-delimiter}#{$size}#{$step-delimiter}#{$i} {
-            @include queries($queries) {
-              @content
-              @include percent('flex-basis', $columns, $i);
-              @include percent('max-width', $columns, $i);
-            }
-          }
-      } @else {
-        #{$selector}#{$modifier-delimiter}#{$size} {
-          @include queries($queries) {
-            @content
-            @include percent('flex-basis', $columns, $i);
-            @include percent('max-width', $columns, $i);
+    @for $i from 1 through $columns {
+      #{$selector}#{$block-delimiter}#{$size}#{$modifier-delimiter}#{$i} {
+        @include queries($queries) {
+          @content;
+          @each $prop in $properties {
+            @include percent($prop, $columns, $i);
           }
         }
       }
@@ -64,24 +62,26 @@ $queries: #{$viewport-xs}, #{$viewport-sm}, #{$viewport-md}, #{$viewport-lg};
 }
 
 @mixin breakpoints($selector, $queries: $queries) {
-  #{$selector}#{$modifier-delimiter}#{$size} {
-    @include queries($queries) {
-      @content
+  @each $size in $sizes {
+    #{$selector}#{$modifier-delimiter}#{$size} {
+      @include queries($queries) {
+        @content;
+      }
     }
   }
 }
 
 .container-fluid {
+  box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
   padding-right: $outer-margin;
-  padding-left: $outer-pargin;
+  padding-left: $outer-margin;
 }
 
 .row {
   box-sizing: border-box;
   display: flex;
-  flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
   margin-right: $gutter-compensation;
@@ -91,7 +91,6 @@ $queries: #{$viewport-xs}, #{$viewport-sm}, #{$viewport-md}, #{$viewport-lg};
 %column {
   box-sizing: border-box;
   display: flex;
-  flex: 0 1 auto;
   flex-direction: column;
   flex-grow: 0;
   flex-shrink: 0;
@@ -99,8 +98,58 @@ $queries: #{$viewport-xs}, #{$viewport-sm}, #{$viewport-md}, #{$viewport-lg};
   padding-left: $half-gutter-width;
 }
 
-@include columns($column-selector, $column-count) {
-  @extend %column
+@include breakpoints($column-selector) {
+  @extend %column;
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
 }
 
+@include columns($column-selector, $column-count) {
+  @extend %column;
+}
+
+@include breakpoints('.start') {
+  justify-content: start;
+}
+
+@include breakpoints('.center') {
+  justify-content: center;
+}
+
+@include breakpoints('.end') {
+  justify-content: end;
+}
+
+@include breakpoints('.top') {
+  align-items: flex-start;
+}
+
+@include breakpoints('.middle') {
+  align-items: center;
+}
+
+@include breakpoints('.bottom') {
+  align-items: flex-end;
+}
+
+@include breakpoints('.around') {
+  justify-content: space-around;
+}
+
+@include breakpoints('.between') {
+  justify-content: space-between;
+}
+
+@include breakpoints('.first') {
+  order: -1;
+}
+
+@include breakpoints('.last') {
+  order: 1;
+}
+
+@include breakpoints('.reverse') {
+  flex-direction: row-reverse;
+}
 
