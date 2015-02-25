@@ -29,6 +29,7 @@ $block-delimiter: '-';
 $element-delimiter: '-';
 $modifier-delimiter: '-';
 
+$defaultQuery: $viewport-xs;
 $sizes: #{$xs}, #{$sm}, #{$md}, #{$lg};
 $queries: #{$viewport-xs}, #{$viewport-sm}, #{$viewport-md}, #{$viewport-lg};
 
@@ -36,14 +37,23 @@ $properties: 'flex-basis', 'max-width';
 
 @mixin queries($queries: $queries) {
   @each $query in $queries {
-    @media screen and (min-width: #{$query}) {
+    @if ($query == $defaultQuery) {
       @content;
+    } @else {
+      @media screen and (min-width: #{$query}) {
+        @content;
+      }
     }
   }
 }
 
-@mixin percent($property, $columns, $count) {
+@mixin percentWidth($property, $columns, $count) {
   #{$property}: ((100% / $columns) * $count);
+}
+
+@mixin percentOffset($property, $columns, $count) {
+  $singleColumnWidth: ((100% / $columns) * 1);
+  #{$property}: $singleColumnWidth * $count;
 }
 
 @mixin columns($selector, $columns: 0, $queries: $queries) {
@@ -53,7 +63,22 @@ $properties: 'flex-basis', 'max-width';
         @include queries($queries) {
           @content;
           @each $prop in $properties {
-            @include percent($prop, $columns, $i);
+            @include percentWidth($prop, $columns, $i);
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin offsets($selector, $columns: 0, $queries: $queries) {
+  @each $size in $sizes {
+    @for $i from 1 through $columns {
+      #{$selector}#{$block-delimiter}offset#{$modifier-delimiter}#{$size}#{$modifier-delimiter}#{$i} {
+        @include queries($queries) {
+          @content;
+          @each $prop in $properties {
+            @include percentOffset($prop, $columns, $i);
           }
         }
       }
