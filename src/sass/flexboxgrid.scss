@@ -1,5 +1,6 @@
 $column-count: 12;
 $column-selector: '.col';
+$offset-modifier: 'offset';
 
 $gutter-width: 1rem;
 $outer-margin: 2rem;
@@ -31,39 +32,49 @@ $modifier-delimiter: '-';
 
 $defaultQuery: $viewport-xs;
 $sizes: #{$xs}, #{$sm}, #{$md}, #{$lg};
-$queries: #{$viewport-xs}, #{$viewport-sm}, #{$viewport-md}, #{$viewport-lg};
+$queries: (#{$xs}:#{$viewport-xs}, #{$sm}:#{$viewport-sm}, #{$md}:#{$viewport-md}, #{$lg}:#{$viewport-lg});
 
-$properties: 'flex-basis', 'max-width';
+$column-properties: 'flex-basis', 'max-width';
+$offset-properties: 'margin-left';
 
-@mixin queries($queries: $queries) {
-  @each $query in $queries {
-    @if ($query == $defaultQuery) {
-      @content;
-    } @else {
-      @media screen and (min-width: #{$query}) {
-        @content;
-      }
-    }
-  }
-}
 
 @mixin percentWidth($property, $columns, $count) {
   #{$property}: ((100% / $columns) * $count);
 }
 
 @mixin percentOffset($property, $columns, $count) {
-  $singleColumnWidth: ((100% / $columns) * 1);
-  #{$property}: $singleColumnWidth * $count;
+  $single-column-width: ((100% / $columns) * 1);
+  #{$property}: $single-column-width * $count;
 }
 
-@mixin columns($selector, $columns: 0, $queries: $queries) {
+@mixin queries($key, $queries) {
+  $query: map-get($queries, $key);
+  @if ($query == $defaultQuery) {
+    @content;
+  } @else {
+    @media screen and (min-width: #{$query}) {
+      @content;
+    }
+  }
+}
+
+@mixin columns($selector: $column-selector, $properties: $column-properties, $columns: $column-count, $queries: $queries) {
   @each $size in $sizes {
-    @for $i from 1 through $columns {
-      #{$selector}#{$block-delimiter}#{$size}#{$modifier-delimiter}#{$i} {
-        @include queries($queries) {
-          @content;
-          @each $prop in $properties {
-            @include percentWidth($prop, $columns, $i);
+    @include queries($size, $queries) {
+      @for $i from 0 through $columns {
+        @if ($i == 0) {
+          #{$selector}#{$block-delimiter}#{$size} {
+            @content;
+            @each $prop in $properties {
+              @include percentWidth($prop, $columns, $i);
+            }
+          }
+        } @else {
+          #{$selector}#{$block-delimiter}#{$size}#{$modifier-delimiter}#{$i} {
+            @content;
+            @each $prop in $properties {
+              @include percentWidth($prop, $columns, $i);
+            }
           }
         }
       }
@@ -71,11 +82,11 @@ $properties: 'flex-basis', 'max-width';
   }
 }
 
-@mixin offsets($selector, $columns: 0, $queries: $queries) {
+@mixin offsets($selector: $column-selector, $modifier-selector: $offset-modifier, $properties: $offset-properties, $columns: $column-count, $queries: $queries) {
   @each $size in $sizes {
-    @for $i from 1 through $columns {
-      #{$selector}#{$block-delimiter}offset#{$modifier-delimiter}#{$size}#{$modifier-delimiter}#{$i} {
-        @include queries($queries) {
+    @for $i from 0 through $columns {
+      #{$selector}#{$block-delimiter}#{$size}#{$modifier-delimiter}#{$modifier-selector}#{$modifier-delimiter}#{$i} {
+        @include queries($size, $queries) {
           @content;
           @each $prop in $properties {
             @include percentOffset($prop, $columns, $i);
@@ -89,7 +100,7 @@ $properties: 'flex-basis', 'max-width';
 @mixin breakpoints($selector, $queries: $queries) {
   @each $size in $sizes {
     #{$selector}#{$modifier-delimiter}#{$size} {
-      @include queries($queries) {
+      @include queries($size, $queries) {
         @content;
       }
     }
@@ -123,14 +134,11 @@ $properties: 'flex-basis', 'max-width';
   padding-left: $half-gutter-width;
 }
 
-@include breakpoints($column-selector) {
+@include columns() {
   @extend %column;
-  flex-grow: 1;
-  flex-basis: 0;
-  max-width: 100%;
 }
 
-@include columns($column-selector, $column-count) {
+@include offsets() {
   @extend %column;
 }
 

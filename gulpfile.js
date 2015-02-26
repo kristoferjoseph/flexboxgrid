@@ -33,7 +33,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('css', function() {
-  return gulp.src(['src/css/style.css', 'dist/flexboxgrid.css'])
+  return gulp.src(['src/vendor/normalize.css', 'src/css/style.css', 'dist/flexboxgrid.css'])
     .pipe(postcss(preprocessors))
     .pipe(concat('index.css'))
     .pipe(minify())
@@ -58,5 +58,5 @@ gulp.task('html', function() {
 
 gulp.task('watch', function() {
   livereload.listen();
-  gulp.watch('src/**/*.{scss,js,html}', ['default']);
+  gulp.watch('src/**/*.{scss,css,js,html}', ['default']);
 });
