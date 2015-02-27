@@ -37,6 +37,11 @@ $queries: (#{$xs}:#{$viewport-xs}, #{$sm}:#{$viewport-sm}, #{$md}:#{$viewport-md
 $column-properties: 'flex-basis', 'max-width';
 $offset-properties: 'margin-left';
 
+@mixin autoWidth() {
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
 
 @mixin percentWidth($property, $columns, $count) {
   #{$property}: ((100% / $columns) * $count);
@@ -65,9 +70,7 @@ $offset-properties: 'margin-left';
         @if ($i == 0) {
           #{$selector}#{$block-delimiter}#{$size} {
             @content;
-            @each $prop in $properties {
-              @include percentWidth($prop, $columns, $i);
-            }
+            @include autoWidth();
           }
         } @else {
           #{$selector}#{$block-delimiter}#{$size}#{$modifier-delimiter}#{$i} {
