@@ -146,7 +146,7 @@ $offset-properties: 'margin-left';
 }
 
 @include breakpoints('.start') {
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 @include breakpoints('.center') {
@@ -154,7 +154,7 @@ $offset-properties: 'margin-left';
 }
 
 @include breakpoints('.end') {
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 @include breakpoints('.top') {

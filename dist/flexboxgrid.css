@@ -163,9 +163,9 @@
 
 .start-xs {
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
+  -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
-          justify-content: start; }
+          justify-content: flex-start; }
 
 .center-xs {
   -webkit-box-pack: center;
@@ -175,9 +175,9 @@
 
 .end-xs {
   -webkit-box-pack: end;
-  -webkit-justify-content: end;
+  -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
-          justify-content: end; }
+          justify-content: flex-end; }
 
 .top-xs {
   -webkit-box-align: start;
@@ -349,9 +349,9 @@
 
   .start-sm {
     -webkit-box-pack: start;
-    -webkit-justify-content: start;
+    -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
-    justify-content: start; }
+    justify-content: flex-start; }
 
   .center-sm {
     -webkit-box-pack: center;
@@ -361,9 +361,9 @@
 
   .end-sm {
     -webkit-box-pack: end;
-    -webkit-justify-content: end;
+    -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
-    justify-content: end; }
+    justify-content: flex-end; }
 
   .top-sm {
     -webkit-box-align: start;
@@ -535,9 +535,9 @@
 
   .start-md {
     -webkit-box-pack: start;
-    -webkit-justify-content: start;
+    -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
-    justify-content: start; }
+    justify-content: flex-start; }
 
   .center-md {
     -webkit-box-pack: center;
@@ -547,9 +547,9 @@
 
   .end-md {
     -webkit-box-pack: end;
-    -webkit-justify-content: end;
+    -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
-    justify-content: end; }
+    justify-content: flex-end; }
 
   .top-md {
     -webkit-box-align: start;
@@ -721,9 +721,9 @@
 
   .start-lg {
     -webkit-box-pack: start;
-    -webkit-justify-content: start;
+    -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
-    justify-content: start; }
+    justify-content: flex-start; }
 
   .center-lg {
     -webkit-box-pack: center;
@@ -733,9 +733,9 @@
 
   .end-lg {
     -webkit-box-pack: end;
-    -webkit-justify-content: end;
+    -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
-    justify-content: end; }
+    justify-content: flex-end; }
 
   .top-lg {
     -webkit-box-align: start;
