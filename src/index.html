@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <style>
-            <!-- build:include:dist ../css/index.min.css -->
+            <!-- build:include ../css/index.min.css -->
             <!-- /build -->
         </style>
 
@@ -329,7 +329,7 @@
 
                 <p>Add classes to align elements to the start or end of a row as well as the top,
                     bottom, or center of a column</p>
-                    <h3><code>.start-*</code></h3>
+                    <h3><code>.start</code></h3>
 
                 <div class="row">
                     <div class="col-xs-12">
@@ -341,7 +341,7 @@
                             </div>
                         </div>
                     </div>
-                </div>*default alignment
+                </div>
 <pre><code>&lt;div class="row start-xs">
     &lt;div class="col-xs-6">
         &lt;div class="box">
@@ -352,7 +352,7 @@
 </code></pre>
 
 
-                <h3><code>.center-*</code></h3>
+                <h3><code>.center</code></h3>
 
                 <div class="row">
                     <div class="col-xs-12">
@@ -374,7 +374,7 @@
 &lt;/div>
 </code></pre>
 
-                <h3><code>.end-*</code></h3>
+                <h3><code>.end</code></h3>
 
                 <div class="row">
                     <div class="col-xs-12">
@@ -396,7 +396,7 @@
 &lt;/div>
 </code></pre>
 
-                <p>Here is an example of using the modifiers in conjunction to acheive different alignment at different viewport sizes. </p>
+              <h3><code>Example</code></h3>
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="box box-container">
@@ -407,7 +407,7 @@
                             </div>
                         </div>
                     </div>
-                </div>*Resize the browser window to see the alignment change.
+                </div>
 <pre><code>&lt;div class="row center-xs end-sm start-lg">
     &lt;div class="col-xs-6">
         &lt;div class="box">
@@ -417,7 +417,7 @@
 &lt;/div>
 </code></pre>
 
-                <h3><code>.top-*</code></h3>
+                <h3><code>.top</code></h3>
 
                 <div class="row top-xs">
                     <div class="col-xs-6">
@@ -426,7 +426,7 @@
                     <div class="col-xs-6">
                         <div class="box"></div>
                     </div>
-                </div>*default alignment
+                </div>
 <pre><code>&lt;div class="row top-xs">
     &lt;div class="col-xs-6">
         &lt;div class="box">
@@ -436,7 +436,7 @@
 &lt;/div>
 </code></pre>
 
-                <h3><code>.middle-*</code></h3>
+                <h3><code>.middle</code></h3>
 
                 <div class="row middle-xs">
                     <div class="col-xs-6">
@@ -455,7 +455,7 @@
 &lt;/div>
 </code></pre>
 
-                <h3><code>.bottom-*</code></h3>
+                <h3><code>.bottom</code></h3>
 
                 <div class="row bottom-xs">
                     <div class="col-xs-6">
@@ -481,7 +481,7 @@
                  <h2>Distribution</h2>
 
                 <p>Add classes to distribute the contents of a row or column.</p>
-                <h3><code>.around-*</code></h3>
+                <h3><code>.around</code></h3>
 
                 <div class="row">
                     <div class="col-xs-12">
@@ -519,7 +519,7 @@
 &lt;/div>
 </code></pre>
 
-                <h3><code>.between-*</code></h3>
+                <h3><code>.between</code></h3>
 
                 <div class="row">
                     <div class="col-xs-12">
@@ -564,7 +564,7 @@
                  <h2>Reordering</h2>
 
                 <p>Add classes to reorder columns.</p>
-                <h3><code>.first-*</code></h3>
+                <h3><code>.first</code></h3>
 
                 <div class="row">
                     <div class="col-xs-12">
@@ -611,7 +611,7 @@
 &lt;/div>
 </code></pre>
 
-                <h3><code>.last-*</code></h3>
+                <h3><code>.last</code></h3>
 
                 <div class="row">
                     <div class="col-xs-12">
@@ -669,7 +669,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="box box-container">
-                            <div class="row reverse">
+                            <div class="row reverse-xs">
                                 <div class="col-xs-2">
                                     <div class="box-nested">1</div>
                                 </div>
@@ -692,7 +692,7 @@
                         </div>
                     </div>
                 </div>
-<pre><code>&lt;div class="row reverse">
+<pre><code>&lt;div class="row reverse-xs">
     &lt;div class="col-xs-2">
         &lt;div class="box">
             1
@@ -736,7 +736,9 @@
             });
           }());
         </script>
+        <!-- build:remove -->
         <script src="//localhost:35729/livereload.js"></script>
+        <!-- /build -->
     </body>
 
 </html>

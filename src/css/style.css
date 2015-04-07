@@ -3,7 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: 18px;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
   font-weight: normal;
   background: #EEE;
   line-height: 1.4rem;
@@ -14,7 +14,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "bree", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "bree", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
   color: #001A33;
 }
 h2 {
