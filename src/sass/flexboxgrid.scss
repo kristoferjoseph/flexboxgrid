@@ -1,41 +1,41 @@
-$column-count: 12;
-$column-selector: '.col';
-$offset-modifier: 'offset';
+$column-count: 12 !default;
+$column-selector: '.col' !default;
+$offset-modifier: 'offset' !default;
 
-$gutter-width: 1rem;
-$outer-margin: 2rem;
-$gutter-compensation: (($gutter-width / 2) * -1);
-$half-gutter-width: ($gutter-width / 2);
+$gutter-width: 1rem !default;
+$outer-margin: 2rem !default;
+$gutter-compensation: (($gutter-width / 2) * -1) !default;
+$half-gutter-width: ($gutter-width / 2) !default;
 
-$width-xs: 30;
-$width-sm: 48;
-$width-md: 62;
-$width-lg: 75;
+$width-xs: 30 !default;
+$width-sm: 48 !default;
+$width-md: 62 !default;
+$width-lg: 75 !default;
 
-$viewport-xs: #{$width-xs}em;
-$viewport-sm: #{$width-sm}em;
-$viewport-md: #{$width-md}em;
-$viewport-lg: #{$width-lg}em;
+$viewport-xs: #{$width-xs}em !default;
+$viewport-sm: #{$width-sm}em !default;
+$viewport-md: #{$width-md}em !default;
+$viewport-lg: #{$width-lg}em !default;
 
-$container-sm: #{$width-sm}rem + $gutter-width;
-$container-md: #{$width-md}rem + $gutter-width;
-$container-lg: #{$width-lg}rem + $gutter-width;
+$container-sm: #{$width-sm}rem + $gutter-width !default;
+$container-md: #{$width-md}rem + $gutter-width !default;
+$container-lg: #{$width-lg}rem + $gutter-width !default;
 
-$xs: 'xs';
-$sm: 'sm';
-$md: 'md';
-$lg: 'lg';
+$xs: 'xs' !default;
+$sm: 'sm' !default;
+$md: 'md' !default;
+$lg: 'lg' !default;
 
-$block-delimiter: '-';
-$element-delimiter: '-';
-$modifier-delimiter: '-';
+$block-delimiter: '-' !default;
+$element-delimiter: '-' !default;
+$modifier-delimiter: '-' !default;
 
-$defaultQuery: $viewport-xs;
-$sizes: #{$xs}, #{$sm}, #{$md}, #{$lg};
-$queries: (#{$xs}:#{$viewport-xs}, #{$sm}:#{$viewport-sm}, #{$md}:#{$viewport-md}, #{$lg}:#{$viewport-lg});
+$defaultQuery: $viewport-xs !default;
+$sizes: #{$xs}, #{$sm}, #{$md}, #{$lg} !default;
+$queries: (#{$xs}:#{$viewport-xs}, #{$sm}:#{$viewport-sm}, #{$md}:#{$viewport-md}, #{$lg}:#{$viewport-lg}) !default;
 
-$column-properties: 'flex-basis', 'max-width';
-$offset-properties: 'margin-left';
+$column-properties: 'flex-basis', 'max-width' !default;
+$offset-properties: 'margin-left' !default;
 
 @mixin autoWidth() {
   flex-grow: 1;
