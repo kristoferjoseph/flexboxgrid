@@ -75,7 +75,6 @@
   box-sizing: border-box;
   display: flex;
   flex: 0 0 auto;
-  flex-direction: column;
   padding-right: var( --half-gutter-width, 0.5rem );
   padding-left: var( --half-gutter-width, 0.5rem );
 }
@@ -266,7 +265,6 @@
     box-sizing: border-box;
     display: flex;
     flex: 0 0 auto;
-    flex-direction: column;
     padding-right: var( --half-gutter-width, 0.5rem );
     padding-left: var( --half-gutter-width, 0.5rem );
   }
@@ -458,7 +456,6 @@
     box-sizing: border-box;
     display: flex;
     flex: 0 0 auto;
-    flex-direction: column;
     padding-right: var( --half-gutter-width, 0.5rem );
     padding-left: var( --half-gutter-width, 0.5rem );
   }
@@ -650,7 +647,6 @@
     box-sizing: border-box;
     display: flex;
     flex: 0 0 auto;
-    flex-direction: column;
     padding-right: var( --half-gutter-width, 0.5rem );
     padding-left: var( --half-gutter-width, 0.5rem );
   }
