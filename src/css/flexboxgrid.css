@@ -73,7 +73,6 @@
 .col-xs-offset-11,
 .col-xs-offset-12 {
   box-sizing: border-box;
-  display: flex;
   flex: 0 0 auto;
   flex-direction: column;
   padding-right: var( --half-gutter-width, 0.5rem );
@@ -264,7 +263,6 @@
   .col-sm-offset-11,
   .col-sm-offset-12 {
     box-sizing: border-box;
-    display: flex;
     flex: 0 0 auto;
     flex-direction: column;
     padding-right: var( --half-gutter-width, 0.5rem );
@@ -456,7 +454,6 @@
   .col-md-offset-11,
   .col-md-offset-12 {
     box-sizing: border-box;
-    display: flex;
     flex: 0 0 auto;
     flex-direction: column;
     padding-right: var( --half-gutter-width, 0.5rem );
@@ -648,7 +645,6 @@
   .col-lg-offset-11,
   .col-lg-offset-12 {
     box-sizing: border-box;
-    display: flex;
     flex: 0 0 auto;
     flex-direction: column;
     padding-right: var( --half-gutter-width, 0.5rem );
