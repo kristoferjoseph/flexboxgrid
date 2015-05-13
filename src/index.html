@@ -12,7 +12,39 @@
             <!-- build:include:dist ../css/index.min.css -->
             <!-- /build -->
         </style>
-
+        <script>
+          function loadCSS( href, before, media, callback ){
+            "use strict";
+            var ss = window.document.createElement( "link" );
+            var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
+            var sheets = window.document.styleSheets;
+            ss.rel = "stylesheet";
+            ss.href = href;
+            ss.media = "only x";
+            ref.parentNode.insertBefore( ss, ref );
+            ss.onloadcssdefined = function( cb ){
+              var defined;
+              for( var i = 0; i < sheets.length; i++ ){
+                if( sheets[ i ].href && sheets[ i ].href.indexOf( href ) > -1 ){
+                  defined = true;
+                }
+              }
+              if( defined ){
+                cb();
+              } else {
+                setTimeout(function() {
+                  ss.onloadcssdefined( cb );
+                });
+              }
+            };
+            ss.onloadcssdefined(function() {
+              ss.media = media || "all";
+            });
+            return ss;
+          }
+          loadCSS( "//kristoferjoseph.com/font/bold.css" );
+        </script>
+        <noscript><link href="//kristoferjoseph.com/font/bold.css" rel="stylesheet"></noscript>
     </head>
 
     <body class="layout">
@@ -27,7 +59,7 @@
                         property.</p>
                 </div>
                 <div class="row center-xs">
-                  <a class="button invisible-xs visible-md" href="https://github.com/kristoferjoseph/flexboxgrid/archive/v6.1.1.zip">Download</a>
+                  <a class="button invisible-xs visible-md" href="https://github.com/kristoferjoseph/flexboxgrid/archive/v6.2.1.zip">Download</a>
                   <a class="button" href="https://github.com/kristoferjoseph/flexboxgrid">Github</a>
 
                 </div>
@@ -329,7 +361,7 @@
 
                 <p>Add classes to align elements to the start or end of a row as well as the top,
                     bottom, or center of a column</p>
-                    <h3><code>.start-*</code></h3>
+                    <h3><code>.start-</code></h3>
 
                 <div class="row">
                     <div class="col-xs-12">
@@ -341,7 +373,7 @@
                             </div>
                         </div>
                     </div>
-                </div>*default alignment
+                </div>
 <pre><code>&lt;div class="row start-xs">
     &lt;div class="col-xs-6">
         &lt;div class="box">
@@ -352,7 +384,7 @@
 </code></pre>
 
 
-                <h3><code>.center-*</code></h3>
+                <h3><code>.center-</code></h3>
 
                 <div class="row">
                     <div class="col-xs-12">
@@ -374,7 +406,7 @@
 &lt;/div>
 </code></pre>
 
-                <h3><code>.end-*</code></h3>
+                <h3><code>.end-</code></h3>
 
                 <div class="row">
                     <div class="col-xs-12">
@@ -407,7 +439,7 @@
                             </div>
                         </div>
                     </div>
-                </div>*Resize the browser window to see the alignment change.
+                </div>Example
 <pre><code>&lt;div class="row center-xs end-sm start-lg">
     &lt;div class="col-xs-6">
         &lt;div class="box">
@@ -417,7 +449,7 @@
 &lt;/div>
 </code></pre>
 
-                <h3><code>.top-*</code></h3>
+                <h3><code>.top-</code></h3>
 
                 <div class="row top-xs">
                     <div class="col-xs-6">
@@ -426,7 +458,7 @@
                     <div class="col-xs-6">
                         <div class="box"></div>
                     </div>
-                </div>*default alignment
+                </div>
 <pre><code>&lt;div class="row top-xs">
     &lt;div class="col-xs-6">
         &lt;div class="box">
@@ -436,7 +468,7 @@
 &lt;/div>
 </code></pre>
 
-                <h3><code>.middle-*</code></h3>
+                <h3><code>.middle-</code></h3>
 
                 <div class="row middle-xs">
                     <div class="col-xs-6">
@@ -455,7 +487,7 @@
 &lt;/div>
 </code></pre>
 
-                <h3><code>.bottom-*</code></h3>
+                <h3><code>.bottom-</code></h3>
 
                 <div class="row bottom-xs">
                     <div class="col-xs-6">
@@ -481,7 +513,7 @@
                  <h2>Distribution</h2>
 
                 <p>Add classes to distribute the contents of a row or column.</p>
-                <h3><code>.around-*</code></h3>
+                <h3><code>.around-</code></h3>
 
                 <div class="row">
                     <div class="col-xs-12">
@@ -519,7 +551,7 @@
 &lt;/div>
 </code></pre>
 
-                <h3><code>.between-*</code></h3>
+                <h3><code>.between-</code></h3>
 
                 <div class="row">
                     <div class="col-xs-12">
@@ -564,7 +596,7 @@
                  <h2>Reordering</h2>
 
                 <p>Add classes to reorder columns.</p>
-                <h3><code>.first-*</code></h3>
+                <h3><code>.first-</code></h3>
 
                 <div class="row">
                     <div class="col-xs-12">
@@ -611,7 +643,7 @@
 &lt;/div>
 </code></pre>
 
-                <h3><code>.last-*</code></h3>
+                <h3><code>.last-</code></h3>
 
                 <div class="row">
                     <div class="col-xs-12">
