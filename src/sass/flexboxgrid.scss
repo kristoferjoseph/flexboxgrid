@@ -129,8 +129,6 @@ $offset-properties: 'margin-left' !default;
 
 %column {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
   flex-grow: 0;
   flex-shrink: 0;
   padding-right: $half-gutter-width;
