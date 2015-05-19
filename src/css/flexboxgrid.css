@@ -5,8 +5,8 @@
  * :root {
  *  --gutter-width: 1rem;
  *  --outer-margin: 2rem;
- *  --gutter-compensation: calc( var( --gutter-width / 2 ) * -1 );
- *  --half-gutter-width: calc( var( --gutter-width / 2 ) );
+ *  --gutter-compensation: calc( var( --gutter-width ) / 2 * -1 );
+ *  --half-gutter-width: calc( var( --gutter-width ) / 2 );
  *  --screen-xs-min: 30em;
  *  --screen-sm-min: 48em;
  *  --screen-md-min: 62em;
