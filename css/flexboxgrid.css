@@ -1,22 +1,18 @@
-/*
- *
- * Uncomment and set these variables to customize the grid.
- *
- * :root {
- *  --gutter-width: 1rem;
- *  --outer-margin: 2rem;
- *  --gutter-compensation: calc( var( --gutter-width / 2 ) * -1 );
- *  --half-gutter-width: calc( var( --gutter-width / 2 ) );
- *  --screen-xs-min: 30em;
- *  --screen-sm-min: 48em;
- *  --screen-md-min: 62em;
- *  --screen-lg-min: 75em;
- *  --container-sm: calc( 45rem + var( --gutter-width ) );
- *  --container-md: calc( 60rem + var( --gutter-width ) );
- *  --container-lg: calc( 70rem + var( --gutter-width ) );
- * }
- *
-*/
+/* Uncomment and set these variables to customize the grid. */
+
+:root {
+  --gutter-width: 1rem;
+  --outer-margin: 2rem;
+  --gutter-compensation: calc( var( --gutter-width / 2 ) * -1 );
+  --half-gutter-width: calc( var( --gutter-width / 2 ) );
+  --screen-xs-min: 30em;
+  --screen-sm-min: 48em;
+  --screen-md-min: 62em;
+  --screen-lg-min: 75em;
+  --container-sm: calc( 45rem + var( --gutter-width ) );
+  --container-md: calc( 60rem + var( --gutter-width ) );
+  --container-lg: calc( 70rem + var( --gutter-width ) );
+}
 
 @custom-media --sm-viewport only screen and (min-width: 48em);
 @custom-media --md-viewport only screen and (min-width: 62em);
