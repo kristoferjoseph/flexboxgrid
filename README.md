@@ -25,7 +25,7 @@ Install
 Add the `flexbox.css` __development__ or `flexbox.min.css` __production__ to your html page.
 
 ```
-<link rel="stylesheet" href="css/flexbox.min.css" type="text/css" />
+<link rel="stylesheet" href="css/flexbox.min.css" type="text/css">
 ```
 Inspiration
 -----------
