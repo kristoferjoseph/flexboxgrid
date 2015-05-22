@@ -3,15 +3,15 @@
 :root {
   --gutter-width: 1rem;
   --outer-margin: 2rem;
-  --gutter-compensation: calc(var(--gutter-width / 2) * -1 );
-  --half-gutter-width: calc(var(--gutter-width / 2) );
+  --gutter-compensation: calc( var( --gutter-width / 2 ) * -1 );
+  --half-gutter-width: calc( var( --gutter-width / 2 ) );
   --screen-xs-min: 30em;
   --screen-sm-min: 48em;
   --screen-md-min: 62em;
   --screen-lg-min: 75em;
-  --container-sm: calc(45rem + var(--gutter-width));
-  --container-md: calc(60rem + var(--gutter-width));
-  --container-lg: calc(70rem + var(--gutter-width));
+  --container-sm: calc( 45rem + var( --gutter-width ) );
+  --container-md: calc( 60rem + var( --gutter-width ) );
+  --container-lg: calc( 70rem + var( --gutter-width ) );
 }
 
 @custom-media --sm-viewport only screen and (min-width: 48em);
@@ -21,8 +21,8 @@
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  padding-right: --outer-margin, 2rem);
-  padding-left: var(--outer-margin, 2rem);
+  padding-right: var( --outer-margin, 2rem );
+  padding-left: var( --outer-margin, 2rem );
 }
 
 .row {
@@ -31,8 +31,8 @@
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-right: var(--gutter-compensation, -0.5rem);
-  margin-left: var(--gutter-compensation, -0.5rem);
+  margin-right: var( --gutter-compensation, -0.5rem );
+  margin-left: var( --gutter-compensation, -0.5rem );
 }
 
 .row.reverse {
@@ -70,8 +70,8 @@
 .col-xs-offset-12 {
   box-sizing: border-box;
   flex: 0 0 auto;
-  padding-right: var(--half-gutter-width, 0.5rem);
-  padding-left: var(--half-gutter-width, 0.5rem);
+  padding-right: var( --half-gutter-width, 0.5rem );
+  padding-left: var( --half-gutter-width, 0.5rem );
 }
 
 .col-xs {
@@ -229,7 +229,7 @@
 
 @media (--sm-viewport) {
   .container {
-    width: var(--container-sm, 46rem);
+    width: var( --container-sm, 46rem );
   }
 
   .col-sm,
@@ -259,8 +259,8 @@
   .col-sm-offset-12 {
     box-sizing: border-box;
     flex: 0 0 auto;
-    padding-right: var(--half-gutter-width, 0.5rem);
-    padding-left: var(--half-gutter-width, 0.5rem);
+    padding-right: var( --half-gutter-width, 0.5rem );
+    padding-left: var( --half-gutter-width, 0.5rem );
   }
 
   .col-sm {
@@ -419,7 +419,7 @@
 
 @media (--md-viewport) {
   .container {
-    width: var(--container-md, 61rem);
+    width: var( --container-md, 61rem );
   }
 
   .col-md,
@@ -449,8 +449,8 @@
   .col-md-offset-12 {
     box-sizing: border-box;
     flex: 0 0 auto;
-    padding-right: var(--half-gutter-width, 0.5rem);
-    padding-left: var(--half-gutter-width, 0.5rem);
+    padding-right: var( --half-gutter-width, 0.5rem );
+    padding-left: var( --half-gutter-width, 0.5rem );
   }
 
   .col-md {
@@ -609,7 +609,7 @@
 
 @media (--lg-viewport) {
   .container {
-    width: var(--container-lg, 71rem);
+    width: var( --container-lg, 71rem );
   }
 
   .col-lg,
@@ -639,8 +639,8 @@
   .col-lg-offset-12 {
     box-sizing: border-box;
     flex: 0 0 auto;
-    padding-right: var(--half-gutter-width, 0.5rem);
-    padding-left: var(--half-gutter-width, 0.5rem);
+    padding-right: var( --half-gutter-width, 0.5rem );
+    padding-left: var( --half-gutter-width, 0.5rem );
   }
 
   .col-lg {
@@ -796,4 +796,3 @@
     order: 1;
   }
 }
-
