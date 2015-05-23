@@ -1,22 +1,24 @@
-/* Uncomment and set these variables to customize the grid. */
-
 :root {
   --gutter-width: 1rem;
   --outer-margin: 2rem;
-  --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1 );
-  --half-gutter-width: calc((var(--gutter-width) * 0.5) * -1 );
-  --screen-xs-min: 30em;
-  --screen-sm-min: 48em;
-  --screen-md-min: 62em;
-  --screen-lg-min: 75em;
-  --container-sm: calc(45rem + var(--gutter-width));
-  --container-md: calc(60rem + var(--gutter-width));
-  --container-lg: calc(70rem + var(--gutter-width));
+  --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
+  --half-gutter-width: calc((var(--gutter-width) * 0.5) * -1);
+  --xs-min: 30;
+  --sm-min: 48;
+  --md-min: 64;
+  --lg-min: 75;
+  --screen-xs-min: var(--xs-min)em;
+  --screen-sm-min: var(--sm-min)em;
+  --screen-md-min: var(--md-min)em;
+  --screen-lg-min: var(--lg-min)em;
+  --container-sm: calc(var(--sm-min) + var(--gutter-width));
+  --container-md: calc(var(--md-min) + var(--gutter-width));
+  --container-lg: calc(var(--lg-min) + var(--gutter-width));
 }
 
-@custom-media --sm-viewport only screen and (min-width: 48em);
-@custom-media --md-viewport only screen and (min-width: 62em);
-@custom-media --lg-viewport only screen and (min-width: 75em);
+@custom-media --sm-viewport only screen and (min-width: var(--screen-sm-min));
+@custom-media --md-viewport only screen and (min-width: var(--screen-md-min));
+@custom-media --lg-viewport only screen and (min-width: var(--screen-lg-min));
 
 .container-fluid {
   margin-right: auto;
