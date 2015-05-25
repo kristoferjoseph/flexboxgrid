@@ -1,28 +1,30 @@
-/* Uncomment and set these variables to customize the grid. */
-
 :root {
   --gutter-width: 1rem;
   --outer-margin: 2rem;
-  --gutter-compensation: calc( var( --gutter-width / 2 ) * -1 );
-  --half-gutter-width: calc( var( --gutter-width / 2 ) );
-  --screen-xs-min: 30em;
-  --screen-sm-min: 48em;
-  --screen-md-min: 62em;
-  --screen-lg-min: 75em;
-  --container-sm: calc( 45rem + var( --gutter-width ) );
-  --container-md: calc( 60rem + var( --gutter-width ) );
-  --container-lg: calc( 70rem + var( --gutter-width ) );
+  --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
+  --half-gutter-width: calc((var(--gutter-width) * 0.5) * -1);
+  --xs-min: 30;
+  --sm-min: 48;
+  --md-min: 64;
+  --lg-min: 75;
+  --screen-xs-min: var(--xs-min)em;
+  --screen-sm-min: var(--sm-min)em;
+  --screen-md-min: var(--md-min)em;
+  --screen-lg-min: var(--lg-min)em;
+  --container-sm: calc(var(--screen-sm-min) + var(--gutter-width));
+  --container-md: calc(var(--screen-md-min) + var(--gutter-width));
+  --container-lg: calc(var(--screen-lg-min) + var(--gutter-width));
 }
 
 @custom-media --sm-viewport only screen and (min-width: 48em);
-@custom-media --md-viewport only screen and (min-width: 62em);
+@custom-media --md-viewport only screen and (min-width: 64em);
 @custom-media --lg-viewport only screen and (min-width: 75em);
 
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  padding-right: var( --outer-margin, 2rem );
-  padding-left: var( --outer-margin, 2rem );
+  padding-right: var(--outer-margin);
+  padding-left: var(--outer-margin);
 }
 
 .row {
@@ -31,8 +33,8 @@
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-right: var( --gutter-compensation, -0.5rem );
-  margin-left: var( --gutter-compensation, -0.5rem );
+  margin-right: var(--gutter-compensation);
+  margin-left: var(--gutter-compensation);
 }
 
 .row.reverse {
@@ -70,8 +72,8 @@
 .col-xs-offset-12 {
   box-sizing: border-box;
   flex: 0 0 auto;
-  padding-right: var( --half-gutter-width, 0.5rem );
-  padding-left: var( --half-gutter-width, 0.5rem );
+  padding-right: var(--half-gutter-width);
+  padding-left: var(--half-gutter-width);
 }
 
 .col-xs {
@@ -229,7 +231,7 @@
 
 @media (--sm-viewport) {
   .container {
-    width: var( --container-sm, 46rem );
+    width: var(--container-sm);
   }
 
   .col-sm,
@@ -259,8 +261,8 @@
   .col-sm-offset-12 {
     box-sizing: border-box;
     flex: 0 0 auto;
-    padding-right: var( --half-gutter-width, 0.5rem );
-    padding-left: var( --half-gutter-width, 0.5rem );
+    padding-right: var(--half-gutter-width);
+    padding-left: var(--half-gutter-width);
   }
 
   .col-sm {
@@ -419,7 +421,7 @@
 
 @media (--md-viewport) {
   .container {
-    width: var( --container-md, 61rem );
+    width: var(--container-md);
   }
 
   .col-md,
@@ -449,8 +451,8 @@
   .col-md-offset-12 {
     box-sizing: border-box;
     flex: 0 0 auto;
-    padding-right: var( --half-gutter-width, 0.5rem );
-    padding-left: var( --half-gutter-width, 0.5rem );
+    padding-right: var(--half-gutter-width);
+    padding-left: var(--half-gutter-width);
   }
 
   .col-md {
@@ -609,7 +611,7 @@
 
 @media (--lg-viewport) {
   .container {
-    width: var( --container-lg, 71rem );
+    width: var(--container-lg);
   }
 
   .col-lg,
@@ -639,8 +641,8 @@
   .col-lg-offset-12 {
     box-sizing: border-box;
     flex: 0 0 auto;
-    padding-right: var( --half-gutter-width, 0.5rem );
-    padding-left: var( --half-gutter-width, 0.5rem );
+    padding-right: var(--half-gutter-width);
+    padding-left: var(--half-gutter-width);
   }
 
   .col-lg {
@@ -796,3 +798,4 @@
     order: 1;
   }
 }
+
