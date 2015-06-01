@@ -1,1 +1,39 @@
-/* TODO: Add LESS version */
+@column-count: 12;
+@column-selector: '.col';
+@offset-modifier: 'offset';
+
+@gutter-width: 1rem;
+@outer-margin: 2rem;
+@gutter-compensation: ((@gutter-width / 2) * -1);
+@half-gutter-width: (@gutter-width / 2);
+
+@width-xs: 30;
+@width-sm: 48;
+@width-md: 62;
+@width-lg: 75;
+
+@viewport-xs: @{@width-xs}em;
+@viewport-sm: @{@width-sm}em;
+@viewport-md: @{@width-md}em;
+@viewport-lg: @{@width-lg}em;
+
+@container-sm: @{@width-sm}rem + @gutter-width;
+@container-md: @{@width-md}rem + @gutter-width;
+@container-lg: @{@width-lg}rem + @gutter-width;
+
+@xs: 'xs';
+@sm: 'sm';
+@md: 'md';
+@lg: 'lg';
+
+@block-delimiter: '-';
+@element-delimiter: '-';
+@modifier-delimiter: '-';
+
+@defaultQuery: @viewport-xs;
+@sizes: @{@xs}, @{@sm}, @{@md}, @{@lg};
+@queries: (@{@xs}:@{@viewport-xs}, @{@sm}:@{@viewport-sm}, @{@md}:@{@viewport-md}, @{@lg}:@{@viewport-lg});
+
+@column-properties: 'flex-basis', 'max-width';
+@offset-properties: 'margin-left';
+
