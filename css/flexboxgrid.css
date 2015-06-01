@@ -37,11 +37,11 @@
   margin-left: var(--gutter-compensation);
 }
 
-.row.reverse {
+.row-reverse {
   flex-direction: row-reverse;
 }
 
-.col.reverse {
+.col-reverse {
   flex-direction: column-reverse;
 }
 

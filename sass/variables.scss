@@ -1,0 +1,39 @@
+$column-count: 12 !default;
+$column-selector: '.col' !default;
+$offset-modifier: 'offset' !default;
+
+$gutter-width: 1rem !default;
+$outer-margin: 2rem !default;
+$gutter-compensation: (($gutter-width / 2) * -1) !default;
+$half-gutter-width: ($gutter-width / 2) !default;
+
+$width-xs: 30 !default;
+$width-sm: 48 !default;
+$width-md: 62 !default;
+$width-lg: 75 !default;
+
+$viewport-xs: #{$width-xs}em !default;
+$viewport-sm: #{$width-sm}em !default;
+$viewport-md: #{$width-md}em !default;
+$viewport-lg: #{$width-lg}em !default;
+
+$container-sm: #{$width-sm}rem + $gutter-width !default;
+$container-md: #{$width-md}rem + $gutter-width !default;
+$container-lg: #{$width-lg}rem + $gutter-width !default;
+
+$xs: 'xs' !default;
+$sm: 'sm' !default;
+$md: 'md' !default;
+$lg: 'lg' !default;
+
+$block-delimiter: '-' !default;
+$element-delimiter: '-' !default;
+$modifier-delimiter: '-' !default;
+
+$defaultQuery: $viewport-xs !default;
+$sizes: #{$xs}, #{$sm}, #{$md}, #{$lg} !default;
+$queries: (#{$xs}:#{$viewport-xs}, #{$sm}:#{$viewport-sm}, #{$md}:#{$viewport-md}, #{$lg}:#{$viewport-lg}) !default;
+
+$column-properties: 'flex-basis', 'max-width' !default;
+$offset-properties: 'margin-left' !default;
+
