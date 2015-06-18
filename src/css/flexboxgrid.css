@@ -20,9 +20,12 @@
 @custom-media --md-viewport only screen and (min-width: 64em);
 @custom-media --lg-viewport only screen and (min-width: 75em);
 
-.container-fluid {
+.container-fluid, .container {
   margin-right: auto;
   margin-left: auto;
+}
+
+.container-fluid {
   padding-right: var(--outer-margin, 2rem);
   padding-left: var(--outer-margin, 2rem);
 }
