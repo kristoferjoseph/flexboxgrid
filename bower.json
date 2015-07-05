@@ -6,7 +6,7 @@
     "@dam"
   ],
   "description": "Grid based on the flex display property.",
-  "main": "dist/flexboxgrid.css",
+  "main": "flexboxgrid.css",
   "keywords": [
     "browser",
     "flexbox",
