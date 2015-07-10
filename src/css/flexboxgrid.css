@@ -228,49 +228,56 @@
   order: -1;
 }
 
-.second-xs {
+.col-xs-order-1 {
+  order: 1;
+}
+
+.col-xs-order-2 {
   order: 2;
 }
 
-.third-xs {
+.col-xs-order-3 {
   order: 3;
 }
 
-.fourth-xs {
+.col-xs-order-4 {
   order: 4;
 }
 
-.fifth-xs {
+.col-xs-order-5 {
   order: 5;
 }
 
-.sixth-xs {
+.col-xs-order-6 {
   order: 6;
 }
 
-.seventh-xs {
+.col-xs-order-7 {
   order: 7;
 }
 
-.eighth-xs {
+.col-xs-order-8 {
   order: 8;
 }
 
-.ninth-xs {
+.col-xs-order-9 {
   order: 9;
 }
 
-.tenth-xs {
+.col-xs-order-10 {
   order: 10;
 }
 
-.eleventh-xs {
+.col-xs-order-11 {
   order: 11;
 }
 
-.twelfth-xs,
-.last-xs {
+.col-xs-order-12 {
   order: 12;
+}
+
+.last-xs{
+  order:50;
 }
 
 @media (--sm-viewport) {
@@ -458,49 +465,56 @@
     order: -1;
   }
 
-  .second-sm {
+  .col-sm-order-1 {
+    order: 1;
+  }
+
+  .col-sm-order-2 {
     order: 2;
   }
 
-  .third-sm {
+  .col-sm-order-3 {
     order: 3;
   }
 
-  .fourth-sm {
+  .col-sm-order-4 {
     order: 4;
   }
 
-  .fifth-sm {
+  .col-sm-order-5 {
     order: 5;
   }
 
-  .sixth-sm {
+  .col-sm-order-6 {
     order: 6;
   }
 
-  .seventh-sm {
+  .col-sm-order-7 {
     order: 7;
   }
 
-  .eighth-sm {
+  .col-sm-order-8 {
     order: 8;
   }
 
-  .ninth-sm {
+  .col-sm-order-9 {
     order: 9;
   }
 
-  .tenth-sm {
+  .col-sm-order-10 {
     order: 10;
   }
 
-  .eleventh-sm {
+  .col-sm-order-11 {
     order: 11;
   }
 
-  .twelfth-sm,
-  .last-sm {
+  .col-sm-order-12 {
     order: 12;
+  }
+
+  .last-sm{
+    order:50;
   }
 }
 
@@ -689,49 +703,56 @@
     order: -1;
   }
 
-  .second-md {
+  .col-md-order-1 {
+    order: 1;
+  }
+
+  .col-md-order-2 {
     order: 2;
   }
 
-  .third-md {
+  .col-md-order-3 {
     order: 3;
   }
 
-  .fourth-md {
+  .col-md-order-4 {
     order: 4;
   }
 
-  .fifth-md {
+  .col-md-order-5 {
     order: 5;
   }
 
-  .sixth-md {
+  .col-md-order-6 {
     order: 6;
   }
 
-  .seventh-md {
+  .col-md-order-7 {
     order: 7;
   }
 
-  .eighth-md {
+  .col-md-order-8 {
     order: 8;
   }
 
-  .ninth-md {
+  .col-md-order-9 {
     order: 9;
   }
 
-  .tenth-md {
+  .col-md-order-10 {
     order: 10;
   }
 
-  .eleventh-md {
+  .col-md-order-11 {
     order: 11;
   }
 
-  .twelfth-md,
-  .last-md {
+  .col-md-order-12 {
     order: 12;
+  }
+
+  .last-md{
+    order:50;
   }
 }
 
@@ -920,49 +941,56 @@
     order: -1;
   }
 
-  .second-lg {
+  .col-lg-order-1 {
+    order: 1;
+  }
+
+  .col-lg-order-2 {
     order: 2;
   }
 
-  .third-lg {
+  .col-lg-order-3 {
     order: 3;
   }
 
-  .fourth-lg {
+  .col-lg-order-4 {
     order: 4;
   }
 
-  .fifth-lg {
+  .col-lg-order-5 {
     order: 5;
   }
 
-  .sixth-lg {
+  .col-lg-order-6 {
     order: 6;
   }
 
-  .seventh-lg {
+  .col-lg-order-7 {
     order: 7;
   }
 
-  .eighth-lg {
+  .col-lg-order-8 {
     order: 8;
   }
 
-  .ninth-lg {
+  .col-lg-order-9 {
     order: 9;
   }
 
-  .tenth-lg {
+  .col-lg-order-10 {
     order: 10;
   }
 
-  .eleventh-lg {
+  .col-lg-order-11 {
     order: 11;
   }
 
-  .twelfth-lg,
-  .last-lg {
+  .col-lg-order-12 {
     order: 12;
+  }
+
+  .last-lg{
+    order:50;
   }
 }
 
