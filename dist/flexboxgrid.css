@@ -1,6 +1,10 @@
-.container-fluid {
+.container-fluid,
+.container {
   margin-right: auto;
   margin-left: auto;
+}
+
+.container-fluid {
   padding-right: 2rem;
   padding-left: 2rem;
 }
@@ -263,10 +267,71 @@
   order: -1;
 }
 
+.second-xs {
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.third-xs {
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
+}
+
+.fourth-xs {
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4;
+}
+
+.fifth-xs {
+  -webkit-order: 5;
+  -ms-flex-order: 5;
+  order: 5;
+}
+
+.sixth-xs {
+  -webkit-order: 6;
+  -ms-flex-order: 6;
+  order: 6;
+}
+
+.seventh-xs {
+  -webkit-order: 7;
+  -ms-flex-order: 7;
+  order: 7;
+}
+
+.eighth-xs {
+  -webkit-order: 8;
+  -ms-flex-order: 8;
+  order: 8;
+}
+
+.ninth-xs {
+  -webkit-order: 9;
+  -ms-flex-order: 9;
+  order: 9;
+}
+
+.tenth-xs {
+  -webkit-order: 10;
+  -ms-flex-order: 10;
+  order: 10;
+}
+
+.eleventh-xs {
+  -webkit-order: 11;
+  -ms-flex-order: 11;
+  order: 11;
+}
+
+.twelfth-xs,
 .last-xs {
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
+  -webkit-order: 12;
+  -ms-flex-order: 12;
+  order: 12;
 }
 
 @media only screen and (min-width: 48em) {
@@ -502,10 +567,71 @@
     order: -1;
   }
 
+  .second-sm {
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
+  .third-sm {
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+
+  .fourth-sm {
+    -webkit-order: 4;
+    -ms-flex-order: 4;
+    order: 4;
+  }
+
+  .fifth-sm {
+    -webkit-order: 5;
+    -ms-flex-order: 5;
+    order: 5;
+  }
+
+  .sixth-sm {
+    -webkit-order: 6;
+    -ms-flex-order: 6;
+    order: 6;
+  }
+
+  .seventh-sm {
+    -webkit-order: 7;
+    -ms-flex-order: 7;
+    order: 7;
+  }
+
+  .eighth-sm {
+    -webkit-order: 8;
+    -ms-flex-order: 8;
+    order: 8;
+  }
+
+  .ninth-sm {
+    -webkit-order: 9;
+    -ms-flex-order: 9;
+    order: 9;
+  }
+
+  .tenth-sm {
+    -webkit-order: 10;
+    -ms-flex-order: 10;
+    order: 10;
+  }
+
+  .eleventh-sm {
+    -webkit-order: 11;
+    -ms-flex-order: 11;
+    order: 11;
+  }
+
+  .twelfth-sm,
   .last-sm {
-    -webkit-order: 1;
-    -ms-flex-order: 1;
-    order: 1;
+    -webkit-order: 12;
+    -ms-flex-order: 12;
+    order: 12;
   }
 }
 
@@ -742,10 +868,71 @@
     order: -1;
   }
 
+  .second-md {
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
+  .third-md {
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+
+  .fourth-md {
+    -webkit-order: 4;
+    -ms-flex-order: 4;
+    order: 4;
+  }
+
+  .fifth-md {
+    -webkit-order: 5;
+    -ms-flex-order: 5;
+    order: 5;
+  }
+
+  .sixth-md {
+    -webkit-order: 6;
+    -ms-flex-order: 6;
+    order: 6;
+  }
+
+  .seventh-md {
+    -webkit-order: 7;
+    -ms-flex-order: 7;
+    order: 7;
+  }
+
+  .eighth-md {
+    -webkit-order: 8;
+    -ms-flex-order: 8;
+    order: 8;
+  }
+
+  .ninth-md {
+    -webkit-order: 9;
+    -ms-flex-order: 9;
+    order: 9;
+  }
+
+  .tenth-md {
+    -webkit-order: 10;
+    -ms-flex-order: 10;
+    order: 10;
+  }
+
+  .eleventh-md {
+    -webkit-order: 11;
+    -ms-flex-order: 11;
+    order: 11;
+  }
+
+  .twelfth-md,
   .last-md {
-    -webkit-order: 1;
-    -ms-flex-order: 1;
-    order: 1;
+    -webkit-order: 12;
+    -ms-flex-order: 12;
+    order: 12;
   }
 }
 
@@ -982,9 +1169,70 @@
     order: -1;
   }
 
+  .second-lg {
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
+  .third-lg {
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+
+  .fourth-lg {
+    -webkit-order: 4;
+    -ms-flex-order: 4;
+    order: 4;
+  }
+
+  .fifth-lg {
+    -webkit-order: 5;
+    -ms-flex-order: 5;
+    order: 5;
+  }
+
+  .sixth-lg {
+    -webkit-order: 6;
+    -ms-flex-order: 6;
+    order: 6;
+  }
+
+  .seventh-lg {
+    -webkit-order: 7;
+    -ms-flex-order: 7;
+    order: 7;
+  }
+
+  .eighth-lg {
+    -webkit-order: 8;
+    -ms-flex-order: 8;
+    order: 8;
+  }
+
+  .ninth-lg {
+    -webkit-order: 9;
+    -ms-flex-order: 9;
+    order: 9;
+  }
+
+  .tenth-lg {
+    -webkit-order: 10;
+    -ms-flex-order: 10;
+    order: 10;
+  }
+
+  .eleventh-lg {
+    -webkit-order: 11;
+    -ms-flex-order: 11;
+    order: 11;
+  }
+
+  .twelfth-lg,
   .last-lg {
-    -webkit-order: 1;
-    -ms-flex-order: 1;
-    order: 1;
+    -webkit-order: 12;
+    -ms-flex-order: 12;
+    order: 12;
   }
 }
