@@ -99,8 +99,12 @@ $offset-properties: 'margin-left' !default;
     @for $i from 1 through $columns {
       #{$selector}#{$block-delimiter}#{$size}#{$modifier-delimiter}#{$modifier-selector}#{$modifier-delimiter}#{$i} {
         @extend %column;
+      }
+    }
 
-        @include queries($size, $queries) {
+    @include queries($size, $queries) {
+      @for $i from 1 through $columns {
+        #{$selector}#{$block-delimiter}#{$size}#{$modifier-delimiter}#{$modifier-selector}#{$modifier-delimiter}#{$i} {
           @content;
           @each $prop in $properties {
             @include percentOffset($prop, $columns, $i);
@@ -193,5 +197,4 @@ $offset-properties: 'margin-left' !default;
 @include breakpoints('.reverse') {
   flex-direction: row-reverse;
 }
-
 
