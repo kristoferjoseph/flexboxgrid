@@ -31,7 +31,7 @@ $element-delimiter: '-' !default;
 $modifier-delimiter: '-' !default;
 
 $defaultQuery: $viewport-xs !default;
-$sizes: #{$xs}, #{$sm}, #{$md}, #{$lg} !default;
+$sizes: $xs $sm $md $lg !default;
 $queries: (#{$xs}:#{$viewport-xs}, #{$sm}:#{$viewport-sm}, #{$md}:#{$viewport-md}, #{$lg}:#{$viewport-lg}) !default;
 
 $column-properties: 'flex-basis', 'max-width' !default;
@@ -65,6 +65,15 @@ $offset-properties: 'margin-left' !default;
 
 @mixin columns($selector: $column-selector, $properties: $column-properties, $columns: $column-count, $queries: $queries) {
   @each $size in $sizes {
+
+    $iterator-selector: #{$selector}#{$block-delimiter}#{$size};
+
+    @for $i from 0 through $columns {
+      #{if($i == 0, $iterator-selector, #{$iterator-selector}#{$modifier-delimiter}#{$i})} {
+        @extend %column;
+      }
+    }
+
     @include queries($size, $queries) {
       @for $i from 0 through $columns {
         @if ($i == 0) {
@@ -89,7 +98,13 @@ $offset-properties: 'margin-left' !default;
   @each $size in $sizes {
     @for $i from 1 through $columns {
       #{$selector}#{$block-delimiter}#{$size}#{$modifier-delimiter}#{$modifier-selector}#{$modifier-delimiter}#{$i} {
-        @include queries($size, $queries) {
+        @extend %column;
+      }
+    }
+
+    @include queries($size, $queries) {
+      @for $i from 1 through $columns {
+        #{$selector}#{$block-delimiter}#{$size}#{$modifier-delimiter}#{$modifier-selector}#{$modifier-delimiter}#{$i} {
           @content;
           @each $prop in $properties {
             @include percentOffset($prop, $columns, $i);
@@ -135,13 +150,9 @@ $offset-properties: 'margin-left' !default;
   padding-left: $half-gutter-width;
 }
 
-@include columns() {
-  @extend %column;
-}
+@include columns();
 
-@include offsets() {
-  @extend %column;
-}
+@include offsets();
 
 @include breakpoints('.start') {
   justify-content: flex-start;
