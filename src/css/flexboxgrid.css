@@ -1,12 +1,12 @@
 :root {
-  --gutter-width: 1rem;
+  --gutter-width:2rem;
   --outer-margin: 2rem;
   --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
   --half-gutter-width: calc((var(--gutter-width) * 0.5));
-  --xs-min: 30;
-  --sm-min: 48;
-  --md-min: 64;
-  --lg-min: 75;
+  --xs-min: 24;
+  --sm-min: 32;
+  --md-min: 48;
+  --lg-min: 72;
   --screen-xs-min: var(--xs-min)em;
   --screen-sm-min: var(--sm-min)em;
   --screen-md-min: var(--md-min)em;
@@ -16,9 +16,9 @@
   --container-lg: calc(var(--lg-min) + var(--gutter-width));
 }
 
-@custom-media --sm-viewport only screen and (min-width: 48em);
-@custom-media --md-viewport only screen and (min-width: 64em);
-@custom-media --lg-viewport only screen and (min-width: 75em);
+@custom-media --sm-viewport only screen and (min-width: 32em);
+@custom-media --md-viewport only screen and (min-width: 48em);
+@custom-media --lg-viewport only screen and (min-width: 72em);
 
 .container-fluid, .container {
   margin-right: auto;
@@ -801,4 +801,3 @@
     order: 1;
   }
 }
-
