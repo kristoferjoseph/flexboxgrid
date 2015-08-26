@@ -66,10 +66,16 @@ $offset-properties: 'margin-left' !default;
 @mixin columns($selector: $column-selector, $properties: $column-properties, $columns: $column-count, $queries: $queries) {
   @each $size in $sizes {
 
-    $iterator-selector: #{$selector}#{$block-delimiter}#{$size};
+    $iterator-selector: '';
 
     @for $i from 0 through $columns {
-      #{if($i == 0, $iterator-selector, #{$iterator-selector}#{$modifier-delimiter}#{$i})} {
+      @if ($i == 0) {
+        $iterator-selector: #{$selector}#{$block-delimiter}#{$size};
+      } @else {
+        $iterator-selector: #{$selector}#{$block-delimiter}#{$size}#{$modifier-delimiter}#{$i};
+      }
+
+      #{$iterator-selector} {
         @extend %column;
       }
     }
@@ -197,4 +203,3 @@ $offset-properties: 'margin-left' !default;
 @include breakpoints('.reverse') {
   flex-direction: row-reverse;
 }
-
