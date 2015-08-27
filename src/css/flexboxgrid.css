@@ -228,8 +228,56 @@
   order: -1;
 }
 
-.last-xs {
+.col-xs-order-1 {
   order: 1;
+}
+
+.col-xs-order-2 {
+  order: 2;
+}
+
+.col-xs-order-3 {
+  order: 3;
+}
+
+.col-xs-order-4 {
+  order: 4;
+}
+
+.col-xs-order-5 {
+  order: 5;
+}
+
+.col-xs-order-6 {
+  order: 6;
+}
+
+.col-xs-order-7 {
+  order: 7;
+}
+
+.col-xs-order-8 {
+  order: 8;
+}
+
+.col-xs-order-9 {
+  order: 9;
+}
+
+.col-xs-order-10 {
+  order: 10;
+}
+
+.col-xs-order-11 {
+  order: 11;
+}
+
+.col-xs-order-12 {
+  order: 12;
+}
+
+.last-xs{
+  order:50;
 }
 
 @media (--sm-viewport) {
@@ -417,8 +465,56 @@
     order: -1;
   }
 
-  .last-sm {
+  .col-sm-order-1 {
     order: 1;
+  }
+
+  .col-sm-order-2 {
+    order: 2;
+  }
+
+  .col-sm-order-3 {
+    order: 3;
+  }
+
+  .col-sm-order-4 {
+    order: 4;
+  }
+
+  .col-sm-order-5 {
+    order: 5;
+  }
+
+  .col-sm-order-6 {
+    order: 6;
+  }
+
+  .col-sm-order-7 {
+    order: 7;
+  }
+
+  .col-sm-order-8 {
+    order: 8;
+  }
+
+  .col-sm-order-9 {
+    order: 9;
+  }
+
+  .col-sm-order-10 {
+    order: 10;
+  }
+
+  .col-sm-order-11 {
+    order: 11;
+  }
+
+  .col-sm-order-12 {
+    order: 12;
+  }
+
+  .last-sm{
+    order:50;
   }
 }
 
@@ -607,8 +703,56 @@
     order: -1;
   }
 
-  .last-md {
+  .col-md-order-1 {
     order: 1;
+  }
+
+  .col-md-order-2 {
+    order: 2;
+  }
+
+  .col-md-order-3 {
+    order: 3;
+  }
+
+  .col-md-order-4 {
+    order: 4;
+  }
+
+  .col-md-order-5 {
+    order: 5;
+  }
+
+  .col-md-order-6 {
+    order: 6;
+  }
+
+  .col-md-order-7 {
+    order: 7;
+  }
+
+  .col-md-order-8 {
+    order: 8;
+  }
+
+  .col-md-order-9 {
+    order: 9;
+  }
+
+  .col-md-order-10 {
+    order: 10;
+  }
+
+  .col-md-order-11 {
+    order: 11;
+  }
+
+  .col-md-order-12 {
+    order: 12;
+  }
+
+  .last-md{
+    order:50;
   }
 }
 
@@ -797,8 +941,56 @@
     order: -1;
   }
 
-  .last-lg {
+  .col-lg-order-1 {
     order: 1;
+  }
+
+  .col-lg-order-2 {
+    order: 2;
+  }
+
+  .col-lg-order-3 {
+    order: 3;
+  }
+
+  .col-lg-order-4 {
+    order: 4;
+  }
+
+  .col-lg-order-5 {
+    order: 5;
+  }
+
+  .col-lg-order-6 {
+    order: 6;
+  }
+
+  .col-lg-order-7 {
+    order: 7;
+  }
+
+  .col-lg-order-8 {
+    order: 8;
+  }
+
+  .col-lg-order-9 {
+    order: 9;
+  }
+
+  .col-lg-order-10 {
+    order: 10;
+  }
+
+  .col-lg-order-11 {
+    order: 11;
+  }
+
+  .col-lg-order-12 {
+    order: 12;
+  }
+
+  .last-lg{
+    order:50;
   }
 }
 
