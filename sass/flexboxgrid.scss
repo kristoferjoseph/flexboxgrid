@@ -49,12 +49,12 @@ $offset-properties: 'margin-left' !default;
 }
 
 @mixin percentWidth($property, $columns, $count) {
-  $property: ((100% / $columns) * $count);
+  #{$property}: ((100% / $columns) * $count);
 }
 
 @mixin percentOffset($property, $columns, $count) {
   $single-column-width: ((100% / $columns) * 1);
-  $property: $single-column-width * $count;
+  #{$property}: $single-column-width * $count;
 }
 
 @mixin queries($key, $queries) {
