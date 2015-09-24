@@ -22,10 +22,10 @@ Install
 * [Development](https://raw.githubusercontent.com/kristoferjoseph/flexboxgrid/master/dist/flexboxgrid.css)
 * [Production](https://raw.githubusercontent.com/kristoferjoseph/flexboxgrid/master/dist/flexboxgrid.min.css)
 
-Add the `flexbox.css` __development__ or `flexbox.min.css` __production__ to your html page.
+Add the `flexboxgrid.css` __development__ or `flexboxgrid.min.css` __production__ to your html page.
 
 ```
-<link rel="stylesheet" href="css/flexbox.min.css" type="text/css">
+<link rel="stylesheet" href="css/flexboxgrid.min.css" type="text/css">
 ```
 Inspiration
 -----------
