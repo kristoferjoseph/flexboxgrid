@@ -17,6 +17,7 @@ $viewport-sm: $width-sm * 1em !default;
 $viewport-md: $width-md * 1em !default;
 $viewport-lg: $width-lg * 1em !default;
 
+$container-selector: '.container' !default;
 $container-sm: $width-sm * 1rem + $gutter-width !default;
 $container-md: $width-md * 1rem + $gutter-width !default;
 $container-lg: $width-lg * 1rem + $gutter-width !default;
@@ -132,7 +133,7 @@ $offset-properties: 'margin-left' !default;
   }
 }
 
-.container-fluid {
+#{$container-selector}-fluid {
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
