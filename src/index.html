@@ -744,6 +744,62 @@
 </code></pre>
 
             </section>
+
+            <a name="hiding"></a>
+            <section class="page-section">
+                 <h2>Hiding</h2>
+                 <p>Hide any element based on viewport width.</p>
+
+                 <h3><code>.hide-</code></h3>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="box box-container">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <div class="hide-xs box-nested"><code>hide-xs</code></div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="hide-sm box-nested"><code>hide-sm</code></div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="hide-md box-nested"><code>hide-md</code></div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="hide-lg box-nested"><code>hide-lg</code></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <div class="hide-sm-down box-nested"><code>hide-sm-down</code></div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="hide-sm-up box-nested"><code>hide-sm-up</code></div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="hide-md-down box-nested"><code>hide-md-down</code></div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="hide-md-up box-nested"><code>hide-md-up</code></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<pre><code>&lt;div>
+    &lt;div class="box hide-lg">
+        Hidden on lg only
+    &lt;/div>
+    &lt;div class="box hide-sm-down">
+        Hidden on xs and sm
+    &lt;/div>
+    &lt;div class="box hide-xs hide-lg">
+        Only visible on sm and md
+    &lt;/div>
+&lt;/div>
+</code></pre>
+
+            </section>
             <footer class="page-footer">
                 <div class="row">
                     <div class="col-xs start"> <a class="tag" href="http://twitter.com/dam">
