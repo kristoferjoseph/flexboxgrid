@@ -11,9 +11,9 @@
   --screen-sm-min: var(--sm-min)em;
   --screen-md-min: var(--md-min)em;
   --screen-lg-min: var(--lg-min)em;
-  --container-sm: calc(var(--sm-min) + var(--gutter-width));
-  --container-md: calc(var(--md-min) + var(--gutter-width));
-  --container-lg: calc(var(--lg-min) + var(--gutter-width));
+  --container-sm: var(--sm-min)rem;
+  --container-md: var(--md-min)rem;
+  --container-lg: var(--lg-min)rem;
 }
 
 @custom-media --sm-viewport only screen and (min-width: 48em);
@@ -23,11 +23,9 @@
 .container-fluid, .container {
   margin-right: auto;
   margin-left: auto;
-}
-
-.container-fluid {
   padding-right: var(--outer-margin, 2rem);
   padding-left: var(--outer-margin, 2rem);
+  box-sizing: border-box;
 }
 
 .row {
