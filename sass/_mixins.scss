@@ -28,27 +28,28 @@
 
 @mixin columns($selector: $column-selector, $properties: $column-properties, $columns: $column-count, $queries: $queries) {
   @for $i from 0 through $columns {
-    @each $size in $sizes {
+    @each $name, $size in $queries {
       @if ($i == 0) {
-        #{$selector + $block-delimiter + $size} {
+        #{$selector + $block-delimiter + $name} {
           @content;
         }
       } @else {
-        #{$selector + $block-delimiter + $size + $modifier-delimiter + $i} {
+        #{$selector + $block-delimiter + $name + $modifier-delimiter + $i} {
           @content;
         }
       }
     }
   }
-  @each $size in $sizes {
-    @include queries($size, $queries) {
+
+  @each $name, $size in $queries {
+    @include queries($name, $queries) {
       @for $i from 0 through $columns {
         @if ($i == 0) {
-          #{$selector + $block-delimiter + $size} {
+          #{$selector + $block-delimiter + $name} {
             @include autoWidth();
           }
         } @else {
-          #{$selector + $block-delimiter + $size + $modifier-delimiter + $i} {
+          #{$selector + $block-delimiter + $name + $modifier-delimiter + $i} {
             @each $prop in $properties {
               @include percentWidth($prop, $columns, $i);
             }
@@ -60,17 +61,18 @@
 }
 
 @mixin offsets($selector: $column-selector, $modifier-selector: $offset-modifier, $properties: $offset-properties, $columns: $column-count, $queries: $queries) {
-  @each $size in $sizes {
+  @each $name, $size in $queries {
     @for $i from 1 through $columns {
-      #{$selector + $block-delimiter + $size + $modifier-delimiter + $modifier-selector + $modifier-delimiter + $i} {
+      #{$selector + $block-delimiter + $name + $modifier-delimiter + $modifier-selector + $modifier-delimiter + $i} {
         @content;
       }
     }
   }
-  @each $size in $sizes {
+
+  @each $name, $size in $queries {
     @for $i from 1 through $columns {
-      #{$selector + $block-delimiter + $size + $modifier-delimiter + $modifier-selector + $modifier-delimiter + $i} {
-        @include queries($size, $queries) {
+      #{$selector + $block-delimiter + $name + $modifier-delimiter + $modifier-selector + $modifier-delimiter + $i} {
+        @include queries($name, $queries) {
           @each $prop in $properties {
             @include percentOffset($prop, $columns, $i);
           }
@@ -81,9 +83,9 @@
 }
 
 @mixin breakpoints($selector, $queries: $queries) {
-  @each $size in $sizes {
-    #{$selector + $modifier-delimiter + $size} {
-      @include queries($size, $queries) {
+  @each $name, $size in $queries {
+    #{$selector + $modifier-delimiter + $name} {
+      @include queries($name, $queries) {
         @content;
       }
     }

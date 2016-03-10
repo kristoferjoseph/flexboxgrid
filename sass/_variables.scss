@@ -31,7 +31,6 @@ $element-delimiter: '-' !default;
 $modifier-delimiter: '-' !default;
 
 $default-query: $viewport-xs !default;
-$sizes: $xs, $sm, $md, $lg !default;
 $queries: (
   $xs: $viewport-xs,
   $sm: $viewport-sm,
