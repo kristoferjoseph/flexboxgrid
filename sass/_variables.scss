@@ -12,14 +12,14 @@ $width-sm: 48 !default;
 $width-md: 62 !default;
 $width-lg: 75 !default;
 
-$viewport-xs: #{$width-xs}em !default;
-$viewport-sm: #{$width-sm}em !default;
-$viewport-md: #{$width-md}em !default;
-$viewport-lg: #{$width-lg}em !default;
+$viewport-xs: $width-xs * 1em !default;
+$viewport-sm: $width-sm * 1em !default;
+$viewport-md: $width-md * 1em !default;
+$viewport-lg: $width-lg * 1em !default;
 
-$container-sm: #{$width-sm}rem + $gutter-width !default;
-$container-md: #{$width-md}rem + $gutter-width !default;
-$container-lg: #{$width-lg}rem + $gutter-width !default;
+$container-sm: $width-sm * 1rem + $gutter-width !default;
+$container-md: $width-md * 1rem + $gutter-width !default;
+$container-lg: $width-lg * 1rem + $gutter-width !default;
 
 $xs: 'xs' !default;
 $sm: 'sm' !default;
@@ -31,8 +31,13 @@ $element-delimiter: '-' !default;
 $modifier-delimiter: '-' !default;
 
 $defaultQuery: $viewport-xs !default;
-$sizes: #{$xs}, #{$sm}, #{$md}, #{$lg} !default;
-$queries: (#{$xs}:#{$viewport-xs}, #{$sm}:#{$viewport-sm}, #{$md}:#{$viewport-md}, #{$lg}:#{$viewport-lg}) !default;
+$sizes: $xs, $sm, $md, $lg !default;
+$queries: (
+  $xs: $viewport-xs,
+  $sm: $viewport-sm,
+  $md: $viewport-md,
+  $lg: $viewport-lg
+) !default;
 
 $column-properties: 'flex-basis', 'max-width' !default;
 $offset-properties: 'margin-left' !default;
