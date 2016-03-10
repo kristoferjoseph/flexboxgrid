@@ -30,7 +30,7 @@ $block-delimiter: '-' !default;
 $element-delimiter: '-' !default;
 $modifier-delimiter: '-' !default;
 
-$defaultQuery: $viewport-xs !default;
+$default-query: $viewport-xs !default;
 $sizes: $xs, $sm, $md, $lg !default;
 $queries: (
   $xs: $viewport-xs,
