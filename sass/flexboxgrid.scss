@@ -9,12 +9,16 @@
   @include row();
 }
 
-@include columns() {
+%column {
   @include column();
 }
 
+@include columns() {
+  @extend %column;
+}
+
 @include offsets() {
-  @include column();
+  @extend %column;
 }
 
 @include breakpoints('.start') {
