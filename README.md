@@ -15,7 +15,7 @@ Install
 
 ### cdn
 ```
-<link rel="stylesheet" href="//cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" type="text/css" >
+<link rel="stylesheet" href="//cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css">
 ```
 
 ### css
@@ -25,7 +25,7 @@ Install
 Add the `flexboxgrid.css` __development__ or `flexboxgrid.min.css` __production__ to your html page.
 
 ```
-<link rel="stylesheet" href="css/flexboxgrid.min.css" type="text/css">
+<link rel="stylesheet" href="css/flexboxgrid.min.css">
 ```
 Inspiration
 -----------
