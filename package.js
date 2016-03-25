@@ -8,6 +8,6 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.3-rc.8');
-  api.use('nathantreid:css-modules');
+  api.use('ecmascript');
   api.addFiles('css/flexboxgrid.css');
 });
