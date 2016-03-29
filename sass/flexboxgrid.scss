@@ -1,160 +1,16 @@
-$column-count: 12 !default;
-$column-selector: '.col' !default;
-$offset-modifier: 'offset' !default;
-
-$gutter-width: 1rem !default;
-$outer-margin: 2rem !default;
-$gutter-compensation: (($gutter-width / 2) * -1) !default;
-$half-gutter-width: ($gutter-width / 2) !default;
-
-$width-xs: 30 !default;
-$width-sm: 48 !default;
-$width-md: 62 !default;
-$width-lg: 75 !default;
-
-$viewport-xs: $width-xs * 1em !default;
-$viewport-sm: $width-sm * 1em !default;
-$viewport-md: $width-md * 1em !default;
-$viewport-lg: $width-lg * 1em !default;
-
-$container-sm: $width-sm * 1rem + $gutter-width !default;
-$container-md: $width-md * 1rem + $gutter-width !default;
-$container-lg: $width-lg * 1rem + $gutter-width !default;
-
-$xs: 'xs' !default;
-$sm: 'sm' !default;
-$md: 'md' !default;
-$lg: 'lg' !default;
-
-$block-delimiter: '-' !default;
-$element-delimiter: '-' !default;
-$modifier-delimiter: '-' !default;
-
-$default-query: $viewport-xs !default;
-$sizes: $xs, $sm, $md, $lg !default;
-$queries: (
-	$xs: $viewport-xs, 
-	$sm: $viewport-sm, 
-	$md: $viewport-md, 
-	$lg: $viewport-lg,
-) !default;
-
-$column-properties: 'flex-basis', 'max-width' !default;
-$offset-properties: 'margin-left' !default;
-
-@mixin autoWidth() {
-  flex-grow: 1;
-  flex-basis: 0;
-  max-width: 100%;
-}
-
-@mixin percentWidth($property, $columns, $count) {
-  #{$property}: ((100% / $columns) * $count);
-}
-
-@mixin percentOffset($property, $columns, $count) {
-  $single-column-width: ((100% / $columns) * 1);
-  #{$property}: $single-column-width * $count;
-}
-
-@mixin queries($key, $queries) {
-  $query: map-get($queries, $key);
-  @if ($query == $default-query) {
-    @content;
-  } @else {
-    @media screen and (min-width: $query) {
-      @content;
-    }
-  }
-}
-
-@mixin columns($selector: $column-selector, $properties: $column-properties, $columns: $column-count, $queries: $queries) {
-  @for $i from 0 through $columns {
-    @each $size in $sizes {
-      @if ($i == 0) {
-        #{$selector + $block-delimiter + $size} {
-          @content;
-        }
-      } @else {
-        #{$selector + $block-delimiter + $size + $modifier-delimiter + $i} {
-          @content;
-        }
-      }
-    }
-  }
-  @each $size in $sizes {
-    @include queries($size, $queries) {
-      @for $i from 0 through $columns {
-        @if ($i == 0) {
-          #{$selector + $block-delimiter + $size} {
-            @include autoWidth();
-          }
-        } @else {
-          #{$selector + $block-delimiter + $size + $modifier-delimiter + $i} {
-            @each $prop in $properties {
-              @include percentWidth($prop, $columns, $i);
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@mixin offsets($selector: $column-selector, $modifier-selector: $offset-modifier, $properties: $offset-properties, $columns: $column-count, $queries: $queries) {
-  @each $size in $sizes {
-    @for $i from 1 through $columns {
-      #{$selector + $block-delimiter + $size + $modifier-delimiter + $modifier-selector + $modifier-delimiter + $i} {
-        @content;
-      }
-    }
-  }
-  @each $size in $sizes {
-    @for $i from 1 through $columns {
-      #{$selector + $block-delimiter + $size + $modifier-delimiter + $modifier-selector + $modifier-delimiter + $i} {
-        @include queries($size, $queries) {
-          @each $prop in $properties {
-            @include percentOffset($prop, $columns, $i);
-          }
-        }
-      }
-    }
-  }
-}
-
-@mixin breakpoints($selector, $queries: $queries) {
-  @each $size in $sizes {
-    #{$selector + $modifier-delimiter + $size} {
-      @include queries($size, $queries) {
-        @content;
-      }
-    }
-  }
-}
+@import 'variables';
+@import 'mixins';
 
 .container-fluid {
-  box-sizing: border-box;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $outer-margin;
-  padding-left: $outer-margin;
+  @include container-fluid();
 }
 
 .row {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-right: $gutter-compensation;
-  margin-left: $gutter-compensation;
+  @include row();
 }
 
 %column {
-  box-sizing: border-box;
-  flex-grow: 0;
-  flex-shrink: 0;
-  padding-right: $half-gutter-width;
-  padding-left: $half-gutter-width;
+  @include column();
 }
 
 @include columns() {

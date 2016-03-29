@@ -1,0 +1,118 @@
+@import 'variables';
+
+@mixin autoWidth() {
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+@mixin percentWidth($property, $columns, $count) {
+  #{$property}: ((100% / $columns) * $count);
+}
+
+@mixin percentOffset($property, $columns, $count) {
+  $single-column-width: ((100% / $columns) * 1);
+  #{$property}: $single-column-width * $count;
+}
+
+@mixin queries($key, $queries) {
+  $query: map-get($queries, $key);
+  @if ($query == $default-query) {
+    @content;
+  } @else {
+    @media screen and (min-width: $query) {
+      @content;
+    }
+  }
+}
+
+@mixin columns($selector: $column-selector, $properties: $column-properties, $columns: $column-count, $queries: $queries) {
+  @for $i from 0 through $columns {
+    @each $name, $size in $queries {
+      @if ($i == 0) {
+        #{$selector + $block-delimiter + $name} {
+          @content;
+        }
+      } @else {
+        #{$selector + $block-delimiter + $name + $modifier-delimiter + $i} {
+          @content;
+        }
+      }
+    }
+  }
+
+  @each $name, $size in $queries {
+    @include queries($name, $queries) {
+      @for $i from 0 through $columns {
+        @if ($i == 0) {
+          #{$selector + $block-delimiter + $name} {
+            @include autoWidth();
+          }
+        } @else {
+          #{$selector + $block-delimiter + $name + $modifier-delimiter + $i} {
+            @each $prop in $properties {
+              @include percentWidth($prop, $columns, $i);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin offsets($selector: $column-selector, $modifier-selector: $offset-modifier, $properties: $offset-properties, $columns: $column-count, $queries: $queries) {
+  @each $name, $size in $queries {
+    @for $i from 1 through $columns {
+      #{$selector + $block-delimiter + $name + $modifier-delimiter + $modifier-selector + $modifier-delimiter + $i} {
+        @content;
+      }
+    }
+  }
+
+  @each $name, $size in $queries {
+    @for $i from 1 through $columns {
+      #{$selector + $block-delimiter + $name + $modifier-delimiter + $modifier-selector + $modifier-delimiter + $i} {
+        @include queries($name, $queries) {
+          @each $prop in $properties {
+            @include percentOffset($prop, $columns, $i);
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin breakpoints($selector, $queries: $queries) {
+  @each $name, $size in $queries {
+    #{$selector + $modifier-delimiter + $name} {
+      @include queries($name, $queries) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin container-fluid() {
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $outer-margin;
+  padding-left: $outer-margin;
+}
+
+@mixin row() {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: $gutter-compensation;
+  margin-left: $gutter-compensation;
+}
+
+@mixin column() {
+  box-sizing: border-box;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-right: $half-gutter-width;
+  padding-left: $half-gutter-width;
+}
