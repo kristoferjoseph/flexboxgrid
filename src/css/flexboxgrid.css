@@ -80,6 +80,11 @@
   padding-left: var(--half-gutter-width, 0.5rem);
 }
 
+[class*="col-"] {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
 .col-xs {
   flex-grow: 1;
   flex-basis: 0;
