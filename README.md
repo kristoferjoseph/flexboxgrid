@@ -15,7 +15,7 @@ Install
 
 ### cdn
 ```
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" type="text/css" >
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" integrity="2F+2FzrfISjBKUujnq5oYFUY944Ee/W6gMKDlAK45HQ=" type="text/css" >
 ```
 
 ### css
