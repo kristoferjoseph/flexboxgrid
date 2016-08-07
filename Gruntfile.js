@@ -82,6 +82,9 @@ module.exports = function(grunt) {
           'img/*'
         ]
       }
+    },
+    sri: {
+      src: ['dist/**/*.min.css']
     }
   });
 
@@ -92,6 +95,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks("grunt-sri");
 
   // Default task.
   grunt.registerTask('default', [
@@ -101,7 +105,8 @@ module.exports = function(grunt) {
     'cssmin:release',
     'uglify',
     'processhtml',
-    'htmlmin'
+    'htmlmin',
+    'sri'
   ]);
   grunt.registerTask('reload', ['watch']);
 
