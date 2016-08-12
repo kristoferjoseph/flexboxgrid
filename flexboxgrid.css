@@ -1,8 +1,6 @@
 :root {
-  --gutter-width: 1rem;
-  --outer-margin: 2rem;
-  --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
-  --half-gutter-width: calc((var(--gutter-width) * 0.5));
+  --padded: 2rem;
+  --gutter: calc(var(--outer)*0.25);
   --xs-min: 30;
   --sm-min: 48;
   --md-min: 64;
@@ -11,35 +9,37 @@
   --screen-sm-min: var(--sm-min)em;
   --screen-md-min: var(--md-min)em;
   --screen-lg-min: var(--lg-min)em;
-  --container-sm: calc(var(--sm-min) + var(--gutter-width));
-  --container-md: calc(var(--md-min) + var(--gutter-width));
-  --container-lg: calc(var(--lg-min) + var(--gutter-width));
 }
 
 @custom-media --sm-viewport only screen and (min-width: 48em);
 @custom-media --md-viewport only screen and (min-width: 64em);
 @custom-media --lg-viewport only screen and (min-width: 75em);
 
-.container-fluid,
-.container {
-  box-sizing: border-box;
-  margin-right: auto;
-  margin-left: auto;
+.flexboxgrid {
+  margin: 0 auto;
 }
 
-.container-fluid {
-  padding-right: var(--outer-margin, 2rem);
-  padding-left: var(--outer-margin, 2rem);
+.padded {
+  padding: 0 2rem;
+}
+
+.gutters > .row {
+  margin-left: -1rem;
+}
+
+.gutters > .row > .column {
+  padding-left: 1rem;
 }
 
 .row {
-  box-sizing: border-box;
   display: flex;
-  flex: 0 1 auto;
-  flex-direction: row;
   flex-wrap: wrap;
-  margin-right: var(--gutter-compensation, -0.5rem);
-  margin-left: var(--gutter-compensation, -0.5rem);
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .row.reverse {
@@ -78,8 +78,6 @@
 .col-xs-offset-12 {
   box-sizing: border-box;
   flex: 0 0 auto;
-  padding-right: var(--half-gutter-width, 0.5rem);
-  padding-left: var(--half-gutter-width, 0.5rem);
 }
 
 .col-xs {
