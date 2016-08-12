@@ -1,0 +1,5 @@
+#!/bin/sh
+#minify js
+#move to public
+uglify=./node_modules/uglify-js/bin/uglifyjs
+$uglify ./index.js  -c -m -o ./index.min.js

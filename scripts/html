@@ -1,0 +1,3 @@
+#!/bin/sh
+htmlprocessor=./node_modules/htmlprocessor/bin/htmlprocessor
+$htmlprocessor ./template.html -o ./index.html

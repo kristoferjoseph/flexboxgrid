@@ -1,0 +1,4 @@
+#!/bin/sh
+./scripts/css
+./scripts/js
+./scripts/html

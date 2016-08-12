@@ -123,7 +123,7 @@ code {
 }
 .hero-copy {
   font-size: 1rem;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   padding: 0 2rem;
   text-align: center;
 }
@@ -176,7 +176,8 @@ code {
 }
 .button {
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   box-sizing: border-box;
   min-width: 11rem;
   padding: 0 4rem;

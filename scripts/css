@@ -1,0 +1,5 @@
+#!/bin/sh
+postcss=./node_modules/postcss-cli/bin/postcss
+cssnano=./node_modules/cssnano-cli/cmd.js
+$postcss --use postcss-custom-properties autoprefixer ./flexboxgrid.css -o ./flexboxgrid.css
+$cssnano < ./flexboxgrid.css > ./flexboxgrid.min.css

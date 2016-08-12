@@ -1,11 +1,11 @@
 {
   "name": "flexboxgrid",
-  "version": "6.3.0",
-  "description": "Grid based off of CSS3 flexbox specification",
-  "style": "dist/flexboxgrid.css",
-  "main": "dist/flexboxgrid.css",
+  "version": "7.0.0",
+  "description": "Grid based on the flex display property",
+  "style": "./flexboxgrid.css",
+  "main": "./index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape ./test.js | tap-spec"
   },
   "repository": {
     "type": "git",
@@ -24,13 +24,13 @@
   },
   "homepage": "https://github.com/kristoferjoseph/flexboxgrid",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-autoprefixer": "^0.7.2",
-    "grunt-contrib-cssmin": "^0.7.0",
-    "grunt-contrib-htmlmin": "^0.1.3",
-    "grunt-contrib-uglify": "^0.2.7",
-    "grunt-contrib-watch": "^0.5.3",
-    "grunt-myth": "^1.0.1",
-    "grunt-processhtml": "^0.2.9"
+    "autoprefixer": "^6.4.0",
+    "cssnano-cli": "^1.0.4",
+    "htmlprocessor": "^0.2.3",
+    "postcss-cli": "^2.5.2",
+    "postcss-custom-properties": "^5.0.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0",
+    "uglify-js": "^2.7.0"
   }
 }
