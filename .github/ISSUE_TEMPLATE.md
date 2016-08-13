@@ -1,3 +1,5 @@
+### Briefly ( tweet size ) describe your issue and how you discovered it.
+
 ### Expected behavior
 
 Write here.
@@ -10,4 +12,4 @@ Write here.
 
 * OS:
 * Browser:
-* code/fiddle:
+* code/fiddle/pen:
