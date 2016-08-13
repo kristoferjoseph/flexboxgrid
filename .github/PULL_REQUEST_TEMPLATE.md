@@ -1,10 +1,8 @@
 ### Description
 
-Write here
+...
 
 ### Check List
-
-- [ ] run the build script
-- [ ] bump the version number
-- [ ] update the html to reflect the new version number
-- [ ] Update the gh-pages branch
+__instruction : terminal command__
+- [ ] run the build script `grunt`
+- [ ] open  `index.html` in a browser & resize to test visual issues
