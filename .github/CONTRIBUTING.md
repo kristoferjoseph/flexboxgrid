@@ -1,4 +1,4 @@
-# FLEXBOXGRID
+# FLEXBOX GRID
 
 ## Thanks for contributing
 
@@ -13,4 +13,4 @@ Again the better the information, the quicker your issue will be resolved.
 
 Use the supplied template in order to supply all the information I need to merge in your code.
 Make sure to follow the build steps and double check the output index.html to make sure you haven't broken anything. 
-The website is basically the equivalent of a visual unit test since it uses the newly build css for it's layout.
+The website is basically the equivalent of a visual unit test since it uses the newly built css for it's layout.
