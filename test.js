@@ -7,12 +7,18 @@ test('should exist', function(t) {
 })
 
 test('getContainer should return container class', function(t){
-  t.equal(flexboxgrid().getContainer(),'.flexboxgrid{margin:0 auto;}', 'container class should match')
+  t.equal(flexboxgrid().getContainer(),'.flexboxgrid{margin:0 auto;}\n', 'container class should match')
   t.end()
 })
 
 test('getColumn should return column class', function(t) {
-  t.equal(flexboxgrid().getColumn(), '.column{display:flex;flex-direction:column;flex-grow:1;}', 'column class should match expected')
-  t.equal(flexboxgrid().getColumn({column:'{display:flex;flex-direction:column;flex-grow:1;}'}, 'lg', 3), '.column{display:flex;flex-direction:column;flex-grow:1;}', 'column class should match expected')
+  t.equal(flexboxgrid().getColumn(), '.column{display:flex;flex-direction:column;flex-grow:1;}\n', 'column class should match expected')
+  t.equal(flexboxgrid().getColumn('lg', 3), '.column-lg-3{display:flex;flex-direction:column;flex-grow:1;}\n', 'column class should match expected')
   t.end()
+})
+
+test('getGrid should come down my selectors', function(t) {
+  t.ok(flexboxgrid().getGrid(), 'This is a placeholder test. Nothing is working here yet')
+  t.end()
+  //console.log(flexboxgrid().getGrid())
 })
