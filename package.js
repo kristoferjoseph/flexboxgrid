@@ -9,5 +9,5 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.3-rc.8');
   api.use('ecmascript');
-  api.addFiles('css/flexboxgrid.css');
+  api.addFiles('dist/flexboxgrid.css');
 });
