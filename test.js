@@ -23,11 +23,13 @@ test('getOffset should return offset class', function(t) {
   t.end()
 })
 
-test.only('getQuery should output media query',function(t){
+test('getQuery should output media query',function(t){
   t.equal(
     flexboxgrid().getQuery(48, 'md', 5),
-    '@media only screen and (min-width:48em){}\n'
+    '@media only screen and (min-width:48em) {\n.column-md-5{display:flex;flex-direction:column;flex-grow:1;}\n.offset-md-5{flex:0 0 auto;}\n.reverse-md-5{flex-direction:row-reverse;}\n.around-md-5{justify-content:space-around;}\n.between-md-5{justify-content:space-between;}\n.start-md-5{justify-content:flex-start;}\n.center-md-5{justify-content:center;}\n.end-md-5{justify-content:flex-end;}\n.top-md-5{align-items:flex-start;}\n.middle-md-5{align-items:center;}\n.bottom-md-5{align-items:flex-end;}\n.stretch-md-5{align-items:stretch;}\n.first-md-5{order:-1;}\n.last-md-5{order:1;}\n}\n'
   )
+  console.log('query',flexboxgrid().getQuery(48, 'md', 5))
+  t.end()
 })
 
 test('getGrid should come down my selectors', function(t) {

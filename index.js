@@ -43,7 +43,7 @@ module.exports = function flexboxgrid(options) {
         }
         return klass+obj[selector]+'\n'
       })
-    return klasses.length === 1? klasses[0]: klasses.join().replace(/,/g,' ')
+    return klasses.join().replace(/,/g,'')
   }
 
   function getContainer() {
@@ -64,7 +64,7 @@ module.exports = function flexboxgrid(options) {
   }
 
   function getQuery(size, breakpoint, index) {
-    var query = '@media only screen and (min-width:'+ size +'em) {'
+    var query = '@media only screen and (min-width:'+ size +'em) {\n'
     query += getColumn(breakpoint, index)
     query += getOffset(breakpoint, index)
     query += getModifiers(breakpoint, index)
