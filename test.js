@@ -23,6 +23,13 @@ test('getOffset should return offset class', function(t) {
   t.end()
 })
 
+test.only('getQuery should output media query',function(t){
+  t.equal(
+    flexboxgrid().getQuery(48, 'md', 5),
+    '@media only screen and (min-width:48em){}\n'
+  )
+})
+
 test('getGrid should come down my selectors', function(t) {
   t.ok(flexboxgrid().getGrid(), 'This is a placeholder test. Nothing is working here yet')
   t.end()
