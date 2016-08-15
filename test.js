@@ -17,6 +17,12 @@ test('getColumn should return column class', function(t) {
   t.end()
 })
 
+test('getOffset should return offset class', function(t) {
+  t.equal(flexboxgrid().getOffset(), '.offset{flex:0 0 auto;}\n')
+  t.equal(flexboxgrid().getOffset('xs', 12), '.offset-xs-12{flex:0 0 auto;}\n')
+  t.end()
+})
+
 test('getGrid should come down my selectors', function(t) {
   t.ok(flexboxgrid().getGrid(), 'This is a placeholder test. Nothing is working here yet')
   t.end()

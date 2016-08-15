@@ -26,7 +26,6 @@ module.exports = function flexboxgrid(options) {
   var output    = ''
 
   function getGrid() {
-    output += getContainer()
     output += getBreakpoints()
     return output
   }
@@ -42,7 +41,6 @@ module.exports = function flexboxgrid(options) {
         if (index) {
           klass = klass+'-'+index
         }
-        console.log('breakpoint', breakpoint)
         return klass+obj[selector]+'\n'
       })[0]
   }
@@ -52,19 +50,24 @@ module.exports = function flexboxgrid(options) {
   }
 
   function getBreakpoints() {
+    output += getContainer()
+    output += getColumn()
+    output += getOffset()
+    output += getModifiers()
     return Object.keys(breakpoints)
       .map(
         function(breakpoint, index) {
-          output += getColumn(breakpoint, index)
-          output += getOffset(breakpoint, index)
-          output += getModifiers(breakpoint, index)
-          return output
+          getQuery(breakpoint, index, breakpoints[breakpoint])
         }
       )
   }
 
-  function getQuery() {
-    return
+  function getQuery(breakpoint, index, size) {
+    var query = '@media only screen and (min-width:'+ size +'em) {'
+    query += getColumn(breakpoint, index)
+    query += getOffset(breakpoint, index)
+    query += getModifiers(breakpoint, index)
+    return query+'}\n'
   }
 
   function getColumn(breakpoint, index) {
