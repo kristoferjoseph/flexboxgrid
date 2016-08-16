@@ -275,6 +275,7 @@ code {
   position: relative;
   display: block;
   overflow: hidden;
+  font-size: 0.875rem;
 }
 
 .carbon-img {
