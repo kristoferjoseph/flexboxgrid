@@ -1,8 +1,0 @@
-{
-  "packageManager": "github",
-  "name": "flexboxgrid",
-  "repo": "kristoferjoseph/flexboxgrid",
-  "files": {
-    "include": ["./dist/flexboxgrid.css", "./dist/flexboxgrid.min.css"]
-  }
-}
