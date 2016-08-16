@@ -14,9 +14,8 @@ Install
 `bower install flexboxgrid`
 
 ### cdn
-```
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/flexboxgrid/7.0.0/flexboxgrid.min.css" type="text/css" >
-```
+<code>CDNJS</code>
+`<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/7.0.0/flexboxgrid.min.css" type="text/css" >`
 
 ### css
 * [Development](https://raw.githubusercontent.com/kristoferjoseph/flexboxgrid/master/dist/flexboxgrid.css)

@@ -87,7 +87,7 @@ module.exports = function flexboxgrid(options) {
 
   function getColumn(breakpoint, index) {
     var basis = index?
-      `flex-basis:calc(100%/${columnCount})*${index});max-width:calc(100%/${columnCount})*${index});`:
+      `flex-basis:calc((100%/${columnCount})*${index});max-width:calc((100%/${columnCount})*${index});`:
       'flex-grow:1;'
     return getClass(column, breakpoint, index, basis)
   }
@@ -103,7 +103,7 @@ module.exports = function flexboxgrid(options) {
 
   function getOffset(breakpoint, index) {
     var margin = index?
-      `margin-left:calc(100%/${columnCount})*${index});`:''
+      `margin-left:calc((100%/${columnCount})*${index});`:''
 
     return getClass(offset, breakpoint, index, margin)
   }

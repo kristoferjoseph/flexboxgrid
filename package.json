@@ -5,6 +5,7 @@
   "style": "./flexboxgrid.css",
   "main": "./index.js",
   "scripts": {
+    "build": "./scripts/build",
     "test": "tape ./test.js | tap-spec"
   },
   "repository": {

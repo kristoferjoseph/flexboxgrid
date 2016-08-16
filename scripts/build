@@ -1,4 +1,3 @@
 #!/bin/sh
+node ./index.js > flexboxgrid.css
 ./scripts/css
-./scripts/js
-./scripts/html
