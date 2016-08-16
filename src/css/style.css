@@ -254,29 +254,51 @@ code {
   display: block;
   visibility: visible;
 }
+
 #carbonads {
-  display: flex;
-  justify-content: center;
-  font-size: 0.75rem;
-}
-#carbonads a,
-#carbonads a:active,
-#carbonads a:hover,
-#carbonads a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-.carbon-wrap {
-  display: flex;
-  max-width: 18.75rem;
+  overflow: hidden;
+  margin: 0 auto;
   margin-top: 2rem;
+  padding: 1em;
+  max-width: 18.75rem;
+  border: solid 1px #e5e5e5;
+  border-radius: 2px;
+  background-color: #fcfcfc;
+  box-shadow: inset 0 1px #fff;
+  text-shadow: 0 1px #fff;
+  line-height: 1.5;
 }
+
+.carbon-wrap { margin: 0; }
+
+#carbonads span {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
 .carbon-img {
-  margin-right: 0.5rem;
+  float: left;
+  margin-right: 1em;
 }
+
+.carbon-img img { display: block; }
+
+.carbon-text {
+  display: block;
+  float: left;
+  max-width: calc(100% - 130px - 1em);
+  text-align: left;
+}
+
 .carbon-poweredby {
-  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  font-size: 10px;
 }
+
 @media only screen and (min-width: 48rem) {
   body {
     font-size: 16px;
