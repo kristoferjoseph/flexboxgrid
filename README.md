@@ -19,11 +19,6 @@ Install
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
 ```
 
-<code>jsDelivr</code>
-```
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
-```
-
 ### css
 * [Development](https://raw.githubusercontent.com/kristoferjoseph/flexboxgrid/master/dist/flexboxgrid.css)
 * [Production](https://raw.githubusercontent.com/kristoferjoseph/flexboxgrid/master/dist/flexboxgrid.min.css)
