@@ -765,6 +765,11 @@
               code.src = 'js/index.js';
               var script = document.getElementsByTagName('script')[0];
               script.parentNode.insertBefore(code, script);
+              var ad = document.createElement('script');
+              var target = document.querySelector('.hero')
+              ad.id = "_carbonads_js"
+              ad.src = '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=flexboxgridcom'
+              target.appendChild(ad)
             });
           }());
         </script>

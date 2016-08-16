@@ -254,6 +254,29 @@ code {
   display: block;
   visibility: visible;
 }
+#carbonads {
+  display: flex;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+#carbonads a,
+#carbonads a:active,
+#carbonads a:hover,
+#carbonads a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+.carbon-wrap {
+  display: flex;
+  max-width: 18.75rem;
+  margin-top: 2rem;
+}
+.carbon-img {
+  margin-right: 0.5rem;
+}
+.carbon-poweredby {
+  opacity: 0.5;
+}
 @media only screen and (min-width: 48rem) {
   body {
     font-size: 16px;
