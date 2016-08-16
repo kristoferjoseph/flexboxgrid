@@ -5,11 +5,11 @@ module.exports = function flexboxgrid(options) {
   var padding     = options.padding     || 2 + unit
   var gutterWidth = options.gutters     || parseInt(padding, 10) * 0.5 + unit
   var breakpoints = options.breakpoints || {sm:30, md:48, lg:75}
-  var padded      = options.padded      || `.padded{padding: 0 2${unit}}\n`
-  var rowGutters  = options.rowGutters  || `.gutters > .row {margin-left: -1${unit}}\n`
+  var padded      = options.padded      || `.padded{padding: 0 2${unit};}\n`
+  var rowGutters  = options.rowGutters  || `.gutters > .row {margin-left: -1${unit};}\n`
   var columnGutters = options.columnGutters || `.gutters > .row > .column {padding-left: 1${unit};}\n`
   var row         = options.row       || `.row{display:flex;flex-wrap:wrap;}\n`
-  var container = options.contianer || {flexboxgrid:function(){return '{margin:0 auto;}'}}
+  var container = options.container || `.flexboxgrid{margin:0 auto;}\n`
   var column    = options.column    || {column:function(basis){return `{display:flex;flex-direction:column;${basis}}`}}
   var offset    = options.offset    || {offset:function(margin){return`{flex:0 0 auto;${margin}}`}}
   var output    = ''
@@ -29,11 +29,13 @@ module.exports = function flexboxgrid(options) {
   }
 
   function getGrid() {
-    output += getContainer()
+   
+    output += container
     output += padded
     output += rowGutters
     output += columnGutters
     output += row
+    
     output += getBreakpoints()
     return output
   }
@@ -56,10 +58,6 @@ module.exports = function flexboxgrid(options) {
 
   function getReset() {
     return getClass(reset)
-  }
-
-  function getContainer() {
-    return getClass(container)
   }
 
   function getBreakpoints() {
@@ -127,10 +125,9 @@ module.exports = function flexboxgrid(options) {
     return getClass(overrides)
   }
 
-  //return output
+  console.log(getGrid())
   return {
     output:output,
-    getContainer:getContainer,
     getColumn:getColumn,
     getColumns:getColumns,
     getOffset:getOffset,
@@ -139,4 +136,4 @@ module.exports = function flexboxgrid(options) {
     getQuery:getQuery,
     getGrid:getGrid
   }
-}
+}()
