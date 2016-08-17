@@ -1,47 +1,50 @@
-module.exports = function flexboxgrid(options) {
-  options = options || {}
-  var unit        = options.unit        || 'rem'
-  var columnCount = options.columnCount || 12
-  var padding     = options.padding     || 2 + unit
-  var gutterWidth = options.gutters     || parseInt(padding, 10) * 0.5 + unit
-  var breakpoints = options.breakpoints || {sm:30, md:48, lg:75}
-  var padded      = options.padded      || `.padded{padding: 0 2${unit};}\n`
-  var rowGutters  = options.rowGutters  || `.gutters > .row {margin-left: -1${unit};}\n`
-  var columnGutters = options.columnGutters || `.gutters > .row > .column {padding-left: 1${unit};}\n`
-  var row         = options.row       || `.row{display:flex;flex-wrap:wrap;}\n`
-  var container = options.container || `.flexboxgrid{margin:0 auto;}\n`
-  var column    = options.column    || {column:function(basis){return `{display:flex;flex-direction:column;${basis}}`}}
-  var offset    = options.offset    || {offset:function(margin){return`{flex:0 0 auto;${margin}}`}}
-  var output    = ''
-  var modifiers   = options.modifiers   || {
-    reverse : function(){return '{flex-direction:row-reverse;}'},
-    around  : function(){return '{justify-content:space-around;}'},
-    between : function(){return '{justify-content:space-between;}'},
-    start   : function(){return '{justify-content:flex-start;}'},
-    center  : function(){return '{justify-content:center;}'},
-    end     : function(){return '{justify-content:flex-end;}'},
-    top     : function(){return '{align-items:flex-start;}'},
-    middle  : function(){return '{align-items:center;}'},
-    bottom  : function(){return '{align-items:flex-end;}'},
-    stretch : function(){return '{align-items:stretch;}'},
-    first   : function(){return '{order:-1;}'},
-    last    : function(){return '{order:1;}'},
+module.exports = function flexboxgrid(opts) {
+  opts = opts || {}
+  var vars          = opts.vars          || {}
+  var reset         = opts.reset         || {}
+  var unit          = opts.unit          || 'rem'
+  var columnCount   = opts.columnCount   || 12
+  var padding       = opts.padding       || 2
+  var gutterWidth   = opts.gutters       || parseInt(padding, 10) * 0.5
+  var breakpoints   = opts.breakpoints   || {sm:30, md:48, lg:75}
+  var padded        = opts.padded        || {padded:`{padding: 0 ${padding}${unit};}`}
+  var rowGutters    = opts.rowGutters    || {'gutters > .row': `{margin-left: -${gutterWidth}${unit};}`}
+  var columnGutters = opts.columnGutters || {'gutters > .row > .column': `{padding-left: ${gutterWidth}${unit};}`}
+  var row           = opts.row           || {row:'{display:flex;flex-wrap:wrap;}'}
+  var container     = opts.container     || {flexboxgrid:'{margin:0 auto;}'}
+  var column        = opts.column        || {column:function(basis){return `{display:flex;flex-direction:column;${basis}}`}}
+  var offset        = opts.offset        || {offset:function(margin){return`{flex:0 0 auto;${margin}}`}}
+  var output        = ''
+  var modifiers     = opts.modifiers     || {
+    reverse : '{flex-direction:row-reverse;}',
+    around  : '{justify-content:space-around;}',
+    between : '{justify-content:space-between;}',
+    start   : '{justify-content:flex-start;}',
+    center  : '{justify-content:center;}',
+    end     : '{justify-content:flex-end;}',
+    top     : '{align-items:flex-start;}',
+    middle  : '{align-items:center;}',
+    bottom  : '{align-items:flex-end;}',
+    stretch : '{align-items:stretch;}',
+    first   : '{order:-1;}',
+    last    : '{order:1;}',
   }
 
   function getGrid() {
-   
-    output += container
-    output += padded
-    output += rowGutters
-    output += columnGutters
-    output += row
-    
+
+    output += getContainer()
+    output += getPadded()
+    output += getRowGutters()
+    output += getColumnGutters()
+    output += getRow()
+
     output += getBreakpoints()
     return output
   }
 
   function getClass(obj, breakpoint, index, variable) {
     var klass
+    var selector
     var klasses = Object.keys(obj)
       .map(function(selector){
         klass = `.${selector}`
@@ -51,13 +54,41 @@ module.exports = function flexboxgrid(options) {
         if (index) {
           klass = `${klass}-${index}`
         }
-        return `${klass}${obj[selector](variable)}\n`
+        selector = obj[selector]
+        if (typeof selector === 'function') {
+          selector = selector(variable)
+        }
+        return `${klass}${selector}\n`
       })
     return klasses.join().replace(/,/g,'')
   }
 
   function getReset() {
     return getClass(reset)
+  }
+
+  function getVars() {
+    return getClass(vars)
+  }
+
+  function getContainer() {
+    return getClass(container)
+  }
+
+  function getPadded() {
+    return getClass(padded)
+  }
+
+  function getRowGutters() {
+    return getClass(rowGutters)
+  }
+
+  function getColumnGutters() {
+    return getClass(columnGutters)
+  }
+
+  function getRow() {
+    return getClass(row)
   }
 
   function getBreakpoints() {
@@ -125,15 +156,18 @@ module.exports = function flexboxgrid(options) {
     return getClass(overrides)
   }
 
-  console.log(getGrid())
   return {
     output:output,
+    getContainer:getContainer,
     getColumn:getColumn,
+    getRow:getRow,
     getColumns:getColumns,
+    getRowGutters:getRowGutters,
+    getColumnGutters:getColumnGutters,
     getOffset:getOffset,
     getModifiers:getModifiers,
     getBreakpoints:getBreakpoints,
     getQuery:getQuery,
     getGrid:getGrid
   }
-}()
+}
