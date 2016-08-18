@@ -4,6 +4,9 @@
   "description": "Grid based on the flex display property",
   "style": "./flexboxgrid.css",
   "main": "./index.js",
+  "bin": {
+    "flexboxgrid": "./generator.js"
+  },
   "scripts": {
     "build": "./scripts/build",
     "test": "tape ./test.js | tap-spec"

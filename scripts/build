@@ -1,3 +1,3 @@
 #!/bin/sh
-node ./index.js > flexboxgrid.css
+node ./generator.js > flexboxgrid.css
 ./scripts/css

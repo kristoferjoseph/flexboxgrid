@@ -156,6 +156,8 @@ module.exports = function flexboxgrid(opts) {
     return getClass(overrides)
   }
 
+  getGrid()
+
   return {
     output:output,
     getContainer:getContainer,
