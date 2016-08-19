@@ -6,6 +6,11 @@ test('should exist', function(t) {
   t.end()
 })
 
+test('namespace should append to selector', function(t) {
+  t.equal(flexboxgrid({namespace:'fbg'}).getContainer(), '.fbg-flexboxgrid{margin:0 auto;}\n')
+  t.end()
+})
+
 test('getContainer should return container class', function(t){
   t.equal(flexboxgrid().getContainer(),'.flexboxgrid{margin:0 auto;}\n', 'container class should match')
   t.end()

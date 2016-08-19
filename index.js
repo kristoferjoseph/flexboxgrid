@@ -1,21 +1,22 @@
 module.exports = function flexboxgrid(opts) {
   opts = opts || {}
-  var vars          = opts.vars          || {}
-  var reset         = opts.reset         || {}
-  var unit          = opts.unit          || 'rem'
-  var columnCount   = opts.columnCount   || 12
-  var padding       = opts.padding       || 2
-  var gutterWidth   = opts.gutters       || parseInt(padding, 10) * 0.5
-  var breakpoints   = opts.breakpoints   || {sm:30, md:48, lg:75}
-  var padded        = opts.padded        || {padded:`{padding: 0 ${padding}${unit};}`}
-  var rowGutters    = opts.rowGutters    || {'gutters > .row': `{margin-left: -${gutterWidth}${unit};}`}
-  var columnGutters = opts.columnGutters || {'gutters > .row > .column': `{padding-left: ${gutterWidth}${unit};}`}
-  var row           = opts.row           || {row:'{display:flex;flex-wrap:wrap;}'}
-  var container     = opts.container     || {flexboxgrid:'{margin:0 auto;}'}
-  var column        = opts.column        || {column:function(basis){return `{display:flex;flex-direction:column;${basis}}`}}
-  var offset        = opts.offset        || {offset:function(margin){return`{flex:0 0 auto;${margin}}`}}
-  var output        = ''
-  var modifiers     = opts.modifiers     || {
+  var vars            = opts.vars            || {}
+  var reset           = opts.reset           || {}
+  var namespace       = opts.namespace       || ''
+  namespace? namespace = namespace+'-': ''
+  var unit            = opts.unit            || 'rem'
+  var columnCount     = opts.columnCount     || 12
+  var padding         = opts.padding         || 2
+  var gutterWidth     = opts.gutters         || parseInt(padding, 10) * 0.5
+  var breakpoints     = opts.breakpoints     || {sm:30, md:48, lg:75}
+  var padded          = opts.padded          || {padded:`{padding: 0 ${padding}${unit};}`}
+  var rowGutters      = opts.rowGutters      || {'gutters > .row': `{margin-left: -${gutterWidth}${unit};}`}
+  var columnGutters   = opts.columnGutters   || {'gutters > .row > .column': `{padding-left: ${gutterWidth}${unit};}`}
+  var row             = opts.row             || {row:'{display:flex;flex-wrap:wrap;}'}
+  var container       = opts.container       || {flexboxgrid:'{margin:0 auto;}'}
+  var column          = opts.column          || {column:function(basis){return `{display:flex;flex-direction:column;${basis}}`}}
+  var offset          = opts.offset          || {offset:function(margin){return`{flex:0 0 auto;${margin}}`}}
+  var modifiers       = opts.modifiers       || {
     reverse : '{flex-direction:row-reverse;}',
     around  : '{justify-content:space-around;}',
     between : '{justify-content:space-between;}',
@@ -31,7 +32,7 @@ module.exports = function flexboxgrid(opts) {
   }
 
   function getGrid() {
-
+    var output = ''
     output += getContainer()
     output += getPadded()
     output += getRowGutters()
@@ -47,7 +48,7 @@ module.exports = function flexboxgrid(opts) {
     var selector
     var klasses = Object.keys(obj)
       .map(function(selector){
-        klass = `.${selector}`
+        klass = `.${namespace}${selector}`
         if (breakpoint) {
           klass = `${klass}-${breakpoint}`
         }
@@ -92,6 +93,7 @@ module.exports = function flexboxgrid(opts) {
   }
 
   function getBreakpoints() {
+    var output = ''
     output += getColumn()
     output += getOffset()
     output += getModifiers()
@@ -110,6 +112,7 @@ module.exports = function flexboxgrid(opts) {
 
   function getQuery(size, breakpoint, index) {
     var query = `@media only screen and (min-width:${size}em) {\n`
+
     query += getColumns(breakpoint, index)
     query += getOffsets(breakpoint, index)
     query += getModifiers(breakpoint)
@@ -156,10 +159,7 @@ module.exports = function flexboxgrid(opts) {
     return getClass(overrides)
   }
 
-  getGrid()
-
   return {
-    output:output,
     getContainer:getContainer,
     getColumn:getColumn,
     getRow:getRow,
