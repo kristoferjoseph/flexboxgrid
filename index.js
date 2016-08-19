@@ -38,7 +38,6 @@ module.exports = function flexboxgrid(opts) {
     output += getRowGutters()
     output += getColumnGutters()
     output += getRow()
-
     output += getBreakpoints()
     return output
   }
@@ -112,7 +111,6 @@ module.exports = function flexboxgrid(opts) {
 
   function getQuery(size, breakpoint, index) {
     var query = `@media only screen and (min-width:${size}em) {\n`
-
     query += getColumns(breakpoint, index)
     query += getOffsets(breakpoint, index)
     query += getModifiers(breakpoint)
