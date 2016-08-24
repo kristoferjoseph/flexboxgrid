@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Grid</title>
+  <style>
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      padding-top: 2rem;
+      background: #DDD;
+    }
+
+    .example-content {
+      font-family: sans-serif;
+      color: #EEE;;
+      padding: 3rem;
+      background: #4242BA;
+      border: 1px solid white;
+      text-align: center;
+    }
+
+  </style>
+  <link rel="stylesheet" href="./flexboxgrid.min.css">
+</head>
+<body>
+  <div class="flexboxgrid padded gutters">
+    <div class="row">
+      <div class="column">
+        <div class="example-content">One</div>
+      </div>
+      <div class="column">
+        <div class="example-content">Two</div>
+      </div>
+      <div class="column">
+        <div class="example-content">Three</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="example-content">One</div>
+      </div>
+      <div class="column">
+        <div class="example-content">Two</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="example-content">One</div>
+      </div>
+    </div>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+</html>
