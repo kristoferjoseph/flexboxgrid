@@ -83,6 +83,7 @@
 
 .col-xs-hidden{
   visibility: hidden;
+	display: none;
 }
 
 .col-xs {
@@ -293,10 +294,12 @@
   .col-sm-11,
   .col-sm-12{
     visibility: visible;
+		display: block;
   }
 
   .col-sm-hidden{
     visibility: hidden;
+		display: none;
   }
 
   .col-sm {
@@ -508,10 +511,12 @@
   .col-md-11,
   .col-md-12{
     visibility: visible;
+		display: block;
   }
 
   .col-md-hidden{
     visibility: hidden;
+		display: none;
   }
 
   .col-md {
@@ -723,11 +728,13 @@
   .col-lg-11,
   .col-lg-12{
     visibility: visible;
+		display: block;
   }
 
   .col-lg-hidden{
     visibility: hidden;
-  } 
+		display: none;
+  }
 
   .col-lg {
     flex-grow: 1;
