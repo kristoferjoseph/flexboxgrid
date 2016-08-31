@@ -81,7 +81,7 @@
   padding-left: var(--half-gutter-width, 0.5rem);
 }
 
-.col-xs-hidden{
+.hidden-xs{
   visibility: hidden;
 	display: none;
 }
@@ -297,7 +297,7 @@
 		display: block;
   }
 
-  .col-sm-hidden{
+  .hidden-sm{
     visibility: hidden;
 		display: none;
   }
@@ -514,7 +514,7 @@
 		display: block;
   }
 
-  .col-md-hidden{
+  .hidden-md{
     visibility: hidden;
 		display: none;
   }
@@ -731,7 +731,7 @@
 		display: block;
   }
 
-  .col-lg-hidden{
+  .hidden-lg{
     visibility: hidden;
 		display: none;
   }
