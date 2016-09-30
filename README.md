@@ -15,7 +15,7 @@ Install
 ### cdn
 
 <code>CDNJS</code>
-```
+```html
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
 ```
 
@@ -25,7 +25,7 @@ Install
 
 Add the `flexboxgrid.css` __development__ or `flexboxgrid.min.css` __production__ to your html page.
 
-```
+```html
 <link rel="stylesheet" href="css/flexboxgrid.min.css" type="text/css">
 ```
 Inspiration
