@@ -1,0 +1,7 @@
+.row {
+  -webkit-box-orient:vertical;
+}
+
+.row.center-xs {
+  -webkit-box-align:center;
+}
