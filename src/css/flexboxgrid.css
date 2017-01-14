@@ -1,19 +1,11 @@
 :root {
-  --gutter-width: 1rem;
-  --outer-margin: 2rem;
-  --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
-  --half-gutter-width: calc((var(--gutter-width) * 0.5));
-  --xs-min: 30;
-  --sm-min: 48;
-  --md-min: 64;
-  --lg-min: 75;
-  --screen-xs-min: var(--xs-min)em;
-  --screen-sm-min: var(--sm-min)em;
-  --screen-md-min: var(--md-min)em;
-  --screen-lg-min: var(--lg-min)em;
-  --container-sm: calc(var(--sm-min) + var(--gutter-width));
-  --container-md: calc(var(--md-min) + var(--gutter-width));
-  --container-lg: calc(var(--lg-min) + var(--gutter-width));
+  --computed-gutter-width: var(--gutter-width, 1rem);
+  --computed-outer-margin: var(--outer-margin, 2rem);
+  --computed-gutter-compensation: calc((var(--computed-gutter-width) * 0.5) * -1);
+  --computed-half-gutter-width: calc((var(--computed-gutter-width) * 0.5));
+  --container-sm: calc(var(--sm-min, 48rem) + var(--computed-gutter-width));
+  --container-md: calc(var(--md-min, 64rem) + var(--computed-gutter-width));
+  --container-lg: calc(var(--lg-min, 75rem) + var(--computed-gutter-width));
 }
 
 @custom-media --sm-viewport only screen and (min-width: 48em);
@@ -26,8 +18,8 @@
 }
 
 .container-fluid {
-  padding-right: var(--outer-margin, 2rem);
-  padding-left: var(--outer-margin, 2rem);
+  padding-right: var(--computed-outer-margin);
+  padding-left: var(--computed-outer-margin);
 }
 
 .row {
@@ -36,8 +28,8 @@
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-right: var(--gutter-compensation, -0.5rem);
-  margin-left: var(--gutter-compensation, -0.5rem);
+  margin-right: var(--computed-gutter-compensation);
+  margin-left: var(--computed-gutter-compensation);
 }
 
 .row.reverse {
@@ -76,8 +68,8 @@
 .col-xs-offset-12 {
   box-sizing: border-box;
   flex: 0 0 auto;
-  padding-right: var(--half-gutter-width, 0.5rem);
-  padding-left: var(--half-gutter-width, 0.5rem);
+  padding-right: var(--computed-half-gutter-width);
+  padding-left: var(--computed-half-gutter-width);
 }
 
 .col-xs {
@@ -239,7 +231,7 @@
 
 @media (--sm-viewport) {
   .container {
-    width: var(--container-sm, 46rem);
+    width: var(--container-sm);
   }
 
   .col-sm,
@@ -270,8 +262,8 @@
   .col-sm-offset-12 {
     box-sizing: border-box;
     flex: 0 0 auto;
-    padding-right: var(--half-gutter-width, 0.5rem);
-    padding-left: var(--half-gutter-width, 0.5rem);
+    padding-right: var(--computed-half-gutter-width);
+    padding-left: var(--computed-half-gutter-width);
   }
 
   .col-sm {
@@ -434,7 +426,7 @@
 
 @media (--md-viewport) {
   .container {
-    width: var(--container-md, 61rem);
+    width: var(--container-md);
   }
 
   .col-md,
@@ -465,8 +457,8 @@
   .col-md-offset-12 {
     box-sizing: border-box;
     flex: 0 0 auto;
-    padding-right: var(--half-gutter-width, 0.5rem);
-    padding-left: var(--half-gutter-width, 0.5rem);
+    padding-right: var(--computed-half-gutter-width);
+    padding-left: var(--computed-half-gutter-width);
   }
 
   .col-md {
@@ -629,7 +621,7 @@
 
 @media (--lg-viewport) {
   .container {
-    width: var(--container-lg, 71rem);
+    width: var(--container-lg);
   }
 
   .col-lg,
@@ -660,8 +652,8 @@
   .col-lg-offset-12 {
     box-sizing: border-box;
     flex: 0 0 auto;
-    padding-right: var(--half-gutter-width, 0.5rem);
-    padding-left: var(--half-gutter-width, 0.5rem);
+    padding-right: var(--computed-half-gutter-width);
+    padding-left: var(--computed-half-gutter-width);
   }
 
   .col-lg {
