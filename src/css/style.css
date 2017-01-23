@@ -207,7 +207,6 @@ code {
 .box {
   box-sizing: border-box;
   position: relative;
-  box-sizing: border-box;
   min-height: 1rem;
   margin-bottom: 0;
   background: #007FFF;
