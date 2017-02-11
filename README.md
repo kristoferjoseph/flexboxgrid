@@ -7,6 +7,9 @@ Grid based on the `flex` display property.
 
 Install
 ---------
+### bower
+`bower i flexboxgrid --save`
+
 ### npm
 `npm i flexboxgrid --save`
 
