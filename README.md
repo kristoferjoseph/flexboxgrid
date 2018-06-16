@@ -10,8 +10,9 @@ Install
 ### npm
 `npm i flexboxgrid --save`
 
-### bower
-`bower install flexboxgrid`
+### yarn
+`yarn add flexboxgrid`
+
 ### cdn
 
 <code>CDNJS</code>
