@@ -34,6 +34,11 @@
   flex-direction: row-reverse;
 }
 
+.row.nowrap {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
 .col.reverse {
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
