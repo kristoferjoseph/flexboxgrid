@@ -28,6 +28,19 @@ Add the `flexboxgrid.css` __development__ or `flexboxgrid.min.css` __production_
 ```html
 <link rel="stylesheet" href="css/flexboxgrid.min.css" type="text/css">
 ```
+
+
+Development
+---------
+1. run the build script `grunt`
+1. open index.html in a browser & resize to test visual issues
+
+
+Extra Features
+---------
+If you are looking for features like "hidden-columns", "flex-column", or "flex-center" add the companion package [flexboxgrid-helpers](https://github.com/lgg/flexboxgrid-helpers)
+
+
 Inspiration
 -----------
 - [topcoat-grid](https://github.com/topcoat/grid)
