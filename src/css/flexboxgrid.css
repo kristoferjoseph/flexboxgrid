@@ -30,18 +30,25 @@
   padding-left: var(--outer-margin, 2rem);
 }
 
-.row {
+.row, .col {
   box-sizing: border-box;
   display: flex;
   flex: 0 1 auto;
-  flex-direction: row;
   flex-wrap: wrap;
   margin-right: var(--gutter-compensation, -0.5rem);
   margin-left: var(--gutter-compensation, -0.5rem);
 }
 
+.row {
+  flex-direction: row;
+}
+
 .row.reverse {
   flex-direction: row-reverse;
+}
+
+.col {
+  flex-direction: column;
 }
 
 .col.reverse {
