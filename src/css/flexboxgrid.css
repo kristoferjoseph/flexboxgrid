@@ -196,6 +196,7 @@
 
 .start-xs {
   justify-content: flex-start;
+  text-align: left;
   text-align: start;
 }
 
@@ -206,6 +207,7 @@
 
 .end-xs {
   justify-content: flex-end;
+  text-align: right;
   text-align: end;
 }
 
@@ -390,6 +392,7 @@
 
   .start-sm {
     justify-content: flex-start;
+    text-align: left;
     text-align: start;
   }
 
@@ -400,6 +403,7 @@
 
   .end-sm {
     justify-content: flex-end;
+    text-align: right;
     text-align: end;
   }
 
@@ -585,6 +589,7 @@
 
   .start-md {
     justify-content: flex-start;
+    text-align: left;
     text-align: start;
   }
 
@@ -595,6 +600,7 @@
 
   .end-md {
     justify-content: flex-end;
+    text-align: right;
     text-align: end;
   }
 
@@ -780,6 +786,7 @@
 
   .start-lg {
     justify-content: flex-start;
+    text-align: left;
     text-align: start;
   }
 
@@ -790,6 +797,7 @@
 
   .end-lg {
     justify-content: flex-end;
+    text-align: right;
     text-align: end;
   }
 
