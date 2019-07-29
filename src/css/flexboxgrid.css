@@ -54,6 +54,10 @@
   flex-direction: column;
 }
 
+.row[class*='col-count-']>[class*='col-'] {
+  max-width: 100%;
+}
+
 .col-count-xs-2 {
   column-count: 2;
 }
