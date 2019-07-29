@@ -48,6 +48,60 @@
   flex-direction: column-reverse;
 }
 
+/* use .row.col-count-* to preserve vertical sorting */
+.row[class*='col-count-'] {
+  display: inherit;
+  flex-direction: column;
+}
+
+.row[class*='col-count-']>[class*='col-'] {
+  max-width: 100%;
+}
+
+.col-count-xs-2 {
+  column-count: 2;
+}
+
+.col-count-xs-3 {
+  column-count: 3;
+}
+
+.col-count-xs-4 {
+  column-count: 4;
+}
+
+.col-count-xs-5 {
+  column-count: 5;
+}
+
+.col-count-xs-6 {
+  column-count: 6;
+}
+
+.col-count-xs-7 {
+  column-count: 7;
+}
+
+.col-count-xs-8 {
+  column-count: 8;
+}
+
+.col-count-xs-9 {
+  column-count: 9;
+}
+
+.col-count-xs-10 {
+  column-count: 10;
+}
+
+.col-count-xs-11 {
+  column-count: 11;
+}
+
+.col-count-xs-12 {
+  column-count: 12;
+}
+
 .col-xs,
 .col-xs-1,
 .col-xs-2,
@@ -430,6 +484,50 @@
   .last-sm {
     order: 1;
   }
+
+  .col-count-sm-2 {
+    column-count: 2;
+  }
+
+  .col-count-sm-3 {
+    column-count: 3;
+  }
+
+  .col-count-sm-4 {
+    column-count: 4;
+  }
+
+  .col-count-sm-5 {
+    column-count: 5;
+  }
+
+  .col-count-sm-6 {
+    column-count: 6;
+  }
+
+  .col-count-sm-7 {
+    column-count: 7;
+  }
+
+  .col-count-sm-8 {
+    column-count: 8;
+  }
+
+  .col-count-sm-9 {
+    column-count: 9;
+  }
+
+  .col-count-sm-10 {
+    column-count: 10;
+  }
+
+  .col-count-sm-11 {
+    column-count: 11;
+  }
+
+  .col-count-sm-12 {
+    column-count: 12;
+  }
 }
 
 @media (--md-viewport) {
@@ -624,6 +722,50 @@
 
   .last-md {
     order: 1;
+  }
+
+  .col-count-md-2 {
+    column-count: 2;
+  }
+
+  .col-count-md-3 {
+    column-count: 3;
+  }
+
+  .col-count-md-4 {
+    column-count: 4;
+  }
+
+  .col-count-md-5 {
+    column-count: 5;
+  }
+
+  .col-count-md-6 {
+    column-count: 6;
+  }
+
+  .col-count-md-7 {
+    column-count: 7;
+  }
+
+  .col-count-md-8 {
+    column-count: 8;
+  }
+
+  .col-count-md-9 {
+    column-count: 9;
+  }
+
+  .col-count-md-10 {
+    column-count: 10;
+  }
+
+  .col-count-md-11 {
+    column-count: 11;
+  }
+
+  .col-count-md-12 {
+    column-count: 12;
   }
 }
 
@@ -820,5 +962,48 @@
   .last-lg {
     order: 1;
   }
-}
 
+  .col-count-lg-2 {
+    column-count: 2;
+  }
+
+  .col-count-lg-3 {
+    column-count: 3;
+  }
+
+  .col-count-lg-4 {
+    column-count: 4;
+  }
+
+  .col-count-lg-5 {
+    column-count: 5;
+  }
+
+  .col-count-lg-6 {
+    column-count: 6;
+  }
+
+  .col-count-lg-7 {
+    column-count: 7;
+  }
+
+  .col-count-lg-8 {
+    column-count: 8;
+  }
+
+  .col-count-lg-9 {
+    column-count: 9;
+  }
+
+  .col-count-lg-10 {
+    column-count: 10;
+  }
+
+  .col-count-lg-11 {
+    column-count: 11;
+  }
+
+  .col-count-lg-12 {
+    column-count: 12;
+  }
+}
