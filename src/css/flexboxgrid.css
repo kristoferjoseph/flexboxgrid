@@ -7,10 +7,10 @@
   --sm-min: 48;
   --md-min: 64;
   --lg-min: 75;
-  --screen-xs-min: var(--xs-min) em;
-  --screen-sm-min: var(--sm-min) em;
-  --screen-md-min: var(--md-min) em;
-  --screen-lg-min: var(--lg-min) em;
+  --screen-xs-min: var(--xs-min)em;
+  --screen-sm-min: var(--sm-min)em;
+  --screen-md-min: var(--md-min)em;
+  --screen-lg-min: var(--lg-min)em;
   --container-sm: calc(var(--sm-min) + var(--gutter-width));
   --container-md: calc(var(--md-min) + var(--gutter-width));
   --container-lg: calc(var(--lg-min) + var(--gutter-width));
