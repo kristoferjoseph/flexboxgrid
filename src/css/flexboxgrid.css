@@ -40,6 +40,15 @@
   margin-left: var(--gutter-compensation, -0.5rem);
 }
 
+.row.collapse {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.collapse > *[class*="col"] {
+  padding: 0;
+}
+
 .row.reverse {
   flex-direction: row-reverse;
 }
