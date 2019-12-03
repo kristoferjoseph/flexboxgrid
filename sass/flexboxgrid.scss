@@ -110,6 +110,30 @@ $offset-properties: 'margin-left' !default;
   }
 }
 
+@mixin box-class-style($name-class: '.box') {
+  #{$name-class} {
+    box-sizing: border-box;
+    position: relative;
+    box-sizing: border-box;
+    min-height: 1rem;
+    margin-bottom: 0;
+    background: #007fff;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    &#{$name-class}-row {
+      margin-bottom: 1rem;
+    }
+    @include breakpoints($name-class) {
+      &#{$name-class}-row {
+        margin-bottom: 2rem;
+      }
+    };
+  }
+}
+
 .container-fluid {
   box-sizing: border-box;
   margin-right: auto;
@@ -135,12 +159,16 @@ $offset-properties: 'margin-left' !default;
   padding-left: $half-gutter-width;
 }
 
-@include columns() {
+.percent-column {
   @extend %column;
 }
 
+@include columns() {
+  @extend .percent-column;
+}
+
 @include offsets() {
-  @extend %column;
+  @extend .percent-column;
 }
 
 @include breakpoints('.start') {
@@ -187,3 +215,4 @@ $offset-properties: 'margin-left' !default;
   flex-direction: row-reverse;
 }
 
+@include box-class-style('.box');
